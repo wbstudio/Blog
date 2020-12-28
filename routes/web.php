@@ -14,8 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 //非会員閲覧可能ページ
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 Route::get('/', function () {
-    return view('welcome');
+    var_dump("aaaaaaaaaaaaaaaaaaaa");
 });
 
 Route::get('/aaa', function () {
