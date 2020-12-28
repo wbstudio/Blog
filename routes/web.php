@@ -44,7 +44,7 @@ Route::prefix('admin')->middleware('auth:admin')->group(function(){
     //記事管理
     Route::group(['prefix' => 'article'], function () {
         Route::get('list', [\App\Http\Controllers\Admin\ArticleController::class, 'getList'])->name('articleList');
-        Route::post('list', [\App\Http\Controllers\Admin\ArticleController::class, 'getList'])->name('articleList');
+        Route::post('list', [\App\Http\Controllers\Admin\ArticleController::class, 'getList']);
         Route::post('delete', [\App\Http\Controllers\Admin\ArticleController::class, 'delete'])->name('articleDelete');
         Route::get('/regist', [\App\Http\Controllers\Admin\ArticleController::class, 'regist'])->name('articleRegist');
         Route::post('/regist', [\App\Http\Controllers\Admin\ArticleController::class, 'insert'])->name('articleInsert');
@@ -60,7 +60,7 @@ Route::prefix('admin')->middleware('auth:admin')->group(function(){
     //会員管理
     Route::group(['prefix' => 'member'], function () {
         Route::get('list', [\App\Http\Controllers\Admin\MemberController::class, 'getList'])->name('memberList');
-        Route::post('list', [\App\Http\Controllers\Admin\MemberController::class, 'getList'])->name('memberList');
+        Route::post('list', [\App\Http\Controllers\Admin\MemberController::class, 'getList']);
         Route::post('delete', [\App\Http\Controllers\Admin\MemberController::class, 'delete'])->name('memberDelete');
         Route::get('/regist', [\App\Http\Controllers\Admin\MemberController::class, 'regist'])->name('memberRegist');
         Route::post('/regist', [\App\Http\Controllers\Admin\MemberController::class, 'insert']);
@@ -71,7 +71,7 @@ Route::prefix('admin')->middleware('auth:admin')->group(function(){
     //タグ管理
     Route::group(['prefix' => 'tag'], function () {
         Route::get('list', [\App\Http\Controllers\Admin\TagController::class, 'getList'])->name('tagList');
-        Route::post('list', [\App\Http\Controllers\Admin\TagController::class, 'getList'])->name('tagList');
+        Route::post('list', [\App\Http\Controllers\Admin\TagController::class, 'getList']);
         Route::post('delete', [\App\Http\Controllers\Admin\TagController::class, 'delete'])->name('tagDelete');
         Route::get('/regist', [\App\Http\Controllers\Admin\TagController::class, 'regist'])->name('tagRegist');
         Route::post('/regist', [\App\Http\Controllers\Admin\TagController::class, 'insert']);
