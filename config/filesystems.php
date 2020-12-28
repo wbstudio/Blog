@@ -1,10 +1,6 @@
 <?php
 
-if($_SERVER["HOME"] == "/home/vagrant"){
-    $storing_path = public_path("images");
-}else{
-    $storing_path = public_path("../../../web/[project_path]/images");
-}
+$storing_path = public_path("images");
 
 return [
 
