@@ -69,20 +69,24 @@ class Article extends Model
     }
 
 
-    public function getArticleData($id)
+    public function getArticleDataByid($id)
     {
         $columnList = [
             "id",
-            "course",
-            "classification",
-            "order",
+            "auther",
+            "auther_category",
+            "main_category",
+            "tag",
+            "channel",
             "title",
             "heading",
-            "explanation",
-            "movie_link",
-            "question",
-            "commentary",
+            "main",
+            "eyecatch",
             "status",
+            "release_at",
+            "end_at",
+            "count",
+            "good",
             "created_at",
             "updated_at",
         ];

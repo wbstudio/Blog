@@ -10,7 +10,7 @@
 @section('content')
 <div class="container">
     <h2>記事登録ページ</h2>
-    <form method="POST" action="{{route('articleInsert')}}" class="regist_place"  enctype="multipart/form-data">
+    <form method="POST" action="{{route('articleUpdate')}}" class="edit_place"  enctype="multipart/form-data">
     @csrf
         <table>
         <tr>
@@ -30,6 +30,12 @@
                             @endforeach    
                         @endforeach
                     </select>
+                    @isset($autherhidden)
+                    <input type="hidden" name="autherhidden" value="{{$autherhidden}}">
+                    @endisset
+                    @isset($authercategoryhidden)
+                    <input type="hidden" name="authercategoryhidden" value="{{$authercategoryhidden}}">
+                    @endisset
                 </td>
             </tr>
             <tr>
@@ -38,7 +44,7 @@
                 <select class="category" name="main_category">
                         <option value="">全体でのカテゴリー</option>
                         @foreach(Config::get('category') as $key => $category)
-                            <option value="{{$key}}" @if(isset($categoryhidden) && $categoryhidden == $key) selected @endif>{{$category["name"]}}</option>
+                            <option value="{{$key}}" @if(isset($maincategoryhidden) && $maincategoryhidden == $key) selected @endif>{{$category["name"]}}</option>
                         @endforeach
                     </select>
                 </td>
@@ -50,12 +56,13 @@
             </tr>
             <tr>
                 <th>title</th>
-                <td><input type="text" name="title" class="inp_text"></td>
+                <td><input type="text" name="title" class="inp_text" value="{{$article->title}}"></td>
             </tr>
             <tr>
                 <th>main</th>
                 <td>
                 <textarea name="main" id="editor">
+                    {!!$article->main!!}
                 </textarea>
                 <script>
                     window.onload=function(){
@@ -72,12 +79,14 @@
             </tr>
             <tr>
                 <th>eyecatch</th>
-                <td><input type="file" name="eyecatch"></td>
+                <td><input type="file" name="eyecatch"><br>
+                <img src="{{ asset('images/admin/article/eyecatch/' .$article->eyecatch)}}">
+            </td>
             </tr>
             <tr>
                 <th>heading</th>
                 <td>
-                    <textarea name="heading"></textarea>
+                    <textarea name="heading">{!!$article->heading!!}</textarea>
                 </td>
             </tr>
             <tr>
@@ -85,7 +94,7 @@
                 <td>
                     <select class="" name="status">
                         @foreach(Config::get('status.article') as $key => $status)
-                            <option value="{{$key}}">{{$status}}</option>
+                            <option value="{{$key}}" @if(isset($statushidden) && $statushidden == $key) selected @endif>{{$status}}</option>
                         @endforeach
                     </select>
                 </td>
@@ -127,7 +136,7 @@
             </tr>
             <tr>
             <th>endStatus</th>
-            <td><input type="checkbox" name="endstatus">チェックを入れると公開終了時間を設定できます。</td>
+            <td><input type="checkbox" name="endstatus"  @if(isset($article->editEndFlag) && $article->editEndFlag == 1) checked @endif>チェックを入れると公開終了時間を設定できます。</td>
             </tr>
             <tr>
                 <th>end_at</th>
@@ -165,6 +174,13 @@
                 </td>
             </tr>
         </table>
+        <input type="hidden" name="hiddenreleaseDate" value="{{$article->release_at}}">
+        <input type="hidden" name="hiddenendDate" value="{{$article->end_at}}">
+        <input type="hidden" name="hiddenrelease" value=1>
+        @if(isset($article->editEndFlag) && $article->editEndFlag == 1) 
+        <input type="hidden" name="hiddenend" value=1>
+        @endif
+        <input type="hidden" name="id" value="{{$article->id}}">
         <input type="submit" value="submit">
     </form>
 </div>

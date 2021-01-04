@@ -53,7 +53,7 @@ Route::prefix('admin')->middleware('auth:admin')->group(function(){
         Route::get('/regist', [\App\Http\Controllers\Admin\ArticleController::class, 'regist'])->name('articleRegist');
         Route::post('/regist', [\App\Http\Controllers\Admin\ArticleController::class, 'insert'])->name('articleInsert');
         Route::get('/edit/{id}', [\App\Http\Controllers\Admin\ArticleController::class, 'edit']);
-        Route::post('/edit', [\App\Http\Controllers\Admin\ArticleController::class, 'update']);
+        Route::post('/edit', [\App\Http\Controllers\Admin\ArticleController::class, 'update'])->name('articleUpdate');
     });
 
     //問い合わせ管理

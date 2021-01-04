@@ -2,7 +2,7 @@
 @section('title', 'Page Title')
 @section('head')
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="{{ asset('js/administer/article.js') }}"></script>
+<script src="{{ asset('js/admin/article.js') }}"></script>
 @endsection
 
 @section('content')
@@ -23,23 +23,28 @@
                     <select class="auther" name="auther">
                         <option value="">著者</option>
                         @foreach(Config::get('auther') as $key => $auther)
-                            <option value="{{$key}}" @if(isset($auther) && $auther == $key) selected @endif>{{$auther["name"]}}</option>
+                            <option value="{{$key}}" @if(isset($autherhidden) && $autherhidden == $key) selected @endif>{{$auther["name"]}}</option>
                         @endforeach
                     </select>
                 </div>
                 <div class="nd_article">
-                    <select class="auther_category"  name="auther_category" >
+                    <select class="auther_category"  name="auther_category" disabled>
                         <option value="">著者内カテゴリー</option>
                         @foreach(Config::get('auther') as $key => $auther)
                             @foreach($auther["category"] as $idx => $auther_category)
-                                <option value="{{$idx}}" class="auther_{{$key}}" @if(isset($auther_category) && $auther_category == $idx) selected @endif>{{$auther_category["name"]}}</option>
+                                <option value="{{$idx}}" class="auther_{{$key}}" @if(isset($authercategoryhidden) && $authercategoryhidden == $idx) selected @endif>{{$auther_category["name"]}}</option>
                             @endforeach    
                         @endforeach
                     </select>
                 </div>
-
                 <div class="nd_article">
                     <input type="submit" value="絞り込む">
+                    @isset($autherhidden)
+                    <input type="hidden" name="autherhidden" value="{{$autherhidden}}">
+                    @endisset
+                    @isset($authercategoryhidden)
+                    <input type="hidden" name="authercategoryhidden" value="{{$authercategoryhidden}}">
+                    @endisset
                 </div>
             </div>
         </form>
@@ -53,7 +58,6 @@
                 <th>status</th>
                 <th>course</th>
                 <th class="category">category</th>
-                <th>order</th>
                 <th class="max">title</th>
                 <th>delete</th>
             </tr>
@@ -63,8 +67,7 @@
             <td><div class="status_{{$article -> status}}">{{config("status.$article->status")}}</div></td>
             <td>{{config("course.$article->course.name")}}</td>
             <td class="category">{{config("course.$article->course.category.$article->category")}}</td>
-            <td>{{$article -> order}}</td>
-            <td class="title"><a href="editquestion/{{ $article -> id}}">{{$article -> title}}</a></td>
+            <td class="title"><a href="edit/{{ $article -> id}}">{{$article -> title}}</a></td>
             <td><input type="checkbox" value="{{$article -> id}}" name="del_id[]"></td>
             </tr>
             @endforeach
