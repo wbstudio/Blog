@@ -56,23 +56,38 @@
             <tr>
                 <th>id</th>
                 <th>status</th>
-                <th>course</th>
-                <th class="category">category</th>
+                <th>auther</th>
+                <th>a_cate</th>
+                <th class="category">m_cate</th>
                 <th class="max">title</th>
                 <th>delete</th>
             </tr>
             @foreach ($articles as $index => $article)
             <tr>
             <td><a href="edit/{{ $article -> id}}">{{$article -> id}}</a></td>
-            <td><div class="status_{{$article -> status}}">{{config("status.$article->status")}}</div></td>
-            <td>{{config("course.$article->course.name")}}</td>
-            <td class="category">{{config("course.$article->course.category.$article->category")}}</td>
+            <td><div class="status_{{$article -> status}}">{{config("status.article.$article->status")}}</div></td>
+            <td>{{config("auther.$article->auther.name")}}</td>
+            <td>
+                @if(isset($article->auther_category) && $article->auther_category != null)
+                {{config("auther.$article->auther.category.$article->auther_category.name")}}
+                @else
+                -
+                @endif
+            </td>
+            <td class="category">
+                @if(isset($article->main_category) && $article->main_category != null)
+                {{config("category.$article->main_category.name")}}
+                @else
+                -
+                @endif
+            </td>
+
             <td class="title"><a href="edit/{{ $article -> id}}">{{$article -> title}}</a></td>
             <td><input type="checkbox" value="{{$article -> id}}" name="del_id[]"></td>
             </tr>
             @endforeach
         </table>
-        <input type="submit" value="checkしたものを消す" id="delete">
+        <!-- <input type="submit" value="checkしたものを消す" id="delete"> -->
         @else
         <p>
         記事が一つもありません！！！

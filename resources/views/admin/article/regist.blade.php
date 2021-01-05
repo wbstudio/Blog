@@ -1,10 +1,11 @@
 @extends('admin.layout')
 @section('title', 'Page Title')
 @section('head')
+<link rel="stylesheet" href="{{ asset('css/admin/article.css') }}">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdn.ckeditor.com/4.14.0/full/ckeditor.js"></script>
 <script src="{{ asset('js/admin/article.js') }}"></script>
 <script src="{{ asset('js/admin/selectdate.js') }}"></script>
-<script src="https://cdn.ckeditor.com/4.14.0/full/ckeditor.js"></script>
 @endsection
 
 @section('content')
@@ -63,12 +64,9 @@
                             filebrowserBrowseUrl:filemanager.ckBrowseUrl
                         })
                     }
+                    CKEDITOR.config.height=800;
                 </script>
                 </td>
-            </tr>
-            <tr>
-                <th></th>
-                <td></td>
             </tr>
             <tr>
                 <th>eyecatch</th>
@@ -94,30 +92,30 @@
                 <th>release_at</th>
                 <td>
                     <div class="release">
-                        <select class="" name="release_year">
+                        <select class="datetime" name="release_year">
                             @foreach(Config::get('date.year') as $key => $year)
                                 <option value="{{$key}}">{{$year}}</option>
                             @endforeach
                         </select>
                         年
-                        <select class="" name="release_month">
+                        <select class="datetime" name="release_month">
                             @foreach(Config::get('date.month') as $key => $month)
                                 <option value="{{$key}}">{{$month}}</option>
                             @endforeach
                         </select>
                         月
-                        <select class="" name="release_day">
+                        <select class="datetime" name="release_day">
                             @foreach(Config::get('date.year') as $key => $year)
                                 <option value="{{$key}}">{{$year}}</option>
                             @endforeach
                         </select>
                         日
-                        <select class="" name="release_hour">
+                        <select class="datetime" name="release_hour">
                             @foreach(Config::get('date.hour') as $key => $hour)
                                 <option value="{{$key}}">{{$hour}}</option>
                             @endforeach
                         </select>:
-                        <select class="" name="release_minute">
+                        <select class="datetime" name="release_minute">
                             @foreach(Config::get('date.minute') as $key => $minute)
                                 <option value="{{$key}}">{{$minute}}</option>
                             @endforeach
@@ -133,30 +131,30 @@
                 <th>end_at</th>
                 <td>
                 <div class="end_at">
-                        <select class="" name="end_year">
+                        <select class="datetime" name="end_year">
                             @foreach(Config::get('date.year') as $key => $year)
                                 <option value="{{$key}}">{{$year}}</option>
                             @endforeach
                         </select>
                         年
-                        <select class="" name="end_month">
+                        <select class="datetime" name="end_month">
                             @foreach(Config::get('date.month') as $key => $month)
                                 <option value="{{$key}}">{{$month}}</option>
                             @endforeach
                         </select>
                         月
-                        <select class="" name="end_day">
+                        <select class="datetime" name="end_day">
                             @foreach(Config::get('date.year') as $key => $year)
                                 <option value="{{$key}}">{{$year}}</option>
                             @endforeach
                         </select>
                         日
-                        <select class="" name="end_hour">
+                        <select class="datetime" name="end_hour">
                             @foreach(Config::get('date.hour') as $key => $hour)
                                 <option value="{{$key}}">{{$hour}}</option>
                             @endforeach
                         </select>:
-                        <select class="" name="end_minute">
+                        <select class="datetime" name="end_minute">
                             @foreach(Config::get('date.minute') as $key => $minute)
                                 <option value="{{$key}}">{{$minute}}</option>
                             @endforeach
@@ -165,7 +163,9 @@
                 </td>
             </tr>
         </table>
-        <input type="submit" value="submit">
+        <div class="submitPlace">
+            <input type="submit" value="submit">
+        </div>
     </form>
 </div>
 
