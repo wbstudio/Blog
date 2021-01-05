@@ -208,9 +208,9 @@ class ArticleController extends Controller
         /*
         * バリデーション
         */
-        $this->validate($request, [
-            'auther' => 'required',
-            ]);
+        // $this->validate($request, [
+        //     'auther' => 'required',
+        //     ]);
 
         $article = new Article();
         $releaseDate = $request->input('release_year')."-".$request->input('release_month')."-".$request->input('release_day')." ".$request->input('release_hour').":".$request->input('release_minute');
