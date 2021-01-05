@@ -78,6 +78,7 @@ common
 
 .container{
     padding: 10px;
+    min-height: 660px;
 }
 
 main h2{
