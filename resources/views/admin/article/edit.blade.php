@@ -10,7 +10,7 @@
 @section('content')
 <div class="container">
     <h2>記事登録ページ</h2>
-    <form method="POST" action="{{route('articleUpdate')}}" class="edit_place"  enctype="multipart/form-data">
+    <form method="POST" action="./" class="edit_place"  enctype="multipart/form-data">
     @csrf
         <table>
         <tr>
