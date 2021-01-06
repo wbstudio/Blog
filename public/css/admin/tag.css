@@ -1,0 +1,19 @@
+.tag_list{
+    margin-top: 55px;
+}
+
+.tag_detail{
+    padding: 5px 10px;
+    margin:5px;
+    background: #e5e5e5;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.tag_detail img{
+    width:10px;
+}
+
+
+
+

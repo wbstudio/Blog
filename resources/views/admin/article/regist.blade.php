@@ -47,6 +47,14 @@
             <tr>
                 <th>tag</th>
                 <td>
+                <div class="tag_list">
+                    @foreach($tags as $tag)
+                    <div class="tag_detail">
+                    {{$tag->name}}
+                    <input type="checkbox" name="tag[]" value="{{$tag->id}}">
+                    </div>
+                    @endforeach
+                </div>
                 </td>
             </tr>
             <tr>

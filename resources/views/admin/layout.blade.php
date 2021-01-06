@@ -1,6 +1,7 @@
 <html>
     <head>
         <title>サイト名 - @yield('title')</title>
+        <meta name="csrf-token" content="{{ csrf_token() }}">
         <link rel="stylesheet" href="{{ asset('css/admin/common.css') }}">
         @yield('head')
         @FilemanagerScript

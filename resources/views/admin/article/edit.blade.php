@@ -53,6 +53,14 @@
             <tr>
                 <th>tag</th>
                 <td>
+                <div class="tag_list">
+                    @foreach($tags as $tag)
+                    <div class="tag_detail">
+                    {{$tag->name}}
+                    <input type="checkbox" name="tag[]" value="{{$tag->id}}" @if(is_array($contain_tags) && in_array($tag->id,$contain_tags)) checked @endif>
+                    </div>
+                    @endforeach
+                </div>
                 </td>
             </tr>
             <tr>

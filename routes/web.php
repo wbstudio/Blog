@@ -76,12 +76,9 @@ Route::prefix('admin')->middleware('auth:admin')->group(function(){
     //タグ管理
     Route::group(['prefix' => 'tag'], function () {
         Route::get('list', [\App\Http\Controllers\Admin\TagController::class, 'getList'])->name('tagList');
-        Route::post('list', [\App\Http\Controllers\Admin\TagController::class, 'getList']);
+        Route::post('regist', [\App\Http\Controllers\Admin\TagController::class, 'regist'])->name('tagRegist');
         Route::post('delete', [\App\Http\Controllers\Admin\TagController::class, 'delete'])->name('tagDelete');
-        Route::get('/regist', [\App\Http\Controllers\Admin\TagController::class, 'regist'])->name('tagRegist');
-        Route::post('/regist', [\App\Http\Controllers\Admin\TagController::class, 'insert']);
-        Route::get('/edit/{id}', [\App\Http\Controllers\Admin\TagController::class, 'edit']);
-        Route::post('/edit', [\App\Http\Controllers\Admin\TagController::class, 'update']);
+        Route::get('edit/{id}/{name}', [\App\Http\Controllers\Admin\TagController::class, 'edit']);
     });
     
 });
