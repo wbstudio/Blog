@@ -25,16 +25,18 @@
     <form action="{{route('tagDelete')}}" method="POST">
         @csrf
         <div class="tag_list">
-        @foreach($tags as $tag)
-        <div class="tag_detail">
-            <img src="../../images/admin/common/pencil.svg" class="pencil">
-            <span class="nametext">{{$tag->name}}</span>
-            <input type="checkbox" name="delete[]" value="{{$tag->id}}" class="namecheck">
-            <input type="text" name="name" value="{{$tag->name}}"  style="display:none;" class="replacetext" id="{{$tag->id}}">
-            <input type="button" value="p"  style="display:none;" class="replacesubmit">
-                       
-        </div>
-        @endforeach
+        @if(isset($tags) && count($tags) > 0)
+            @foreach($tags as $tag)
+            <div class="tag_detail">
+                <img src="../../images/admin/common/pencil.svg" class="pencil">
+                <span class="nametext">{{$tag->name}}</span>
+                <input type="checkbox" name="delete[]" value="{{$tag->id}}" class="namecheck">
+                <input type="text" name="name" value="{{$tag->name}}"  style="display:none;" class="replacetext" id="{{$tag->id}}">
+                <input type="button" value="p"  style="display:none;" class="replacesubmit">
+                        
+            </div>
+            @endforeach
+        @endif
         </div>
         <div>
             <input type="submit" value="checkしたものを消す">
