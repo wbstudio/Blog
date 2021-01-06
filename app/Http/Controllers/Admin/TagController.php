@@ -19,9 +19,10 @@ class TagController extends Controller
             $dispData = [
                 'tags' => $tagsData,
             ];
+            return view('admin.tag.list', $dispData);
         }
 
-        return view('admin.tag.list', $dispData);
+        return view('admin.tag.list');
     }
 
     public function regist(Request $request) {
