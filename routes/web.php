@@ -15,12 +15,10 @@ use Illuminate\Support\Facades\Route;
 
 //非会員閲覧可能ページ
 Route::get('/', function () {
-    var_dump("aaaaaaaaaaa");
     return view('welcome');
 });
 
 Route::get('/aaa', function () {
-    var_dump("aaaaaaaaaaa");
     return view('welcome');
 });
 
