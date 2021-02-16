@@ -13,14 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+if (preg_match("/iPhone|iPod|Android.*Mobile|Windows.*Phone/", $_SERVER['HTTP_USER_AGENT'])) {
+    $user_agent = "sp";
+} else {
+    $user_agent = "pc";
+}
+define("USER_AGENT", $user_agent);
 //非会員閲覧可能ページ
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/aaa', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {return view('welcome');});
+Route::get('/', [\App\Http\Controllers\Front\TopController::class, 'index']);
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
