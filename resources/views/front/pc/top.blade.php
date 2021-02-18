@@ -3,54 +3,65 @@
 @section('head')
 <meta name="csrf-token" content="{{ csrf_token() }}">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" href="{{ asset('css/front/pc/top.css') }}">
 @endsection
 
 @section('content')
 <div class="container">
-    <h2></h2>
-    <div class="card-body">
-     @if (session('status'))
-         <div class="alert alert-success" role="alert">
-             {{ session('status') }}
-         </div>
-     @endif
-     <div class="">
-     a<br>
-     a<br>
-     a<br>
-     a<br>
-     a<br>
-     a<br>
-     a<br>
-     a<br>
-     a<br>
-     a<br>
-     a<br>
-     a<br>
-     a<br>
-     a<br>
-     a<br>
-     a<br>
-     a<br>
-     a<br>
-     a<br>
-     a<br>
-     a<br>
-     a<br>
-     a<br>
-     a<br>
-     a<br>
-     a<br>
-     a<br>
-     a<br>
-     a<br>
-     a<br>
-     a<br>
-     a<br>
-     a<br>
-     a<br>
-     a<br>
-     </div>
+    <div id="top_page" class="">
+    <section id="blogger">
+    <h2>Blogger</h2>
+    <div class="blogger_odd">
+        <img src="{{ asset('images/front/top_link/face_test.png') }}" class="">
+        <div class="blogger_name">名前テスト</div>
+        <div class="blogger_explain">
+        <div class="blogger_explain_title">plofile</div>
+            <p class="blogger_explain_detail">
+                テストテキストテストテキストテストテキストテストテキストテストテキストテストテキテキストテストテキストテストスト<br>
+                テストテキストテストテキストテストテキストテストテキストテストテキストテストテキテキストテストテキストテストスト<br>
+                テストテキストテストテキストテストテキストテストテキスト
+            </p>
+            <div class="blogger_explain_title">plofile</div>
+            <p class="blogger_explain_detail">
+                テストテキストテストテキストテストテキストテストテキストテストテキストテストテキストテストテキストテストテキスト<br>
+                テストテキストテストテキストテストテキストテストテキストテストテキストテストテキストテストテキストテストテキスト<br>
+                テストテキストテストテキストテストテキストテストテキスト
+            </p>
+        </div>
     </div>
+    <div class="blogger_even">
+    <img src="{{ asset('images/front/top_link/face_test.png') }}" class="">
+        <div class="blogger_name">名前テスト</div>
+        <div class="blogger_explain">
+        <div class="blogger_explain_title">plofile</div>
+            <p class="blogger_explain_detail">
+                テストテキストテストテキストテストテキストテストテキストテストテキストテストテキテキストテストテキストテストスト<br>
+                テストテキストテストテキストテストテキストテストテキストテストテキストテストテキテキストテストテキストテストスト<br>
+                テストテキストテストテキストテストテキストテストテキスト
+            </p>
+            <div class="blogger_explain_title">plofile</div>
+            <p class="blogger_explain_detail">
+                テストテキストテストテキストテストテキストテストテキストテストテキストテストテキストテストテキストテストテキスト<br>
+                テストテキストテストテキストテストテキストテストテキストテストテキストテストテキストテストテキストテストテキスト<br>
+                テストテキストテストテキストテストテキストテストテキスト
+            </p>
+        </div>
+    </div>
+
+    </section>
+
+    <section id="category">
+    <h2>Category</h2>
+    </section>
+
+    <section id="how_to">
+    <h2>How to use</h2>
+    </section>
+
+    <section id="inquiry">
+    <h2>問い合わせ</h2>
+    </section>
+
+</div>
 </div>
 @endsection

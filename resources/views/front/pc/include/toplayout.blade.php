@@ -53,7 +53,7 @@
                     </ul>
                 </div>
                 <div class="side_recently">
-                <div class="side_title">topics</div>
+                    <div class="side_title">topics</div>
                     <ul>
                         <li><a href="{{route('adminTop')}}">Top</a></li>
                         <li><a href="{{route('articleList')}}">記事管理</a></li>

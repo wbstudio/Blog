@@ -1,0 +1,76 @@
+/*
+Blogger
+*/
+
+.blogger_odd{
+    padding-right: 20px;
+    margin: 10px 0 -19px;
+}
+.blogger_odd img{
+    border-radius: 50%;
+    width:150px;
+    height: 150px;
+    align: left;
+}
+
+.blogger_odd .blogger_name{
+    float: right;
+    position: relative;
+    font-size: 36px;
+    text-align: right;
+    width: 600px;
+    border-bottom: 3px solid #000;
+    line-height: 0.9em;
+    top: 12px;
+    z-index: 1;
+}
+
+.blogger_odd .blogger_explain{
+    width: 600px;
+    position: relative;
+    top: -89px;
+    left: 175px;
+}
+
+.blogger_even{
+    padding-left: 20px;
+    margin: 10px 0 -19px;
+}
+.blogger_even img{
+    border-radius: 50%;
+    width:150px;
+    height: 150px;
+    align: right;
+    margin-left: 20px;
+}
+
+.blogger_even .blogger_name{
+    float: left;
+    position: relative;
+    font-size: 36px;
+    text-align: left;
+    width: 600px;
+    border-bottom: 3px solid #000;
+    line-height: 0.9em;
+    top: 12px;
+    z-index: 1;
+}
+
+.blogger_even .blogger_explain{
+    width: 600px;
+    position: relative;
+    top: -89px;
+    /* left: 175px; */
+}
+
+#blogger .blogger_explain_title{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#blogger .blogger_explain_detail{
+    font-size: 12px;
+    margin: 0 0 12px;
+}
+
+

@@ -12,6 +12,7 @@ header{
     margin: -87px 0 0;
     background-color: #FFF;
     opacity: 0.95;
+    z-index: 100;
 }
 
 .header_first_area{
@@ -107,6 +108,7 @@ main{
 #content{
     width:794px;
     padding: 30px 0px 30px 30px;
+    min-height: 400px;
 }
 
 
