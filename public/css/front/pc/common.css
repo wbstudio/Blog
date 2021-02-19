@@ -1,3 +1,8 @@
+:root {
+    --main-color: #404040;
+}
+  
+
 body{
     margin: 0;
 }
@@ -43,8 +48,8 @@ header{
 }
 
 .header_btn_area a.regist_member{
-    background: #e6002d;
-    border: 1px solid #e6002d;
+    background: var(--main-color);
+    border: 1px solid var(--main-color);
     border-radius: 10px;
     color: #FFF;
 }
@@ -90,7 +95,7 @@ main{
     text-align: center;
     font-weight: bold;
     font-size: 14px;
-    background: #e6002d;
+    background: var(--main-color);
     border-radius: 10px;
     color: #FFF;
 }
@@ -129,5 +134,5 @@ main{
 ***************/
 footer{
     width: 100%;
-    background: #e6002d;
+    background: var(--main-color);
 }

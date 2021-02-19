@@ -28,6 +28,7 @@
                 テストテキストテストテキストテストテキストテストテキスト
             </p>
         </div>
+        <div class="to_blogger_category"><a href="">名前テストのカテゴリー一覧へ</a></div>
     </div>
     <div class="blogger_even">
     <img src="{{ asset('images/front/top_link/face_test.png') }}" class="">
@@ -46,6 +47,45 @@
                 テストテキストテストテキストテストテキストテストテキスト
             </p>
         </div>
+        <div class="to_blogger_category"><a href="">名前テストのカテゴリー一覧へ</a></div>
+    </div>
+    <div class="blogger_odd">
+        <img src="{{ asset('images/front/top_link/face_test.png') }}" class="">
+        <div class="blogger_name">名前テスト</div>
+        <div class="blogger_explain">
+        <div class="blogger_explain_title">plofile</div>
+            <p class="blogger_explain_detail">
+                テストテキストテストテキストテストテキストテストテキストテストテキストテストテキテキストテストテキストテストスト<br>
+                テストテキストテストテキストテストテキストテストテキストテストテキストテストテキテキストテストテキストテストスト<br>
+                テストテキストテストテキストテストテキストテストテキスト
+            </p>
+            <div class="blogger_explain_title">plofile</div>
+            <p class="blogger_explain_detail">
+                テストテキストテストテキストテストテキストテストテキストテストテキストテストテキストテストテキストテストテキスト<br>
+                テストテキストテストテキストテストテキストテストテキストテストテキストテストテキストテストテキストテストテキスト<br>
+                テストテキストテストテキストテストテキストテストテキスト
+            </p>
+        </div>
+        <div class="to_blogger_category"><a href="">名前テストのカテゴリー一覧へ</a></div>
+    </div>
+    <div class="blogger_even">
+    <img src="{{ asset('images/front/top_link/face_test.png') }}" class="">
+        <div class="blogger_name">名前テスト</div>
+        <div class="blogger_explain">
+        <div class="blogger_explain_title">plofile</div>
+            <p class="blogger_explain_detail">
+                テストテキストテストテキストテストテキストテストテキストテストテキストテストテキテキストテストテキストテストスト<br>
+                テストテキストテストテキストテストテキストテストテキストテストテキストテストテキテキストテストテキストテストスト<br>
+                テストテキストテストテキストテストテキストテストテキスト
+            </p>
+            <div class="blogger_explain_title">plofile</div>
+            <p class="blogger_explain_detail">
+                テストテキストテストテキストテストテキストテストテキストテストテキストテストテキストテストテキストテストテキスト<br>
+                テストテキストテストテキストテストテキストテストテキストテストテキストテストテキストテストテキストテストテキスト<br>
+                テストテキストテストテキストテストテキストテストテキスト
+            </p>
+        </div>
+        <div class="to_blogger_category"><a href="">名前テストのカテゴリー一覧へ</a></div>
     </div>
 
     </section>
