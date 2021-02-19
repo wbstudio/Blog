@@ -22,6 +22,9 @@ define("USER_AGENT", $user_agent);
 //非会員閲覧可能ページ
 // Route::get('/', function () {return view('welcome');});
 Route::get('/', [\App\Http\Controllers\Front\TopController::class, 'index']);
+Route::get('/auther/{auther_id}', [\App\Http\Controllers\Front\ListController::class, 'onlyAuther']);
+Route::get('/category/{category_id}', [\App\Http\Controllers\Front\ListController::class, 'onlyCategory']);
+Route::get('/auther/{auther_id}/category/{category_id}', [\App\Http\Controllers\Front\ListController::class, 'bothAutherAndCategory']);
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
