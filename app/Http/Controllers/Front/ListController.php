@@ -29,4 +29,12 @@ class ListController extends Controller
 
     }
 
+    public function searchBox(Request $request) {
+        $dispData = array();
+        // return view('front.'.USER_AGENT.'.top',$dispData);
+        $search_word = $request->input('search_word');
+        var_dump("serchWord".$search_word);
+
+    }
+
 }

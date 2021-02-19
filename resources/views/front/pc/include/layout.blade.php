@@ -15,6 +15,7 @@
                 </div>
                 <div class="header_btn_area">
                     <form>
+                    @csrf
                         <input type="text" name="search">
                         <input type="image" class="search" src="{{ asset('images/front/icon_search_button.svg') }}">
                     </form>
