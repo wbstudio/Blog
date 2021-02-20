@@ -46,21 +46,21 @@
                 <div class="side_news">
                     <div class="side_title">news</div>
                     <ul>
-                        <li style="border-bottom:1px solid #ccc;"><a href="{{route('adminTop')}}">11月11日(newIcon)<p title="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" style="margin:1px 0;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">リンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンク</p></a><span style="color:#ccc;">筆者:</span><a href="{{route('adminTop')}}">名前テスト</a></li>
-                        <li><a href="{{route('articleList')}}">記事管理</a></li>
-                        <li><a href="{{route('memberList')}}">会員管理</a></li>
-                        <li><a href="{{route('inquiryList')}}">問い合わせ管理</a></li>
-                        <li><a href="{{route('tagList')}}">タグ管理</a></li>
+                        <li style="border-bottom:1px solid #ccc;padding-bottom:2px;margin-bottom:5px;"><a href="{{route('adminTop')}}">11月11日(newIcon)<p title="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" style="margin:1px 0;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">リンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンク</p></a><span style="color:#ccc;">筆者:</span><a href="{{route('adminTop')}}">名前テスト</a></li>
+                        <li style="border-bottom:1px solid #ccc;padding-bottom:2px;margin-bottom:5px;"><a href="{{route('adminTop')}}">11月11日(newIcon)<p title="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" style="margin:1px 0;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">リンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンク</p></a><span style="color:#ccc;">筆者:</span><a href="{{route('adminTop')}}">名前テスト</a></li>
+                        <li style="border-bottom:1px solid #ccc;padding-bottom:2px;margin-bottom:5px;"><a href="{{route('adminTop')}}">11月11日(newIcon)<p title="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" style="margin:1px 0;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">リンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンク</p></a><span style="color:#ccc;">筆者:</span><a href="{{route('adminTop')}}">名前テスト</a></li>
+                        <li style="border-bottom:1px solid #ccc;padding-bottom:2px;margin-bottom:5px;"><a href="{{route('adminTop')}}">11月11日(newIcon)<p title="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" style="margin:1px 0;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">リンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンク</p></a><span style="color:#ccc;">筆者:</span><a href="{{route('adminTop')}}">名前テスト</a></li>
+                        <li style="border-bottom:1px solid #ccc;padding-bottom:2px;margin-bottom:5px;"><a href="{{route('adminTop')}}">11月11日(newIcon)<p title="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" style="margin:1px 0;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">リンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンク</p></a><span style="color:#ccc;">筆者:</span><a href="{{route('adminTop')}}">名前テスト</a></li>
                     </ul>
                 </div>
                 <div class="side_recently">
                     <div class="side_title">topics</div>
                     <ul>
-                        <li><a href="{{route('adminTop')}}">Top</a></li>
-                        <li><a href="{{route('articleList')}}">記事管理</a></li>
-                        <li><a href="{{route('memberList')}}">会員管理</a></li>
-                        <li><a href="{{route('inquiryList')}}">問い合わせ管理</a></li>
-                        <li><a href="{{route('tagList')}}">タグ管理</a></li>
+                        <li style="border-bottom:1px solid #ccc;padding-bottom:2px;margin-bottom:5px;"><a href="{{route('adminTop')}}">11月11日(newIcon)<p title="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" style="margin:1px 0;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">リンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンク</p></a><span style="color:#ccc;">筆者:</span><a href="{{route('adminTop')}}">名前テスト</a></li>
+                        <li style="border-bottom:1px solid #ccc;padding-bottom:2px;margin-bottom:5px;"><a href="{{route('adminTop')}}">11月11日(newIcon)<p title="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" style="margin:1px 0;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">リンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンク</p></a><span style="color:#ccc;">筆者:</span><a href="{{route('adminTop')}}">名前テスト</a></li>
+                        <li style="border-bottom:1px solid #ccc;padding-bottom:2px;margin-bottom:5px;"><a href="{{route('adminTop')}}">11月11日(newIcon)<p title="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" style="margin:1px 0;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">リンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンク</p></a><span style="color:#ccc;">筆者:</span><a href="{{route('adminTop')}}">名前テスト</a></li>
+                        <li style="border-bottom:1px solid #ccc;padding-bottom:2px;margin-bottom:5px;"><a href="{{route('adminTop')}}">11月11日(newIcon)<p title="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" style="margin:1px 0;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">リンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンク</p></a><span style="color:#ccc;">筆者:</span><a href="{{route('adminTop')}}">名前テスト</a></li>
+                        <li style="border-bottom:1px solid #ccc;padding-bottom:2px;margin-bottom:5px;"><a href="{{route('adminTop')}}">11月11日(newIcon)<p title="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" style="margin:1px 0;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">リンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンク</p></a><span style="color:#ccc;">筆者:</span><a href="{{route('adminTop')}}">名前テスト</a></li>
                     </ul>
                 </div>
                 <div class="side_ranking">
