@@ -26,14 +26,14 @@
                 </div>
             </div>
             <div class="header_second_area">
-                <a href=""><img src="{{ asset('images/front/top_link/test_link.png') }}" width="72px" height="30px"></a>
-                <a href=""><img src="{{ asset('images/front/top_link/test_link.png') }}" width="72px" height="30px"></a>
-                <a href=""><img src="{{ asset('images/front/top_link/test_link.png') }}" width="72px" height="30px"></a>
-                <a href=""><img src="{{ asset('images/front/top_link/test_link.png') }}" width="72px" height="30px"></a>
-                <a href=""><img src="{{ asset('images/front/top_link/test_link.png') }}" width="72px" height="30px"></a>
-                <a href=""><img src="{{ asset('images/front/top_link/test_link.png') }}" width="72px" height="30px"></a>
-                <a href=""><img src="{{ asset('images/front/top_link/test_link.png') }}" width="72px" height="30px"></a>
-                <a href=""><img src="{{ asset('images/front/top_link/test_link.png') }}" width="72px" height="30px"></a>
+                <a href=""><img src="{{ asset('images/front/top_link/test_link.png') }}"></a>
+                <a href=""><img src="{{ asset('images/front/top_link/test_link.png') }}"></a>
+                <a href=""><img src="{{ asset('images/front/top_link/test_link.png') }}"></a>
+                <a href=""><img src="{{ asset('images/front/top_link/test_link.png') }}"></a>
+                <a href=""><img src="{{ asset('images/front/top_link/test_link.png') }}"></a>
+                <a href=""><img src="{{ asset('images/front/top_link/test_link.png') }}"></a>
+                <a href=""><img src="{{ asset('images/front/top_link/test_link.png') }}"></a>
+                <a href=""><img src="{{ asset('images/front/top_link/test_link.png') }}"></a>
             </div>
         </header>
 
@@ -51,7 +51,7 @@
                         <li>
                             <a href=""><span class="side_navi_date">11月11日(newIcon)</span>
                                 <p title="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" class="side_navi_title">
-                                    リンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンク
+                                    リンクリンクリンク
                                 </p>
                             </a>
                             <div class="side_navi_auther">
