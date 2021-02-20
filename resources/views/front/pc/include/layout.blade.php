@@ -2,7 +2,9 @@
     <head>
         <title> - @yield('title')</title>
         <meta name="csrf-token" content="{{ csrf_token() }}">
-        <link rel="stylesheet" href="{{ asset('css/front/pc/common.css') }}">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=yes">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="stylesheet" id="paddle-fonts-css" href="https://fonts.googleapis.com/css?family=Montserrat%3A400%2C700" type="text/css" media="all">        <link rel="stylesheet" href="{{ asset('css/front/pc/common.css') }}">
         @yield('head')
     </head>
     <body>
@@ -24,14 +26,14 @@
                 </div>
             </div>
             <div class="header_second_area">
-                <a href=""><img src="{{ asset('images/front/top_link/test_link.png') }}" width="72px" height="30px"></a>
-                <a href=""><img src="{{ asset('images/front/top_link/test_link.png') }}" width="72px" height="30px"></a>
-                <a href=""><img src="{{ asset('images/front/top_link/test_link.png') }}" width="72px" height="30px"></a>
-                <a href=""><img src="{{ asset('images/front/top_link/test_link.png') }}" width="72px" height="30px"></a>
-                <a href=""><img src="{{ asset('images/front/top_link/test_link.png') }}" width="72px" height="30px"></a>
-                <a href=""><img src="{{ asset('images/front/top_link/test_link.png') }}" width="72px" height="30px"></a>
-                <a href=""><img src="{{ asset('images/front/top_link/test_link.png') }}" width="72px" height="30px"></a>
-                <a href=""><img src="{{ asset('images/front/top_link/test_link.png') }}" width="72px" height="30px"></a>
+                <a href=""><img src="{{ asset('images/front/top_link/test_link.png') }}"></a>
+                <a href=""><img src="{{ asset('images/front/top_link/test_link.png') }}"></a>
+                <a href=""><img src="{{ asset('images/front/top_link/test_link.png') }}"></a>
+                <a href=""><img src="{{ asset('images/front/top_link/test_link.png') }}"></a>
+                <a href=""><img src="{{ asset('images/front/top_link/test_link.png') }}"></a>
+                <a href=""><img src="{{ asset('images/front/top_link/test_link.png') }}"></a>
+                <a href=""><img src="{{ asset('images/front/top_link/test_link.png') }}"></a>
+                <a href=""><img src="{{ asset('images/front/top_link/test_link.png') }}"></a>
             </div>
         </header>
 

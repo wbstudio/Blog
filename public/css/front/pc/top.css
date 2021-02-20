@@ -1,5 +1,8 @@
 :root {
     --top-color: #404040;
+    /* --top-bgcolor: #404040; */
+    --top-bgcolor: linear-gradient(#cccccc, #404040);
+    /* --top-bgcolor: linear-gradient(#ffe815, #ffae62); */
 }
 
 /*
@@ -9,7 +12,7 @@ h2
 h2{
     color: var(--top-color);
     font-size: 65px;
-    font-family: fantasy;
+    font-family: Montserrat;
     margin: 10px 0px 40px;
     padding-left:15px;
     background: #dadada;
@@ -34,7 +37,7 @@ Blogger
 
 .blogger_odd .blogger_name{
     font-weight: bold;
-    font-family: fantasy;
+    font-family: Montserrat;
     float: right;
     position: relative;
     font-size: 36px;
@@ -69,7 +72,7 @@ Blogger
 
 .blogger_even .blogger_name{
     font-weight: bold;
-    font-family: fantasy;
+    font-family: Montserrat;
     float: left;
     position: relative;
     font-size: 36px;
@@ -86,11 +89,10 @@ Blogger
     width: 600px;
     position: relative;
     top: -89px;
-    /* left: 175px; */
 }
 
 #blogger .blogger_explain_title{
-    font-family: fantasy;
+    font-family: Montserrat;
     padding-bottom: 3px;
     font-size: 20px;
     font-weight: 500;
@@ -124,3 +126,62 @@ Blogger
     color:#FFF;
   }
 
+
+
+
+  /****************************
+*
+**iPad(1023px以下)用-レスポンシブ
+*
+****************************/
+
+@media screen and (max-width: 1023px){
+
+    /*
+    Blogger
+    */
+    .blogger_odd,.blogger_even {
+        margin: 40px 0 0px;
+    }
+
+    .blogger_odd img,
+    .blogger_even img {
+        width: 20%;
+        height: auto;
+    }
+
+    .blogger_odd img {
+        margin-left: 0.5%;
+    }
+
+    .blogger_even img {
+        margin-left: 2%;
+    }
+
+    .blogger_odd .blogger_name{
+        font-size: 34px;
+        width: 76%;
+        line-height: 1.3em;
+    }
+
+    .blogger_even .blogger_name{
+        font-size: 34px;
+        width: 75%;
+        line-height: 1.3em;
+    }
+
+    .blogger_odd .blogger_explain,
+    .blogger_even .blogger_explain {
+        width: 76%;
+        top: -30px;
+    }
+
+    .blogger_odd .blogger_explain {
+        left: 23%;
+    }
+
+    #blogger .to_blogger_category {
+        top: -15px;
+    }
+
+}/*min-width: 481px*/

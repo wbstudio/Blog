@@ -22,10 +22,10 @@ define("USER_AGENT", $user_agent);
 //非会員閲覧可能ページ
 // Route::get('/', function () {return view('welcome');});
 Route::get('/', [\App\Http\Controllers\Front\TopController::class, 'index']);
-Route::get('/auther/{auther_id}', [\App\Http\Controllers\Front\ListController::class, 'onlyAuther']);
-Route::get('/category/{category_id}', [\App\Http\Controllers\Front\ListController::class, 'onlyCategory']);
-Route::get('/auther/{auther_id}/category/{category_id}', [\App\Http\Controllers\Front\ListController::class, 'bothAutherAndCategory']);
-Route::post('/search', [\App\Http\Controllers\Front\ListController::class, 'searchBox'])->name('searchWordList');
+Route::get('/auther/{auther_id}', [\App\Http\Controllers\Front\ListController::class, 'onlyAuther'])->name('list.onlyAuther');
+Route::get('/category/{category_id}', [\App\Http\Controllers\Front\ListController::class, 'onlyCategory'])->name('list.onlyCategory');
+Route::get('/auther/{auther_id}/category/{category_id}', [\App\Http\Controllers\Front\ListController::class, 'bothAutherAndCategory'])->name('list.bothAutherAndCategory');
+Route::post('/search', [\App\Http\Controllers\Front\ListController::class, 'searchBox'])->name('list.searchWordList');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');

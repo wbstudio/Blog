@@ -2,8 +2,10 @@
     <head>
         <title> - @yield('title')</title>
         <meta name="csrf-token" content="{{ csrf_token() }}">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=yes">
         <link rel="stylesheet" href="{{ asset('css/front/pc/common.css') }}">
-        @yield('head')
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="stylesheet" id="paddle-fonts-css" href="https://fonts.googleapis.com/css?family=Montserrat%3A400%2C700" type="text/css" media="all">        @yield('head')
     </head>
     <body>
         <header>
@@ -14,7 +16,7 @@
                     </a>
                 </div>
                 <div class="header_btn_area">
-                    <form method="POST" action="{{route('searchWordList')}}">
+                    <form method="POST" action="{{route('list.searchWordList')}}">
                     @csrf
                         <input type="text" name="search_word">
                         <input type="image" class="search" src="{{ asset('images/front/icon_search_button.svg') }}">
@@ -46,27 +48,167 @@
                 <div class="side_news">
                     <div class="side_title">news</div>
                     <ul>
-                        <li style="border-bottom:1px solid #ccc;padding-bottom:2px;margin-bottom:5px;"><a href="{{route('adminTop')}}">11月11日(newIcon)<p title="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" style="margin:1px 0;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">リンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンク</p></a><span style="color:#ccc;">筆者:</span><a href="{{route('adminTop')}}">名前テスト</a></li>
-                        <li style="border-bottom:1px solid #ccc;padding-bottom:2px;margin-bottom:5px;"><a href="{{route('adminTop')}}">11月11日(newIcon)<p title="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" style="margin:1px 0;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">リンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンク</p></a><span style="color:#ccc;">筆者:</span><a href="{{route('adminTop')}}">名前テスト</a></li>
-                        <li style="border-bottom:1px solid #ccc;padding-bottom:2px;margin-bottom:5px;"><a href="{{route('adminTop')}}">11月11日(newIcon)<p title="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" style="margin:1px 0;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">リンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンク</p></a><span style="color:#ccc;">筆者:</span><a href="{{route('adminTop')}}">名前テスト</a></li>
-                        <li style="border-bottom:1px solid #ccc;padding-bottom:2px;margin-bottom:5px;"><a href="{{route('adminTop')}}">11月11日(newIcon)<p title="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" style="margin:1px 0;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">リンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンク</p></a><span style="color:#ccc;">筆者:</span><a href="{{route('adminTop')}}">名前テスト</a></li>
-                        <li style="border-bottom:1px solid #ccc;padding-bottom:2px;margin-bottom:5px;"><a href="{{route('adminTop')}}">11月11日(newIcon)<p title="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" style="margin:1px 0;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">リンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンク</p></a><span style="color:#ccc;">筆者:</span><a href="{{route('adminTop')}}">名前テスト</a></li>
+                        <li>
+                            <a href=""><span class="side_navi_date">11月11日(newIcon)</span>
+                                <p title="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" class="side_navi_title">
+                                    リンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンク
+                                </p>
+                            </a>
+                            <div class="side_navi_auther">
+                                <span style="color:#ccc;">筆者:</span>
+                                <a href="{{ route('list.onlyAuther', ['auther_id' => 0]) }}">名前テスト</a>
+                            </div>
+                            <div class="side_navi_category">
+                                <span style="color:#ccc;">カテゴリー:</span>
+                                <a href="{{ route('list.bothAutherAndCategory', ['auther_id' => 0,'category_id' => 0]) }}">名前テスト</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href=""><span class="side_navi_date">11月11日(newIcon)</span>
+                                <p title="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" class="side_navi_title">
+                                    リンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンク
+                                </p>
+                            </a>
+                            <div class="side_navi_auther">
+                                <span style="color:#ccc;">筆者:</span>
+                                <a href="{{ route('list.onlyAuther', ['auther_id' => 0]) }}">名前テスト</a>
+                            </div>
+                            <div class="side_navi_category">
+                                <span style="color:#ccc;">カテゴリー:</span>
+                                <a href="{{ route('list.bothAutherAndCategory', ['auther_id' => 0,'category_id' => 0]) }}">名前テスト</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href=""><span class="side_navi_date">11月11日(newIcon)</span>
+                                <p title="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" class="side_navi_title">
+                                    リンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンク
+                                </p>
+                            </a>
+                            <div class="side_navi_auther">
+                                <span style="color:#ccc;">筆者:</span>
+                                <a href="{{ route('list.onlyAuther', ['auther_id' => 0]) }}">名前テスト</a>
+                            </div>
+                            <div class="side_navi_category">
+                                <span style="color:#ccc;">カテゴリー:</span>
+                                <a href="{{ route('list.bothAutherAndCategory', ['auther_id' => 0,'category_id' => 0]) }}">名前テスト</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href=""><span class="side_navi_date">11月11日(newIcon)</span>
+                                <p title="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" class="side_navi_title">
+                                    リンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンク
+                                </p>
+                            </a>
+                            <div class="side_navi_auther">
+                                <span style="color:#ccc;">筆者:</span>
+                                <a href="{{ route('list.onlyAuther', ['auther_id' => 0]) }}">名前テスト</a>
+                            </div>
+                            <div class="side_navi_category">
+                                <span style="color:#ccc;">カテゴリー:</span>
+                                <a href="{{ route('list.bothAutherAndCategory', ['auther_id' => 0,'category_id' => 0]) }}">名前テスト</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href=""><span class="side_navi_date">11月11日(newIcon)</span>
+                                <p title="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" class="side_navi_title">
+                                    リンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンク
+                                </p>
+                            </a>
+                            <div class="side_navi_auther">
+                                <span style="color:#ccc;">筆者:</span>
+                                <a href="{{ route('list.onlyAuther', ['auther_id' => 0]) }}">名前テスト</a>
+                            </div>
+                            <div class="side_navi_category">
+                                <span style="color:#ccc;">カテゴリー:</span>
+                                <a href="{{ route('list.bothAutherAndCategory', ['auther_id' => 0,'category_id' => 0]) }}">名前テスト</a>
+                            </div>
+                        </li>
                     </ul>
                 </div>
                 <div class="side_recently">
                     <div class="side_title">topics</div>
                     <ul>
-                        <li style="border-bottom:1px solid #ccc;padding-bottom:2px;margin-bottom:5px;"><a href="{{route('adminTop')}}">11月11日(newIcon)<p title="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" style="margin:1px 0;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">リンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンク</p></a><span style="color:#ccc;">筆者:</span><a href="{{route('adminTop')}}">名前テスト</a></li>
-                        <li style="border-bottom:1px solid #ccc;padding-bottom:2px;margin-bottom:5px;"><a href="{{route('adminTop')}}">11月11日(newIcon)<p title="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" style="margin:1px 0;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">リンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンク</p></a><span style="color:#ccc;">筆者:</span><a href="{{route('adminTop')}}">名前テスト</a></li>
-                        <li style="border-bottom:1px solid #ccc;padding-bottom:2px;margin-bottom:5px;"><a href="{{route('adminTop')}}">11月11日(newIcon)<p title="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" style="margin:1px 0;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">リンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンク</p></a><span style="color:#ccc;">筆者:</span><a href="{{route('adminTop')}}">名前テスト</a></li>
-                        <li style="border-bottom:1px solid #ccc;padding-bottom:2px;margin-bottom:5px;"><a href="{{route('adminTop')}}">11月11日(newIcon)<p title="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" style="margin:1px 0;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">リンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンク</p></a><span style="color:#ccc;">筆者:</span><a href="{{route('adminTop')}}">名前テスト</a></li>
-                        <li style="border-bottom:1px solid #ccc;padding-bottom:2px;margin-bottom:5px;"><a href="{{route('adminTop')}}">11月11日(newIcon)<p title="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" style="margin:1px 0;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">リンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンク</p></a><span style="color:#ccc;">筆者:</span><a href="{{route('adminTop')}}">名前テスト</a></li>
+                        <li>
+                            <a href=""><span class="side_navi_date">11月11日(newIcon)</span>
+                                <p title="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" class="side_navi_title">
+                                    リンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンク
+                                </p>
+                            </a>
+                            <div class="side_navi_auther">
+                                <span style="color:#ccc;">筆者:</span>
+                                <a href="{{ route('list.onlyAuther', ['auther_id' => 0]) }}">名前テスト</a>
+                            </div>
+                            <div class="side_navi_category">
+                                <span style="color:#ccc;">カテゴリー:</span>
+                                <a href="{{ route('list.bothAutherAndCategory', ['auther_id' => 0,'category_id' => 0]) }}">名前テスト</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href=""><span class="side_navi_date">11月11日(newIcon)</span>
+                                <p title="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" class="side_navi_title">
+                                    リンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンク
+                                </p>
+                            </a>
+                            <div class="side_navi_auther">
+                                <span style="color:#ccc;">筆者:</span>
+                                <a href="{{ route('list.onlyAuther', ['auther_id' => 0]) }}">名前テスト</a>
+                            </div>
+                            <div class="side_navi_category">
+                                <span style="color:#ccc;">カテゴリー:</span>
+                                <a href="{{ route('list.bothAutherAndCategory', ['auther_id' => 0,'category_id' => 0]) }}">名前テスト</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href=""><span class="side_navi_date">11月11日(newIcon)</span>
+                                <p title="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" class="side_navi_title">
+                                    リンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンク
+                                </p>
+                            </a>
+                            <div class="side_navi_auther">
+                                <span style="color:#ccc;">筆者:</span>
+                                <a href="{{ route('list.onlyAuther', ['auther_id' => 0]) }}">名前テスト</a>
+                            </div>
+                            <div class="side_navi_category">
+                                <span style="color:#ccc;">カテゴリー:</span>
+                                <a href="{{ route('list.bothAutherAndCategory', ['auther_id' => 0,'category_id' => 0]) }}">名前テスト</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href=""><span class="side_navi_date">11月11日(newIcon)</span>
+                                <p title="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" class="side_navi_title">
+                                    リンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンク
+                                </p>
+                            </a>
+                            <div class="side_navi_auther">
+                                <span style="color:#ccc;">筆者:</span>
+                                <a href="{{ route('list.onlyAuther', ['auther_id' => 0]) }}">名前テスト</a>
+                            </div>
+                            <div class="side_navi_category">
+                                <span style="color:#ccc;">カテゴリー:</span>
+                                <a href="{{ route('list.bothAutherAndCategory', ['auther_id' => 0,'category_id' => 0]) }}">名前テスト</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href=""><span class="side_navi_date">11月11日(newIcon)</span>
+                                <p title="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" class="side_navi_title">
+                                    リンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンク
+                                </p>
+                            </a>
+                            <div class="side_navi_auther">
+                                <span style="color:#ccc;">筆者:</span>
+                                <a href="{{ route('list.onlyAuther', ['auther_id' => 0]) }}">名前テスト</a>
+                            </div>
+                            <div class="side_navi_category">
+                                <span style="color:#ccc;">カテゴリー:</span>
+                                <a href="{{ route('list.bothAutherAndCategory', ['auther_id' => 0,'category_id' => 0]) }}">名前テスト</a>
+                            </div>
+                        </li>
                     </ul>
                 </div>
                 <div class="side_ranking">
                     <div class="side_title">ランキング</div>
                     <ul>
-                        <li><a href="{{route('adminTop')}}">Top</a></li>
+                        <li><a href="{{ route('list.onlyAuther', ['auther_id' => 0]) }}">Top</a></li>
                         <li><a href="{{route('articleList')}}">記事管理</a></li>
                         <li><a href="{{route('memberList')}}">会員管理</a></li>
                         <li><a href="{{route('inquiryList')}}">問い合わせ管理</a></li>

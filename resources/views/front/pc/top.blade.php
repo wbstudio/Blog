@@ -28,7 +28,7 @@
                 テストテキストテストテキストテストテキストテストテキスト
             </p>
         </div>
-        <div class="to_blogger_category"><a href="">名前テストのカテゴリー一覧へ</a></div>
+        <div class="to_blogger_category"><a href="{{ route('list.onlyAuther', ['auther_id' => 0]) }}">名前テストのカテゴリー一覧へ</a></div>
     </div>
     <div class="blogger_even">
     <img src="{{ asset('images/front/top_link/face_test.png') }}" class="">
@@ -47,7 +47,7 @@
                 テストテキストテストテキストテストテキストテストテキスト
             </p>
         </div>
-        <div class="to_blogger_category"><a href="">名前テストのカテゴリー一覧へ</a></div>
+        <div class="to_blogger_category"><a href="{{ route('list.onlyAuther', ['auther_id' => 0]) }}">名前テストのカテゴリー一覧へ</a></div>
     </div>
     <div class="blogger_odd">
         <img src="{{ asset('images/front/top_link/face_test.png') }}" class="">
@@ -66,7 +66,7 @@
                 テストテキストテストテキストテストテキストテストテキスト
             </p>
         </div>
-        <div class="to_blogger_category"><a href="">名前テストのカテゴリー一覧へ</a></div>
+        <div class="to_blogger_category"><a href="{{ route('list.onlyAuther', ['auther_id' => 0]) }}">名前テストのカテゴリー一覧へ</a></div>
     </div>
     <div class="blogger_even">
     <img src="{{ asset('images/front/top_link/face_test.png') }}" class="">
@@ -85,7 +85,7 @@
                 テストテキストテストテキストテストテキストテストテキスト
             </p>
         </div>
-        <div class="to_blogger_category"><a href="">名前テストのカテゴリー一覧へ</a></div>
+        <div class="to_blogger_category"><a href="{{ route('list.onlyAuther', ['auther_id' => 0]) }}">名前テストのカテゴリー一覧へ</a></div>
     </div>
 
     </section>
