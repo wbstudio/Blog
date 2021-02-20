@@ -46,7 +46,7 @@
                 <div class="side_news">
                     <div class="side_title">news</div>
                     <ul>
-                        <li><a href="{{route('adminTop')}}">Top</a></li>
+                        <li><a href="{{route('adminTop')}}">11月11日(newIcon)<p>リンクリンクリンクリンク</p></a></li>
                         <li><a href="{{route('articleList')}}">記事管理</a></li>
                         <li><a href="{{route('memberList')}}">会員管理</a></li>
                         <li><a href="{{route('inquiryList')}}">問い合わせ管理</a></li>
