@@ -46,7 +46,7 @@
                     <div class="side_title">news</div>
                     <ul>
                         <li>
-                            <a href=""><span class="side_navi_date">11月11日(newIcon)</span>
+                            <a href="{{ route('detail.article', ['article_id' => 0]) }}"><span class="side_navi_date">11月11日(newIcon)</span>
                                 <p title="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" class="side_navi_title">
                                     リンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンク
                                 </p>
@@ -61,7 +61,7 @@
                             </div>
                         </li>
                         <li>
-                            <a href=""><span class="side_navi_date">11月11日(newIcon)</span>
+                            <a href="{{ route('detail.article', ['article_id' => 0]) }}"><span class="side_navi_date">11月11日(newIcon)</span>
                                 <p title="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" class="side_navi_title">
                                     リンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンク
                                 </p>
@@ -76,7 +76,7 @@
                             </div>
                         </li>
                         <li>
-                            <a href=""><span class="side_navi_date">11月11日(newIcon)</span>
+                            <a href="{{ route('detail.article', ['article_id' => 0]) }}"><span class="side_navi_date">11月11日(newIcon)</span>
                                 <p title="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" class="side_navi_title">
                                     リンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンク
                                 </p>
@@ -91,7 +91,7 @@
                             </div>
                         </li>
                         <li>
-                            <a href=""><span class="side_navi_date">11月11日(newIcon)</span>
+                            <a href="{{ route('detail.article', ['article_id' => 0]) }}"><span class="side_navi_date">11月11日(newIcon)</span>
                                 <p title="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" class="side_navi_title">
                                     リンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンク
                                 </p>
@@ -106,7 +106,7 @@
                             </div>
                         </li>
                         <li>
-                            <a href=""><span class="side_navi_date">11月11日(newIcon)</span>
+                            <a href="{{ route('detail.article', ['article_id' => 0]) }}"><span class="side_navi_date">11月11日(newIcon)</span>
                                 <p title="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" class="side_navi_title">
                                     リンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンク
                                 </p>
@@ -126,7 +126,7 @@
                     <div class="side_title">topics</div>
                     <ul>
                         <li>
-                            <a href=""><span class="side_navi_date">11月11日(newIcon)</span>
+                            <a href="{{ route('detail.article', ['article_id' => 0]) }}"><span class="side_navi_date">11月11日(newIcon)</span>
                                 <p title="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" class="side_navi_title">
                                     リンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンク
                                 </p>
@@ -141,7 +141,7 @@
                             </div>
                         </li>
                         <li>
-                            <a href=""><span class="side_navi_date">11月11日(newIcon)</span>
+                            <a href="{{ route('detail.article', ['article_id' => 0]) }}"><span class="side_navi_date">11月11日(newIcon)</span>
                                 <p title="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" class="side_navi_title">
                                     リンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンク
                                 </p>
@@ -156,7 +156,7 @@
                             </div>
                         </li>
                         <li>
-                            <a href=""><span class="side_navi_date">11月11日(newIcon)</span>
+                            <a href="{{ route('detail.article', ['article_id' => 0]) }}"><span class="side_navi_date">11月11日(newIcon)</span>
                                 <p title="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" class="side_navi_title">
                                     リンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンク
                                 </p>
@@ -171,7 +171,7 @@
                             </div>
                         </li>
                         <li>
-                            <a href=""><span class="side_navi_date">11月11日(newIcon)</span>
+                            <a href="{{ route('detail.article', ['article_id' => 0]) }}"><span class="side_navi_date">11月11日(newIcon)</span>
                                 <p title="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" class="side_navi_title">
                                     リンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンク
                                 </p>
@@ -186,7 +186,7 @@
                             </div>
                         </li>
                         <li>
-                            <a href=""><span class="side_navi_date">11月11日(newIcon)</span>
+                            <a href="{{ route('detail.article', ['article_id' => 0]) }}"><span class="side_navi_date">11月11日(newIcon)</span>
                                 <p title="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" class="side_navi_title">
                                     リンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンク
                                 </p>
