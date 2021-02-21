@@ -20,7 +20,7 @@ if (preg_match("/iPhone|iPod|Android.*Mobile|Windows.*Phone/", $_SERVER['HTTP_US
 }
 define("USER_AGENT", $user_agent);
 //非会員閲覧可能ページ
-Route::get('/', [\App\Http\Controllers\Front\TopController::class, 'index']);
+Route::get('/', [\App\Http\Controllers\Front\TopController::class, 'index'])->name('topPage');
 Route::get('/category', [\App\Http\Controllers\Front\ListController::class, 'categoryList'])->name('categoryList');
 Route::get('/auther/{auther_id}', [\App\Http\Controllers\Front\ListController::class, 'onlyAuther'])->name('list.onlyAuther');
 Route::get('/category/{category_id}', [\App\Http\Controllers\Front\ListController::class, 'onlyCategory'])->name('list.onlyCategory');
