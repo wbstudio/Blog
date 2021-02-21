@@ -22,8 +22,11 @@
                         <input type="text" name="search_word">
                         <input type="image" class="search" src="{{ asset('images/front/icon_search_button.svg') }}">
                     </form>
-                    <a href="" class="login">ログイン</a>
-                    <a href="" class="regist_member">新規登録</a>
+                    @auth
+                    @else
+                        <a href="{{ route('login') }}" class="login">ログイン</a>
+                        <a href="{{ route('register') }}" class="regist_member">新規登録</a>
+                    @endauth
                 </div>
             </div>
             <div class="header_second_area">
