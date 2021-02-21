@@ -5,7 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=yes">
         <link rel="stylesheet" href="{{ asset('css/front/pc/common.css') }}">
         <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link rel="stylesheet" id="paddle-fonts-css" href="https://fonts.googleapis.com/css?family=Montserrat%3A400%2C700" type="text/css" media="all">        @yield('head')
+        <link rel="stylesheet" id="paddle-fonts-css" href="https://fonts.googleapis.com/css?family=Montserrat%3A400%2C700" type="text/css" media="all">
+        @yield('head')
     </head>
     <body>
         <header>
