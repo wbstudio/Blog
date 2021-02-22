@@ -89,7 +89,7 @@ header{
 *main
 ***************/
 main{
-    width:1024px;
+    max-width:1024px;
     margin: 87px auto 0;
 }
 /**sideNavi*/
@@ -154,6 +154,17 @@ main{
     width:794px;
     padding: 30px 25px 30px 17px;
     min-height: 1800px;
+}
+
+/**h2*/
+
+h2{
+    color: var(--main-color);
+    font-size: 65px;
+    font-family: Montserrat;
+    margin: 0px 0px 40px;
+    padding-left:15px;
+    background: #f2f2f2;
 }
 
 

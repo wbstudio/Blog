@@ -1,0 +1,116 @@
+:root {
+    --auther-color: #404040;
+}
+
+/**Introduction*/
+#blogger .blogger{
+    padding-left: 20px;
+    margin: 10px 0 0px;
+    color: var(--auther-color);
+}
+#blogger .blogger img.introduction{
+    border-radius: 50%;
+    width:135px;
+    height: 135px;
+    align: right;
+    margin-left: 18px;
+}
+
+#blogger .blogger .blogger_name{
+    font-weight: bold;
+    font-family: Montserrat;
+    float: left;
+    position: relative;
+    font-size: 36px;
+    text-align: left;
+    width: 594px;
+    border-bottom: 3px solid var(--auther-color);
+    line-height: 1em;
+    top: 12px;
+    padding-left: 10px;
+    z-index: 1;
+}
+
+#blogger .blogger .blogger_explain{
+    width: 600px;
+    position: relative;
+    top: -74px;
+}
+
+#blogger .blogger_explain_title{
+    font-family: Montserrat;
+    padding-bottom: 3px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#blogger .blogger_explain_detail{
+    font-size: 12px;
+    margin: 0 0 12px;
+    font-weight: 600;
+}
+
+
+#blogger .to_blogger_category{
+    text-align: center;
+    position: relative;
+    top: -55px;
+}
+
+#blogger .pick_up{
+    position: relative;
+    top:-60px;
+}
+
+#blogger .pick_up a{
+    text-decoration: none;
+}
+
+#blogger .pick_up a:hover{
+    text-decoration: underline;
+}
+
+#blogger h3{
+    text-align: center;
+    border-bottom: 1px solid #404040;
+}
+
+
+
+
+  /****************************
+*
+**iPad(1023px以下)用-レスポンシブ
+*
+****************************/
+
+@media screen and (max-width: 1023px){
+
+    /*
+    Blogger
+    */
+    #blogger .blogger {
+        margin: 40px 0 0px;
+    }
+
+    #blogger .blogger img {
+        width: 20%;
+        height: auto;
+    }
+
+    #blogger .blogger img {
+        margin-left: 2%;
+    }
+
+    #blogger .blogger .blogger_name{
+        font-size: 34px;
+        width: 75%;
+        line-height: 1.3em;
+    }
+
+    #blogger .blogger .blogger_explain {
+        width: 76%;
+        top: -30px;
+    }
+
+}/*min-width: 481px*/
