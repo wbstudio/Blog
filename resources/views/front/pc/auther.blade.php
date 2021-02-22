@@ -131,7 +131,12 @@
                 <script>
                     const mySwiper = new Swiper('.swiper-container', {
                         // loop: true,
-                        slidesPerView:4,
+                        slidesPerView:3,
+                        breakpoints: {
+                            1023: {
+                            slidesPerView: 4,
+                            },
+                        },
                         autoplay: {
                             delay: 3000,
                             disableOnInteraction: false,

@@ -68,3 +68,25 @@
     color:#ccc;
 }
 
+
+  /****************************
+*
+**iPad(1023px以下)用-レスポンシブ
+*
+****************************/
+
+@media screen and (max-width: 1023px){
+    .patern_01 img{
+        width: 98%;
+        height: 146px;
+    }
+
+    .patern_01 .swiper-button-prev{
+        left: 200px;
+    }
+    
+    .patern_01 .swiper-button-next{
+        right: 200px;
+    }
+    
+}/*min-width: 481px*/
