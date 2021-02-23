@@ -90,13 +90,156 @@
 
     </section>
 
+    <div class="section_separation"></div>
+
     <section id="category">
     <h2>Category</h2>
+    <div class="category_inner">
+        <div class="category_mass">
+            <div class="category_title_area">
+                <div class="to_category_link">
+                    <a href="{{ route('list.onlyCategory', ['category_id' => 0]) }}">
+                        category001
+                        <img src="{{ asset('images/front/icon_link.svg') }}">
+                    </a>
+                </div>
+                <div class="category_title">
+                    <a href="{{ route('list.onlyCategory', ['category_id' => 0]) }}">category001</a>
+                </div>
+            </div>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="single_category_title"><a href="{{ route('list.bothAutherAndCategory', ['auther_id' => 0,'category_id' => 0]) }}">カテゴリー著者絞り</a></td>
+                        <td class="single_category_auther"><a href="{{ route('list.onlyAuther', ['auther_id' => 0]) }}">名前テスト</a></td>
+                        <td class="single_category_update"><span class="last_title">最終更新日</span><span class="last_date">2020/00/00</span></td>
+                    </tr>
+                    <tr>
+                        <td class="single_category_title"><a href="{{ route('list.bothAutherAndCategory', ['auther_id' => 0,'category_id' => 0]) }}">カテゴリー著者絞り</a></td>
+                        <td class="single_category_auther"><a href="{{ route('list.onlyAuther', ['auther_id' => 0]) }}">名前テスト</a></td>
+                        <td class="single_category_update"><span class="last_title">最終更新日</span><span class="last_date">2020/00/00</span></td>
+                    </tr>
+                </tbody> 
+            </table>
+        </div>
+        <div class="category_mass">
+            <div class="category_title_area">
+                <div class="to_category_link">
+                    <a href="{{ route('list.onlyCategory', ['category_id' => 0]) }}">
+                        category001
+                        <img src="{{ asset('images/front/icon_link.svg') }}">
+                    </a>
+                </div>
+                <div class="category_title">
+                    <a href="{{ route('list.onlyCategory', ['category_id' => 0]) }}">category001</a>
+                </div>
+            </div>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="single_category_title"><a href="{{ route('list.bothAutherAndCategory', ['auther_id' => 0,'category_id' => 0]) }}">カテゴリー著者絞り</a></td>
+                        <td class="single_category_auther"><a href="{{ route('list.onlyAuther', ['auther_id' => 0]) }}">名前テスト</a></td>
+                        <td class="single_category_update"><span class="last_title">最終更新日</span><span class="last_date">2020/00/00</span></td>
+                    </tr>
+                    <tr>
+                        <td class="single_category_title"><a href="{{ route('list.bothAutherAndCategory', ['auther_id' => 0,'category_id' => 0]) }}">カテゴリー著者絞り</a></td>
+                        <td class="single_category_auther"><a href="{{ route('list.onlyAuther', ['auther_id' => 0]) }}">名前テスト</a></td>
+                        <td class="single_category_update"><span class="last_title">最終更新日</span><span class="last_date">2020/00/00</span></td>
+                    </tr>
+                </tbody> 
+            </table>
+        </div>
+        <div class="category_mass">
+            <div class="category_title_area">
+                <div class="to_category_link">
+                    <a href="{{ route('list.onlyCategory', ['category_id' => 0]) }}">
+                        category001
+                        <img src="{{ asset('images/front/icon_link.svg') }}">
+                    </a>
+                </div>
+                <div class="category_title">
+                    <a href="{{ route('list.onlyCategory', ['category_id' => 0]) }}">category001</a>
+                </div>
+            </div>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="single_category_title"><a href="{{ route('list.bothAutherAndCategory', ['auther_id' => 0,'category_id' => 0]) }}">カテゴリー著者絞り</a></td>
+                        <td class="single_category_auther"><a href="{{ route('list.onlyAuther', ['auther_id' => 0]) }}">名前テスト</a></td>
+                        <td class="single_category_update"><span class="last_title">最終更新日</span><span class="last_date">2020/00/00</span></td>
+                    </tr>
+                    <tr>
+                        <td class="single_category_title"><a href="{{ route('list.bothAutherAndCategory', ['auther_id' => 0,'category_id' => 0]) }}">カテゴリー著者絞り</a></td>
+                        <td class="single_category_auther"><a href="{{ route('list.onlyAuther', ['auther_id' => 0]) }}">名前テスト</a></td>
+                        <td class="single_category_update"><span class="last_title">最終更新日</span><span class="last_date">2020/00/00</span></td>
+                    </tr>
+                </tbody> 
+            </table>
+        </div>
+        <div class="category_mass">
+            <div class="category_title_area">
+                <div class="to_category_link">
+                    <a href="{{ route('list.onlyCategory', ['category_id' => 0]) }}">
+                        category001
+                        <img src="{{ asset('images/front/icon_link.svg') }}">
+                    </a>
+                </div>
+                <div class="category_title">
+                    <a href="{{ route('list.onlyCategory', ['category_id' => 0]) }}">category001</a>
+                </div>
+            </div>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="single_category_title"><a href="{{ route('list.bothAutherAndCategory', ['auther_id' => 0,'category_id' => 0]) }}">カテゴリー著者絞り</a></td>
+                        <td class="single_category_auther"><a href="{{ route('list.onlyAuther', ['auther_id' => 0]) }}">名前テスト</a></td>
+                        <td class="single_category_update"><span class="last_title">最終更新日</span><span class="last_date">2020/00/00</span></td>
+                    </tr>
+                    <tr>
+                        <td class="single_category_title"><a href="{{ route('list.bothAutherAndCategory', ['auther_id' => 0,'category_id' => 0]) }}">カテゴリー著者絞り</a></td>
+                        <td class="single_category_auther"><a href="{{ route('list.onlyAuther', ['auther_id' => 0]) }}">名前テスト</a></td>
+                        <td class="single_category_update"><span class="last_title">最終更新日</span><span class="last_date">2020/00/00</span></td>
+                    </tr>
+                </tbody> 
+            </table>
+        </div>
+        <div class="category_mass">
+            <div class="category_title_area">
+                <div class="to_category_link">
+                    <a href="{{ route('list.onlyCategory', ['category_id' => 0]) }}">
+                        category001
+                        <img src="{{ asset('images/front/icon_link.svg') }}">
+                    </a>
+                </div>
+                <div class="category_title">
+                    <a href="{{ route('list.onlyCategory', ['category_id' => 0]) }}">category001</a>
+                </div>
+            </div>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="single_category_title"><a href="{{ route('list.bothAutherAndCategory', ['auther_id' => 0,'category_id' => 0]) }}">カテゴリー著者絞り</a></td>
+                        <td class="single_category_auther"><a href="{{ route('list.onlyAuther', ['auther_id' => 0]) }}">名前テスト</a></td>
+                        <td class="single_category_update"><span class="last_title">最終更新日</span><span class="last_date">2020/00/00</span></td>
+                    </tr>
+                    <tr>
+                        <td class="single_category_title"><a href="{{ route('list.bothAutherAndCategory', ['auther_id' => 0,'category_id' => 0]) }}">カテゴリー著者絞り</a></td>
+                        <td class="single_category_auther"><a href="{{ route('list.onlyAuther', ['auther_id' => 0]) }}">名前テスト</a></td>
+                        <td class="single_category_update"><span class="last_title">最終更新日</span><span class="last_date">2020/00/00</span></td>
+                    </tr>
+                </tbody> 
+            </table>
+        </div>
+    </div>
     </section>
+
+    <div class="section_separation"></div>
 
     <section id="how_to">
     <h2>How to use</h2>
     </section>
+
+    <div class="section_separation"></div>
 
     <section id="inquiry">
     <h2>問い合わせ</h2>
