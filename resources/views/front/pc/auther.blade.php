@@ -173,56 +173,10 @@
                     <a href="{{ route('list.bothAutherAndCategory', ['auther_id' => 0,'category_id' => 0]) }}">category001</a>
                 </div>
             </div>
-            <div class="category_mass_inner">
-                <div class="category_mass_inner_single">
-                    <div class="category_mass_inner_contents">
-                        <a href="">
-                            <img src="{{ asset('images/front/top_link/image_190_150.png') }}" class="">
-                            <div class="title">01タイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテスト</div>
-                        </a>
-                        <div class="update_date">更新日:2021/00/00</div>
-                    </div>
-                </div>
-                <div class="category_mass_inner_single">
-                    <div class="category_mass_inner_contents">
-                        <a href="">
-                            <img src="{{ asset('images/front/top_link/image_190_150.png') }}" class="">
-                            <div class="title">01タイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテスト</div>
-                        </a>
-                        <div class="update_date">更新日:2021/00/00</div>
-                    </div>
-                </div>
-                <div class="category_mass_inner_single">
-                    <div class="category_mass_inner_contents">
-                        <a href="">
-                            <img src="{{ asset('images/front/top_link/image_190_150.png') }}" class="">
-                            <div class="title">01タイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテスト</div>
-                        </a>
-                        <div class="update_date">更新日:2021/00/00</div>
-                    </div>
-                </div>
-                <div class="category_mass_inner_single">
-                    <div class="category_mass_inner_contents">
-                        <a href="">
-                            <img src="{{ asset('images/front/top_link/image_190_150.png') }}" class="">
-                            <div class="title">01タイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテスト</div>
-                        </a>
-                        <div class="update_date">更新日:2021/00/00</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="category_mass">
-            <div class="category_title_area">
-                <div class="to_category_link">
-                    <a href="{{ route('list.bothAutherAndCategory', ['auther_id' => 0,'category_id' => 0]) }}">
-                        category001
-                        <img src="{{ asset('images/front/icon_link.svg') }}">
-                    </a>
-                </div>
-                <div class="category_title">
-                    <a href="{{ route('list.bothAutherAndCategory', ['auther_id' => 0,'category_id' => 0]) }}">category001</a>
-                </div>
+            <div class="category_explain">
+                <p>
+                    カテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明text
+                </p>
             </div>
             <div class="category_mass_inner">
                 <div class="category_mass_inner_single">
@@ -275,56 +229,10 @@
                     <a href="{{ route('list.bothAutherAndCategory', ['auther_id' => 0,'category_id' => 0]) }}">category001</a>
                 </div>
             </div>
-            <div class="category_mass_inner">
-                <div class="category_mass_inner_single">
-                    <div class="category_mass_inner_contents">
-                        <a href="">
-                            <img src="{{ asset('images/front/top_link/image_190_150.png') }}" class="">
-                            <div class="title">01タイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテスト</div>
-                        </a>
-                        <div class="update_date">更新日:2021/00/00</div>
-                    </div>
-                </div>
-                <div class="category_mass_inner_single">
-                    <div class="category_mass_inner_contents">
-                        <a href="">
-                            <img src="{{ asset('images/front/top_link/image_190_150.png') }}" class="">
-                            <div class="title">01タイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテスト</div>
-                        </a>
-                        <div class="update_date">更新日:2021/00/00</div>
-                    </div>
-                </div>
-                <div class="category_mass_inner_single">
-                    <div class="category_mass_inner_contents">
-                        <a href="">
-                            <img src="{{ asset('images/front/top_link/image_190_150.png') }}" class="">
-                            <div class="title">01タイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテスト</div>
-                        </a>
-                        <div class="update_date">更新日:2021/00/00</div>
-                    </div>
-                </div>
-                <div class="category_mass_inner_single">
-                    <div class="category_mass_inner_contents">
-                        <a href="">
-                            <img src="{{ asset('images/front/top_link/image_190_150.png') }}" class="">
-                            <div class="title">01タイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテスト</div>
-                        </a>
-                        <div class="update_date">更新日:2021/00/00</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="category_mass">
-            <div class="category_title_area">
-                <div class="to_category_link">
-                    <a href="{{ route('list.bothAutherAndCategory', ['auther_id' => 0,'category_id' => 0]) }}">
-                        category001
-                        <img src="{{ asset('images/front/icon_link.svg') }}">
-                    </a>
-                </div>
-                <div class="category_title">
-                    <a href="{{ route('list.bothAutherAndCategory', ['auther_id' => 0,'category_id' => 0]) }}">category001</a>
-                </div>
+            <div class="category_explain">
+                <p>
+                    カテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明text
+                </p>
             </div>
             <div class="category_mass_inner">
                 <div class="category_mass_inner_single">
@@ -376,6 +284,123 @@
                 <div class="category_title">
                     <a href="{{ route('list.bothAutherAndCategory', ['auther_id' => 0,'category_id' => 0]) }}">category001</a>
                 </div>
+            </div>
+            <div class="category_explain">
+                <p>
+                    カテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明text
+                </p>
+            </div>
+            <div class="category_mass_inner">
+                <div class="category_mass_inner_single">
+                    <div class="category_mass_inner_contents">
+                        <a href="">
+                            <img src="{{ asset('images/front/top_link/image_190_150.png') }}" class="">
+                            <div class="title">01タイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテスト</div>
+                        </a>
+                        <div class="update_date">更新日:2021/00/00</div>
+                    </div>
+                </div>
+                <div class="category_mass_inner_single">
+                    <div class="category_mass_inner_contents">
+                        <a href="">
+                            <img src="{{ asset('images/front/top_link/image_190_150.png') }}" class="">
+                            <div class="title">01タイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテスト</div>
+                        </a>
+                        <div class="update_date">更新日:2021/00/00</div>
+                    </div>
+                </div>
+                <div class="category_mass_inner_single">
+                    <div class="category_mass_inner_contents">
+                        <a href="">
+                            <img src="{{ asset('images/front/top_link/image_190_150.png') }}" class="">
+                            <div class="title">01タイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテスト</div>
+                        </a>
+                        <div class="update_date">更新日:2021/00/00</div>
+                    </div>
+                </div>
+                <div class="category_mass_inner_single">
+                    <div class="category_mass_inner_contents">
+                        <a href="">
+                            <img src="{{ asset('images/front/top_link/image_190_150.png') }}" class="">
+                            <div class="title">01タイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテスト</div>
+                        </a>
+                        <div class="update_date">更新日:2021/00/00</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="category_mass">
+            <div class="category_title_area">
+                <div class="to_category_link">
+                    <a href="{{ route('list.bothAutherAndCategory', ['auther_id' => 0,'category_id' => 0]) }}">
+                        category001
+                        <img src="{{ asset('images/front/icon_link.svg') }}">
+                    </a>
+                </div>
+                <div class="category_title">
+                    <a href="{{ route('list.bothAutherAndCategory', ['auther_id' => 0,'category_id' => 0]) }}">category001</a>
+                </div>
+            </div>
+            <div class="category_explain">
+                <p>
+                    カテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明text
+                </p>
+            </div>
+            <div class="category_mass_inner">
+                <div class="category_mass_inner_single">
+                    <div class="category_mass_inner_contents">
+                        <a href="">
+                            <img src="{{ asset('images/front/top_link/image_190_150.png') }}" class="">
+                            <div class="title">01タイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテスト</div>
+                        </a>
+                        <div class="update_date">更新日:2021/00/00</div>
+                    </div>
+                </div>
+                <div class="category_mass_inner_single">
+                    <div class="category_mass_inner_contents">
+                        <a href="">
+                            <img src="{{ asset('images/front/top_link/image_190_150.png') }}" class="">
+                            <div class="title">01タイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテスト</div>
+                        </a>
+                        <div class="update_date">更新日:2021/00/00</div>
+                    </div>
+                </div>
+                <div class="category_mass_inner_single">
+                    <div class="category_mass_inner_contents">
+                        <a href="">
+                            <img src="{{ asset('images/front/top_link/image_190_150.png') }}" class="">
+                            <div class="title">01タイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテスト</div>
+                        </a>
+                        <div class="update_date">更新日:2021/00/00</div>
+                    </div>
+                </div>
+                <div class="category_mass_inner_single">
+                    <div class="category_mass_inner_contents">
+                        <a href="">
+                            <img src="{{ asset('images/front/top_link/image_190_150.png') }}" class="">
+                            <div class="title">01タイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテスト</div>
+                        </a>
+                        <div class="update_date">更新日:2021/00/00</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="category_mass">
+            <div class="category_title_area">
+                <div class="to_category_link">
+                    <a href="{{ route('list.bothAutherAndCategory', ['auther_id' => 0,'category_id' => 0]) }}">
+                        category001
+                        <img src="{{ asset('images/front/icon_link.svg') }}">
+                    </a>
+                </div>
+                <div class="category_title">
+                    <a href="{{ route('list.bothAutherAndCategory', ['auther_id' => 0,'category_id' => 0]) }}">category001</a>
+                </div>
+            </div>
+            <div class="category_explain">
+                <p>
+                    カテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明text
+                </p>
             </div>
             <div class="category_mass_inner">
                 <div class="category_mass_inner_single">

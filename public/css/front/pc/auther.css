@@ -123,6 +123,10 @@ Category
     vertical-align: middle;
 }
 
+#auther_page #category .category_explain{
+    font-size: 12px;
+}
+
 #auther_page #category .category_mass_inner{
     display: flex;
     margin-top: 10px;
