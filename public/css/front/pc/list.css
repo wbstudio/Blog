@@ -287,6 +287,24 @@ a:hover{
     bottom: 0;
 }
 
+
+.category_list_inner{
+    margin: 10px 0 120px;
+}
+
+.category_list_inner table{
+    padding: 10px 20px;
+}
+
+.category_list_inner .category_title_area{
+    border-bottom: 3px solid var(--main-color);
+}
+
+.category_list_inner .category_mass{
+    margin-bottom: 0;
+}
+
+
   /****************************
 *
 **iPad(1023px以下)用-レスポンシブ
