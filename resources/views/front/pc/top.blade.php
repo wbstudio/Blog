@@ -242,7 +242,7 @@
     <div class="section_separation"></div>
 
     <section id="inquiry">
-    <h2>問い合わせ</h2>
+    <h2 class="ja">問い合わせ</h2>
     </section>
 
 </div>

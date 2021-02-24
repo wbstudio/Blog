@@ -42,7 +42,7 @@
 
         <main>
         <div id=side_navi class="content">
-                <div class="side_news">
+            <div class="side_news">
                     <div class="side_title">news</div>
                     <ul>
                         <li>
@@ -121,8 +121,8 @@
                             </div>
                         </li>
                     </ul>
-                </div>
-                <div class="side_recently">
+            </div>
+            <div class="side_recently">
                     <div class="side_title">topics</div>
                     <ul>
                         <li>
@@ -201,8 +201,8 @@
                             </div>
                         </li>
                     </ul>
-                </div>
-                <div class="side_ranking">
+            </div>
+            <div class="side_ranking">
                     <div class="side_title">ランキング</div>
                     <ul>
                         <li><a href="{{ route('list.onlyAuther', ['auther_id' => 0]) }}">Top</a></li>
@@ -211,11 +211,11 @@
                         <li><a href="{{route('inquiryList')}}">問い合わせ管理</a></li>
                         <li><a href="{{route('tagList')}}">タグ管理</a></li>
                     </ul>
-                </div>
             </div>
-            <div id="content" class="content">
-                @yield('content')
-            </div>
+        </div>
+        <div id="content" class="content">
+            @yield('content')
+        </div>
         </main>
         
         <footer>
