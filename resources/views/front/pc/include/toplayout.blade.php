@@ -427,7 +427,7 @@
                     <div class="snslink_area">
                         <a href=""><img src="{{ asset('images/front/Facebook_black.svg') }}"></a>
                         <a href=""><img src="{{ asset('images/front/Instagram_black.svg') }}"></a>
-                        <a href=""><img src="{{ asset('images/front/twitter_black.svg') }}"></a>
+                        <a href=""><img src="{{ asset('images/front/Twitter_black.svg') }}"></a>
                         <a href=""><img src="{{ asset('images/front/Youtube_black.svg') }}"></a>
                         <div class="cheer">
                             SNSもやっています。フォロー・＝＝＝よろしくお願いします。
