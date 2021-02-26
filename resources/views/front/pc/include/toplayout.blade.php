@@ -425,10 +425,10 @@
                         <a href=""><img src="{{ asset('images/front/top_link/logo_240_120.png') }}"></a>
                     </div>
                     <div class="snslink_area">
-                        <a href=""><img src="{{ asset('images/front/Facebook_Black.svg') }}"></a>
-                        <a href=""><img src="{{ asset('images/front/Instagram_Black.svg') }}"></a>
-                        <a href=""><img src="{{ asset('images/front/twitter_Black.svg') }}"></a>
-                        <a href=""><img src="{{ asset('images/front/Youtube_Black.svg') }}"></a>
+                        <a href=""><img src="{{ asset('images/front/Facebook_black.svg') }}"></a>
+                        <a href=""><img src="{{ asset('images/front/Instagram_black.svg') }}"></a>
+                        <a href=""><img src="{{ asset('images/front/twitter_black.svg') }}"></a>
+                        <a href=""><img src="{{ asset('images/front/Youtube_black.svg') }}"></a>
                         <div class="cheer">
                             SNSもやっています。フォロー・＝＝＝よろしくお願いします。
                         </div>
