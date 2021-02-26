@@ -355,7 +355,89 @@
         </div>
         
         <footer>
-            new-blog管理画面
+            <div class="footter_iiner">
+                <div class="site_title_area">
+                    <a href="{{ route('topPage') }}">
+                        <img src="{{ asset('images/front/test_logo.png') }}">
+                    </a>
+                </div>
+                <div class="site_contents_area">
+                    <div class="site_contents_blog">
+                        <h3>Blog</h3>
+                        <div class="footer_blog_area">
+                            <div class="blog_auther">
+                                <h4><a href="">テスト名前</a></h4>
+                                <ul>
+                                    <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
+                                    <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
+                                    <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
+                                    <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
+                                    <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
+                                </ul>
+                            </div>
+                            <div class="blog_auther">
+                                <h4><a href="">テスト名前</a></h4>
+                                <ul>
+                                    <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
+                                    <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
+                                    <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
+                                    <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
+                                    <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
+                                </ul>
+                            </div>
+                            <div class="blog_auther">
+                                <h4><a href="">テスト名前</a></h4>
+                                <ul>
+                                    <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
+                                    <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
+                                    <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
+                                    <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
+                                    <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
+                                </ul>
+                            </div>
+                            <div class="blog_auther">
+                                <h4><a href="">テスト名前</a></h4>
+                                <ul>
+                                    <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
+                                    <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
+                                    <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
+                                    <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
+                                    <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
+                                </ul>
+                            </div>
+                            <div class="blog_auther">
+                                <h4><a href="">テスト名前</a></h4>
+                                <ul>
+                                    <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
+                                    <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
+                                    <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
+                                    <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
+                                    <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="anothersite_link_area">
+                    <div class="wblink_area">
+                        <a href=""><img src="{{ asset('images/front/top_link/logo_240_120.png') }}"></a>
+                    </div>
+                    <div class="snslink_area">
+                        <a href=""><img src="{{ asset('images/front/Facebook_Black.svg') }}"></a>
+                        <a href=""><img src="{{ asset('images/front/Instagram_Black.svg') }}"></a>
+                        <a href=""><img src="{{ asset('images/front/twitter_Black.svg') }}"></a>
+                        <a href=""><img src="{{ asset('images/front/Youtube_Black.svg') }}"></a>
+                        <div class="cheer">
+                            SNSもやっています。フォロー・＝＝＝よろしくお願いします。
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_base">
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            </div>
         </footer>
     </body>
 </html>

@@ -198,11 +198,71 @@ h2.ja{
 ***************/
 footer{
     width: 100%;
-    background: var(--main-bgcolor);
+    border-top: 1px solid var(--main-color);
 }
 
+footer .footter_iiner{
+    max-width: 1024px;
+    margin: 20px auto 50px;
+}
 
+footer .footer_blog_area{
+    text-align: center;
+    border-bottom: 1px solid var(--main-color);
 
+}
+
+footer .site_contents_blog h3{
+    margin-bottom: 0;
+}
+
+footer .footer_blog_area .blog_auther{
+    margin-top: 18px;
+    margin-bottom: 18px;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+footer .footer_blog_area h4{
+    text-align: left;
+    margin: 0;
+}
+
+footer .footer_blog_area ul{
+    list-style: none;
+    font-size: 12px;
+    padding: 0;
+    margin: 0;
+}
+
+footer .footer_blog_area ul li{
+    margin-bottom: 3px;
+}
+
+footer .anothersite_link_area{
+    text-align: center;
+}
+
+footer .wblink_area{
+    margin: 10px 0 20px;
+}
+
+footer .snslink_area a{
+    margin: 10px;
+}
+
+footer .cheer{
+    border-top: 1px solid var(--main-color);
+    font-size: 10px;
+    width: 350px;
+    margin: 0 auto;
+}
+
+footer .footer_base{
+    font-size: 12px;
+    text-align: center;
+    border-top: 1px solid var(--main-color);
+}
 
 /****************************
 *

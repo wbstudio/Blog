@@ -100,7 +100,9 @@ h3{
 }
 
 
-
+.swiper-slide a:hover{
+    opacity: .7;
+}
 
 /*
 Category
@@ -190,6 +192,10 @@ a:hover{
     color:var(--main-lightcolor);
 }
 
+.category_mass_inner_contents a:hover{
+    opacity:0.7;
+}
+
 .category_mass table{
     width: 94%;
     margin: 10px auto;
@@ -213,6 +219,10 @@ a:hover{
     border: 1px solid var(--main-lightcolor);
     padding: 3px;
     margin-bottom: 40px;
+}
+
+.article_list_mass:hover{
+    opacity: 0.7;
 }
 
 .article_list_explain_area{
