@@ -216,7 +216,7 @@ a:hover{
 /**article_list*/
 .article_list_mass{
     display: flex;
-    border: 1px solid var(--main-lightcolor);
+    border: 1px solid #dcdcdc;
     padding: 3px;
     margin-bottom: 40px;
 }
