@@ -125,7 +125,7 @@ a:hover{
 }
 
 .category_title_area{
-    border-bottom: 1px solid #dcdcdc;
+    border-bottom: 1px solid #404040;
 }
 
 .category_title{
@@ -216,7 +216,7 @@ a:hover{
 /**article_list*/
 .article_list_mass{
     display: flex;
-    border: 1px solid #dcdcdc;
+    border: 1px solid #404040;
     padding: 3px;
     margin-bottom: 40px;
 }
