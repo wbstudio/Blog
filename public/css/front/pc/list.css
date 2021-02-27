@@ -3,7 +3,7 @@
 
 h3{
     text-align: center;
-    border-bottom: 1px solid #404040;
+    border-bottom: 1px solid #dcdcdc;
 }
 
 
@@ -125,7 +125,7 @@ a:hover{
 }
 
 .category_title_area{
-    border-bottom: 1px solid #404040;
+    border-bottom: 1px solid #dcdcdc;
 }
 
 .category_title{
