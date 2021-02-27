@@ -20,7 +20,7 @@
     font-size: 36px;
     text-align: left;
     width: 594px;
-    border-bottom: 3px solid var(--main-color);
+    border-bottom: 3px double var(--main-color);
     line-height: 1em;
     top: 12px;
     padding-left: 10px;
