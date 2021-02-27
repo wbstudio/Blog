@@ -51,6 +51,7 @@ header{
 
 .header_btn_area a.regist_member{
     background: var(--main-bgcolor);
+    /* border: 1px solid var(--main-color); */
     border-radius: 10px;
     color: var(--main-color);
 }
@@ -123,7 +124,7 @@ main{
 }
 
 #side_navi ul li{
-    border-bottom: 1px solid #dcdcdc;
+    border-bottom: 1px solid var(--main-lightcolor);
     padding-bottom: 8px;
     margin-bottom: 8px;
 }
@@ -197,7 +198,7 @@ h2.ja{
 ***************/
 footer{
     width: 100%;
-    border-top: 1px solid #dcdcdc;
+    border-top: 1px solid var(--main-color);
 }
 
 footer .footter_iiner{
@@ -207,7 +208,7 @@ footer .footter_iiner{
 
 footer .footer_blog_area{
     text-align: center;
-    border-bottom: 1px solid #dcdcdc;
+    border-bottom: 1px solid var(--main-color);
 
 }
 
@@ -251,7 +252,7 @@ footer .snslink_area a{
 }
 
 footer .cheer{
-    border-top: 1px solid #dcdcdc;
+    border-top: 1px solid var(--main-color);
     font-size: 10px;
     width: 350px;
     margin: 0 auto;
@@ -260,7 +261,7 @@ footer .cheer{
 footer .footer_base{
     font-size: 12px;
     text-align: center;
-    border-top: 1px solid #dcdcdc;
+    border-top: 1px solid var(--main-color);
 }
 
 /****************************
