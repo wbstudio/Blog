@@ -9,7 +9,8 @@
             <div class="modal_contents">
                 <ul>
                     <li class="modal_search_li">
-                        <form action="" method="">
+                        <form method="POST" action="{{route('list.searchWordList')}}">
+                        @csrf
                             <div class="link_mass">
                                 <div class="link_name">
                                     <input type="text" name="">
