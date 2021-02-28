@@ -12,6 +12,8 @@ header{
     position: fixed;
     height: 45px;
     margin-top: -45px;
+    background: #FFF;
+    /* box-shadow: 2px 2px 4px gray; */
 }
 
 header .menu_icon{
@@ -107,7 +109,21 @@ header .menu_icon img{
     top: -1.2em;
 }
 
+.modal__content form{
+    margin-bottom: 0;
+}
 
+.modal__content input[type=text]{
+    height: 21px;
+    width: 90%;
+}
+
+.modal__content .search{
+    float:right;
+    width: 16px;
+    position: relative;
+    top: -18px;
+}
 
 
 /**main*/

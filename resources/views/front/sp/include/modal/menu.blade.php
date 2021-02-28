@@ -9,12 +9,14 @@
             <div class="modal_contents">
                 <ul>
                     <li>
-                        <a href="">
+                        <form action="" method="">
                             <div class="link_mass">
-                            <div class="link_name">01あいうえおあいうえおあいうえお</div>
-                                <div class="go_button"></div>
+                                <div class="link_name">
+                                    <input type="text" name="">
+                                </div>
+                                <input type="image" class="search" src="{{ asset('images/front/icon_search_button.svg') }}">
                             </div>
-                        </a>
+                        </form>
                     </li>
 
                     <li>
