@@ -109,12 +109,16 @@ header .menu_icon img{
     top: -1.2em;
 }
 
+.modal__content .modal_search_li{
+    padding: 7px 10px;
+}
+
 .modal__content form{
     margin-bottom: 0;
 }
 
 .modal__content input[type=text]{
-    height: 21px;
+    height: 27px;
     width: 90%;
 }
 
@@ -122,7 +126,7 @@ header .menu_icon img{
     float:right;
     width: 16px;
     position: relative;
-    top: -18px;
+    top: -21px;
 }
 
 

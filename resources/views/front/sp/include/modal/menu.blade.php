@@ -8,7 +8,7 @@
             </div>
             <div class="modal_contents">
                 <ul>
-                    <li>
+                    <li class="modal_search_li">
                         <form action="" method="">
                             <div class="link_mass">
                                 <div class="link_name">
