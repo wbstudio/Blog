@@ -34,9 +34,9 @@ h3{
     text-decoration: none;
 }
 
-/* .patern_01 .swiper-container{
-    height:260px;
-} */
+.patern_01 .swiper-container{
+    height:290px;
+}
 
 .patern_01 .swiper-button-next:after{
     content: '';
@@ -68,5 +68,10 @@ h3{
     top:225px;
     right: 23%;
     left:auto;
+}
+
+.patern_01 .swiper-button-prev:focus,
+.patern_01 .swiper-button-next:focus{
+    outline:none;
 }
 
