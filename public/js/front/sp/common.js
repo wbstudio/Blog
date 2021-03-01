@@ -16,6 +16,6 @@ $(function(){
         $(".patern_01 .swiper-container").css("height", swiperHeight+30+"px");
         $(".patern_01 .swiper-button-prev").css("top", swiperHeight+16+"px");
         $(".patern_01 .swiper-button-next").css("top", swiperHeight+16+"px");
-    },100);
+    },1000);
 
 });
