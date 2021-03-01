@@ -134,3 +134,8 @@ header .menu_icon img{
 main{
     margin-top: 45px;
 }
+
+.container{
+    width: 98%;
+    margin: 0 auto;
+}
