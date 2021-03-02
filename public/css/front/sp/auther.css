@@ -49,3 +49,12 @@
     padding: 7px 10px;
     border-radius: 4px;
 }
+
+.auther_mass .to_auther_link a{
+    text-decoration: none;
+}
+
+.auther_mass .to_auther_link a:hover{
+    text-decoration: underline;
+}
+
