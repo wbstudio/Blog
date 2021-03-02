@@ -138,7 +138,7 @@
                 <li><a href="">・あああああああああああああ</a></li>
             </ul>
         </div>
-        <div class="to_auther_link">テスト名前テスト名前のページへ</div>
+        <div class="to_auther_link"><a href="">テスト名前テスト名前のページへ</a></div>
     </div>
     <div class="auther_mass">
         <img src="{{ asset('images/front/top_link/face_test.png') }}">
@@ -153,7 +153,7 @@
                 <li><a href="">・あああああああああああああ</a></li>
             </ul>
         </div>
-        <div class="to_auther_link">テスト名前テスト名前のページへ</div>
+        <div class="to_auther_link"><a href="">テスト名前テスト名前のページへ</a></div>
     </div>
 </section>
 
