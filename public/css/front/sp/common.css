@@ -12,6 +12,11 @@ h2{
     font-family: Montserrat;
     font-size: 46px;
     font-weight: 700;
+    color: #000;
+}
+
+.section_separater{
+    padding: 25px;
 }
 
 header{

@@ -83,3 +83,67 @@ h3{
     outline:none;
 }
 
+
+/**category--top*/
+
+.category_list{
+    margin-bottom: 50px;
+}
+
+.category_list .category_title{
+    padding-left: 3px;
+    border-bottom: 1px solid #404040;
+}
+
+.category_list .to_category_link{
+    float: right;
+    border: 1px solid #404040;
+    padding: 1px 5px;
+    border-radius: 9px;
+    position: relative;
+    top: 3px;
+}
+
+.category_list .category_title a{
+    text-decoration: none;
+}
+
+.category_list .category_title a:hover{
+    text-decoration: underline;
+}
+
+.category_list .to_category_link img{
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;  
+}
+
+.category_list .category_name{
+    font-size: 24px;
+}
+
+.category_list .auther_category{
+    text-align: left;
+    width: 75%;
+    padding: 15px 0 5px 3px;
+}
+
+
+.category_list .auther{
+    text-align: right;
+    width: 22%;
+}
+
+.category_list .auther_category a,
+.category_list .auther a{
+    text-decoration: none;
+}
+
+.category_list .auther_category a:hover,
+.category_list .auther a:hover{
+    text-decoration: underline;
+}
+
+
+
+

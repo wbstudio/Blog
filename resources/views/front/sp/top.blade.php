@@ -122,7 +122,7 @@
             </script>
         </div>
 </div>
-
+<div class="section_separater"></div>
 <section>
     <h2>Blogger</h2>
     <div class="auther_mass">
@@ -158,6 +158,179 @@
 </section>
 
 
+<section>
+    <h2>Category</h2>
+    <div class="category_list">
+        <div class="category_title">
+            <div class="to_category_link">
+                <a href="">
+                    category001
+                    <img src="{{ asset('images/front/icon_link.svg') }}">
+                </a>
+            </div>
+            <div class="category_name">
+                <a href="">category001</a>
+            </div>
+        </div>
+        <table>
+        <tr>
+                <td class="auther_category">
+                    <a href="">category001auther</a>
+                </td>
+                <td class="auther">
+                    <a href="">auther001</a>
+                </td>
+            </tr>
+            <tr>
+                <td class="auther_category">
+                    <a href="">category001auther</a>
+                </td>
+                <td class="auther">
+                    <a href="">ああ</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="category_list">
+        <div class="category_title">
+            <div class="to_category_link">
+                <a href="">
+                    category001
+                    <img src="{{ asset('images/front/icon_link.svg') }}">
+                </a>
+            </div>
+            <div class="category_name">
+                <a href="">category001</a>
+            </div>
+        </div>
+        <table>
+        <tr>
+                <td class="auther_category">
+                    <a href="">category001auther</a>
+                </td>
+                <td class="auther">
+                    <a href="">auther001</a>
+                </td>
+            </tr>
+            <tr>
+                <td class="auther_category">
+                    <a href="">category001auther</a>
+                </td>
+                <td class="auther">
+                    <a href="">ああ</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="category_list">
+        <div class="category_title">
+            <div class="to_category_link">
+                <a href="">
+                    category001
+                    <img src="{{ asset('images/front/icon_link.svg') }}">
+                </a>
+            </div>
+            <div class="category_name">
+                <a href="">category001</a>
+            </div>
+        </div>
+        <table>
+        <tr>
+                <td class="auther_category">
+                    <a href="">category001auther</a>
+                </td>
+                <td class="auther">
+                    <a href="">auther001</a>
+                </td>
+            </tr>
+            <tr>
+                <td class="auther_category">
+                    <a href="">category001auther</a>
+                </td>
+                <td class="auther">
+                    <a href="">ああ</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="category_list">
+        <div class="category_title">
+            <div class="to_category_link">
+                <a href="">
+                    category001
+                    <img src="{{ asset('images/front/icon_link.svg') }}">
+                </a>
+            </div>
+            <div class="category_name">
+                <a href="">category001</a>
+            </div>
+        </div>
+        <table>
+        <tr>
+                <td class="auther_category">
+                    <a href="">category001auther</a>
+                </td>
+                <td class="auther">
+                    <a href="">auther001</a>
+                </td>
+            </tr>
+            <tr>
+                <td class="auther_category">
+                    <a href="">category001auther</a>
+                </td>
+                <td class="auther">
+                    <a href="">ああ</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="category_list">
+        <div class="category_title">
+            <div class="to_category_link">
+                <a href="">
+                    category001
+                    <img src="{{ asset('images/front/icon_link.svg') }}">
+                </a>
+            </div>
+            <div class="category_name">
+                <a href="">category001</a>
+            </div>
+        </div>
+        <table>
+        <tr>
+                <td class="auther_category">
+                    <a href="">category001auther</a>
+                </td>
+                <td class="auther">
+                    <a href="">auther001</a>
+                </td>
+            </tr>
+            <tr>
+                <td class="auther_category">
+                    <a href="">category001auther</a>
+                </td>
+                <td class="auther">
+                    <a href="">ああ</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+</section>
+
+
+<section>
+    <h2>How to use</h2>
+</section>
+
+
+<section>
+    <h2>お問い合わせ</h2>
+</section>
 
 
 aaaaaaaaaaaaaaaaaaaaaaaaa<br>
