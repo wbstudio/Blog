@@ -157,7 +157,7 @@
     </div>
 </section>
 
-
+<div class="section_separater_half"></div>
 <section>
     <h2>Category</h2>
     <div class="category_list">
@@ -319,7 +319,6 @@
             </tr>
         </table>
     </div>
-
 </section>
 
 

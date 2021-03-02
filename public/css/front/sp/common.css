@@ -19,6 +19,10 @@ h2{
     padding: 25px;
 }
 
+.section_separater_half{
+    padding: 15px;
+}
+
 header{
     width: 100%;
     position: fixed;
