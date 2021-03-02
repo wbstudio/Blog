@@ -12,7 +12,7 @@
 <div class="container">
 <div id="top_page" class="">
 
-    <div class="pick_up patern_01">
+<div class="pick_up patern_01">
         <h3>Pick Up</h3>
         <div>
             <div class="swiper-container">
@@ -105,12 +105,11 @@
             </div>
             <script>
                 const mySwiper = new Swiper('.swiper-container', {
-                    // loop: true,
                     slidesPerView:2,
-                    autoplay: {
-                        delay: 3000,
-                        disableOnInteraction: false,
-                    },
+                    // autoplay: {
+                    //     delay: 3000,
+                    //     disableOnInteraction: false,
+                    // },
                     pagination: {
                         el: '.swiper-pagination',
                     },
@@ -121,6 +120,12 @@
                 })
             </script>
         </div>
+</div>
+
+<section>
+    <h2>Blogger</h2>
+    <div>
+        
     </div>
 
 

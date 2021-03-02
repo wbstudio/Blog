@@ -4,6 +4,10 @@ h3{
 }
 
 .patern_01 .swiper-slide{
+    z-index: 5;
+}
+
+.patern_01 .swiper-slide{
     text-align: center;
 }
 
@@ -13,6 +17,10 @@ h3{
 .patern_01 .swiper-slide .update_date{
     width: 95%;
     margin: 0 auto;
+}
+.patern_01 .swiper-slide .category,
+.patern_01 .swiper-slide .update_date{
+    text-align: left;
 }
 
 .patern_01 .swiper-slide .title{

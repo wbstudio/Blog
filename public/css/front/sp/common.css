@@ -7,12 +7,19 @@ a{
     color:#404040;
 }
 
+h2{
+    font-family: Montserrat;
+    font-size: 46px;
+    font-weight: 700;
+}
+
 header{
     width: 100%;
     position: fixed;
     height: 45px;
     margin-top: -45px;
     background: #FFF;
+    z-index:10;
     /* box-shadow: 2px 2px 4px gray; */
 }
 
@@ -37,6 +44,7 @@ header .menu_icon img{
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 10;
 }
 
 .modal__bg{
