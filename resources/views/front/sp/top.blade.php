@@ -274,7 +274,7 @@
                     <a href="">category001auther</a>
                 </td>
                 <td class="auther">
-                    <a href="">auther001</a>
+                    <a href="">テスト名前テスト名前</a>
                 </td>
             </tr>
             <tr>
