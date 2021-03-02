@@ -142,7 +142,7 @@
     </div>
     <div class="auther_mass">
         <img src="{{ asset('images/front/top_link/face_test.png') }}">
-        <div class="auther_name">テスト名前テスト名前</div>
+        <div class="auther_name">名前</div>
         <div class="auther_category">
             <div class="auther_category_title">よく書くこと</div>
             <ul class="auther_category_title_list">
