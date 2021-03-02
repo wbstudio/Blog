@@ -3,6 +3,7 @@
 @section('head')
 <meta name="csrf-token" content="{{ csrf_token() }}">
 <link rel="stylesheet" href="{{ asset('css/front/sp/list.css') }}">
+<link rel="stylesheet" href="{{ asset('css/front/sp/auther.css') }}">
 @endsection
 
 @section('content')
@@ -124,10 +125,37 @@
 
 <section>
     <h2>Blogger</h2>
-    <div>
-        
+    <div class="auther_mass">
+        <img src="{{ asset('images/front/top_link/face_test.png') }}">
+        <div class="auther_name">テスト名前テスト名前</div>
+        <div class="auther_category">
+            <div class="auther_category_title">よく書くこと</div>
+            <ul class="auther_category_title_list">
+                <li><a href="">・あああああああああああああ</a></li>
+                <li><a href="">・あああああああああああああ</a></li>
+                <li><a href="">・あああああああああああああ</a></li>
+                <li><a href="">・あああああああああああああ</a></li>
+                <li><a href="">・あああああああああああああ</a></li>
+            </ul>
+        </div>
+        <div class="to_auther_link">テスト名前テスト名前のページへ</div>
     </div>
-
+    <div class="auther_mass">
+        <img src="{{ asset('images/front/top_link/face_test.png') }}">
+        <div class="auther_name">テスト名前テスト名前</div>
+        <div class="auther_category">
+            <div class="auther_category_title">よく書くこと</div>
+            <ul class="auther_category_title_list">
+                <li><a href="">・あああああああああああああ</a></li>
+                <li><a href="">・あああああああああああああ</a></li>
+                <li><a href="">・あああああああああああああ</a></li>
+                <li><a href="">・あああああああああああああ</a></li>
+                <li><a href="">・あああああああああああああ</a></li>
+            </ul>
+        </div>
+        <div class="to_auther_link">テスト名前テスト名前のページへ</div>
+    </div>
+</section>
 
 
 
