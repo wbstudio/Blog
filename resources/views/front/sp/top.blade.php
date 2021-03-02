@@ -174,21 +174,21 @@
         </div>
         <table>
         <tr>
-                <td class="auther_category">
-                    <a href="">category001auther</a>
-                </td>
-                <td class="auther">
-                    <a href="">auther001</a>
-                </td>
-            </tr>
-            <tr>
-                <td class="auther_category">
-                    <a href="">category001auther</a>
-                </td>
-                <td class="auther">
-                    <a href="">ああ</a>
-                </td>
-            </tr>
+            <td class="auther_category">
+                <a href="">category001auther</a>
+            </td>
+            <td class="auther">
+                <a href="">auther001</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="auther_category">
+                <a href="">category001auther</a>
+            </td>
+            <td class="auther">
+                <a href="">ああ</a>
+            </td>
+        </tr>
         </table>
     </div>
 
@@ -206,21 +206,21 @@
         </div>
         <table>
         <tr>
-                <td class="auther_category">
-                    <a href="">category001auther</a>
-                </td>
-                <td class="auther">
-                    <a href="">auther001</a>
-                </td>
-            </tr>
-            <tr>
-                <td class="auther_category">
-                    <a href="">category001auther</a>
-                </td>
-                <td class="auther">
-                    <a href="">ああ</a>
-                </td>
-            </tr>
+            <td class="auther_category">
+                <a href="">category001auther</a>
+            </td>
+            <td class="auther">
+                <a href="">auther001</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="auther_category">
+                <a href="">category001auther</a>
+            </td>
+            <td class="auther">
+                <a href="">ああ</a>
+            </td>
+        </tr>
         </table>
     </div>
 
@@ -238,21 +238,21 @@
         </div>
         <table>
         <tr>
-                <td class="auther_category">
-                    <a href="">category001auther</a>
-                </td>
-                <td class="auther">
-                    <a href="">auther001</a>
-                </td>
-            </tr>
-            <tr>
-                <td class="auther_category">
-                    <a href="">category001auther</a>
-                </td>
-                <td class="auther">
-                    <a href="">ああ</a>
-                </td>
-            </tr>
+            <td class="auther_category">
+                <a href="">category001auther</a>
+            </td>
+            <td class="auther">
+                <a href="">auther001</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="auther_category">
+                <a href="">category001auther</a>
+            </td>
+            <td class="auther">
+                <a href="">ああ</a>
+            </td>
+        </tr>
         </table>
     </div>
 
@@ -270,21 +270,21 @@
         </div>
         <table>
         <tr>
-                <td class="auther_category">
-                    <a href="">category001auther</a>
-                </td>
-                <td class="auther">
-                    <a href="">テスト名前テスト名前</a>
-                </td>
-            </tr>
-            <tr>
-                <td class="auther_category">
-                    <a href="">category001auther</a>
-                </td>
-                <td class="auther">
-                    <a href="">ああ</a>
-                </td>
-            </tr>
+            <td class="auther_category">
+                <a href="">category001auther</a>
+            </td>
+            <td class="auther">
+                <a href="">テスト名前テスト名前</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="auther_category">
+                <a href="">category001auther</a>
+            </td>
+            <td class="auther">
+                <a href="">ああ</a>
+            </td>
+        </tr>
         </table>
     </div>
 
@@ -323,6 +323,7 @@
 </section>
 
 
+<div class="section_separater"></div>
 <section>
     <h2>How to use</h2>
 </section>
