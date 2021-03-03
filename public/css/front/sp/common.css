@@ -15,6 +15,47 @@ h2{
     color: #000;
 }
 
+h2.first_h2{
+    padding-top: 25px;
+}
+
+h2.ja{
+    font-size: 36px;
+}
+
+h2.before_list{
+   margin-bottom: 0; 
+}
+
+h2.narrow{
+    margin-bottom: 15px; 
+}
+
+
+.search_list .title{
+    display: inline-block;
+    margin-top: 0;
+    font-size: 12px;
+    width: 17%;
+    vertical-align: top;
+}
+
+.search_list .inner{
+    display: inline-block;
+    margin-top: 0;
+    font-size: 12px;
+    width: 81%;
+}
+
+.search_list .inner p{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    margin: 0;
+
+}
+
 .section_separater{
     padding: 25px;
 }
