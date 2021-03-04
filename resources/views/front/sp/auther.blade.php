@@ -147,8 +147,203 @@
 
 <section>
     <h2 class="first_h2 narrow">Category</h2>
-    
+    <div class="category_list">
+        <div class="category_mass">
+            <div class="category_title">
+                <div class="to_category_link">
+                    <a href="">
+                        category001
+                        <img src="{{ asset('images/front/icon_link.svg') }}">
+                    </a>
+                </div>
+                <div class="category_name">
+                    <a href="">category001</a>
+                </div>
+            </div>
+            <div class="category_explain">
+                <p>カテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明text</p>
+            </div>
+            <div class="category_pickup_article">
+                <div class="article_mass">
+                    <a href="">
+                        <img src="{{ asset('images/front/top_link/image_190_150.png') }}" class="">
+                        <div class="title">
+                            01タイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテスト
+                        </div>
+                    </a>
+                    <div class="update_date">更新日 2021/00/00</div>                
+                </div>
+                <div class="article_mass">
+                    <a href="">
+                        <img src="{{ asset('images/front/top_link/image_190_150.png') }}" class="">
+                        <div class="title">
+                            01タイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテスト
+                        </div>
+                    </a>
+                    <div class="update_date">更新日 2021/00/00</div>                
+                </div>
+            </div>
+            <a href=""><div class="more">MORE</div></a>
+        </div>
+
+        <div class="category_mass">
+            <div class="category_title">
+                <div class="to_category_link">
+                    <a href="">
+                        category001
+                        <img src="{{ asset('images/front/icon_link.svg') }}">
+                    </a>
+                </div>
+                <div class="category_name">
+                    <a href="">category001</a>
+                </div>
+            </div>
+            <div class="category_explain">
+                <p>カテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明text</p>
+            </div>
+            <div class="category_pickup_article">
+                <div class="article_mass">
+                    <a href="">
+                        <img src="{{ asset('images/front/top_link/image_190_150.png') }}" class="">
+                        <div class="title">
+                            01タイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテスト
+                        </div>
+                    </a>
+                    <div class="update_date">更新日 2021/00/00</div>                
+                </div>
+                <div class="article_mass">
+                    <a href="">
+                        <img src="{{ asset('images/front/top_link/image_190_150.png') }}" class="">
+                        <div class="title">
+                            01タイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテスト
+                        </div>
+                    </a>
+                    <div class="update_date">更新日 2021/00/00</div>                
+                </div>
+            </div>
+            <a href=""><div class="more">MORE</div></a>
+        </div>
+
+        <div class="category_mass">
+            <div class="category_title">
+                <div class="to_category_link">
+                    <a href="">
+                        category001
+                        <img src="{{ asset('images/front/icon_link.svg') }}">
+                    </a>
+                </div>
+                <div class="category_name">
+                    <a href="">category001</a>
+                </div>
+            </div>
+            <div class="category_explain">
+                <p>カテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明text</p>
+            </div>
+            <div class="category_pickup_article">
+                <div class="article_mass">
+                    <a href="">
+                        <img src="{{ asset('images/front/top_link/image_190_150.png') }}" class="">
+                        <div class="title">
+                            01タイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテスト
+                        </div>
+                    </a>
+                    <div class="update_date">更新日 2021/00/00</div>                
+                </div>
+                <div class="article_mass">
+                    <a href="">
+                        <img src="{{ asset('images/front/top_link/image_190_150.png') }}" class="">
+                        <div class="title">
+                            01タイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテスト
+                        </div>
+                    </a>
+                    <div class="update_date">更新日 2021/00/00</div>                
+                </div>
+            </div>
+            <a href=""><div class="more">MORE</div></a>
+        </div>
+        <div class="category_mass">
+            <div class="category_title">
+                <div class="to_category_link">
+                    <a href="">
+                        category001
+                        <img src="{{ asset('images/front/icon_link.svg') }}">
+                    </a>
+                </div>
+                <div class="category_name">
+                    <a href="">category001</a>
+                </div>
+            </div>
+            <div class="category_explain">
+                <p>カテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明text</p>
+            </div>
+            <div class="category_pickup_article">
+                <div class="article_mass">
+                    <a href="">
+                        <img src="{{ asset('images/front/top_link/image_190_150.png') }}" class="">
+                        <div class="title">
+                            01タイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテスト
+                        </div>
+                    </a>
+                    <div class="update_date">更新日 2021/00/00</div>                
+                </div>
+                <div class="article_mass">
+                    <a href="">
+                        <img src="{{ asset('images/front/top_link/image_190_150.png') }}" class="">
+                        <div class="title">
+                            01タイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテスト
+                        </div>
+                    </a>
+                    <div class="update_date">更新日 2021/00/00</div>                
+                </div>
+            </div>
+            <a href=""><div class="more">MORE</div></a>
+        </div>
+        <div class="category_mass">
+            <div class="category_title">
+                <div class="to_category_link">
+                    <a href="">
+                        category001
+                        <img src="{{ asset('images/front/icon_link.svg') }}">
+                    </a>
+                </div>
+                <div class="category_name">
+                    <a href="">category001</a>
+                </div>
+            </div>
+            <div class="category_explain">
+                <p>カテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明text</p>
+            </div>
+            <div class="category_pickup_article">
+                <div class="article_mass">
+                    <a href="">
+                        <img src="{{ asset('images/front/top_link/image_190_150.png') }}" class="">
+                        <div class="title">
+                            01タイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテスト
+                        </div>
+                    </a>
+                    <div class="update_date">更新日 2021/00/00</div>                
+                </div>
+                <div class="article_mass">
+                    <a href="">
+                        <img src="{{ asset('images/front/top_link/image_190_150.png') }}" class="">
+                        <div class="title">
+                            01タイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテスト
+                        </div>
+                    </a>
+                    <div class="update_date">更新日 2021/00/00</div>                
+                </div>
+            </div>
+            <a href=""><div class="more">MORE</div></a>
+        </div>
+
+    </div>
+
 </section>
+
+<section>
+    <h2 class="first_h2 narrow">Category</h2>
+</section>
+
 
 </div>
 </div>
