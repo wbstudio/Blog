@@ -17,6 +17,7 @@
 
 #auther_page .auther_mass img{
     right: 0%;
+    top: 15px;
 }
 
 .auther_mass .auther_name{
@@ -78,3 +79,27 @@
     text-decoration: underline;
 }
 
+
+@media screen and (max-width: 380px){
+
+    #auther_page .auther_mass img {
+        top: 27px;
+        right: -0.5%;
+    }
+
+
+}/*min-width: 481px*/
+
+@media screen and (max-width: 330px){
+
+    #auther_page .auther_mass img {
+        top: 45px;
+        right: 0%;
+    }
+
+    .auther_mass .auther_name{
+        font-size: 18px;
+    }
+    
+
+}/*min-width: 481px*/
