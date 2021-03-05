@@ -221,7 +221,7 @@
         </main>
         
         <footer>
-            new-blog管理画面
+            @include('front.pc.include.footer')
         </footer>
     </body>
 </html>

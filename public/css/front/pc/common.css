@@ -249,7 +249,18 @@ footer .anothersite_link_area{
 }
 
 footer .wblink_area{
-    margin: 10px 0 20px;
+    margin: 40px 0 20px;
+}
+
+footer .footer_summary{
+    margin: 10px 0 s40px;
+}
+
+footer .footer_summary_item{
+    display: inline-block;
+    font-size: 12px;
+    padding: 0 10px 0 4px;
+    border-right: 1px solid #dcdcdc;
 }
 
 footer .snslink_area a{
@@ -258,7 +269,7 @@ footer .snslink_area a{
 
 footer .cheer{
     border-top: 1px solid var(--main-color);
-    font-size: 10px;
+    font-size: 16px;
     width: 350px;
     margin: 0 auto;
 }
@@ -290,5 +301,17 @@ footer .footer_base{
         padding: 0;
     }
     
+
+}/*min-width: 481px*/
+
+@media screen and (max-width: 900px){
+
+    footer .footer_blog_area .blog_auther{
+        margin-right: 8px;
+    }
+
+    footer .footer_blog_area ul{
+        font-size: 10px;
+    }
 
 }/*min-width: 481px*/

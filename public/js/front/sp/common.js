@@ -12,9 +12,9 @@ $(function(){
     //sliderHight
     setTimeout(function(){
         var swiperHeight = $(".swiper-slide_inner").outerHeight(true);
-        $(".patern_01 .swiper-container").css("height", swiperHeight+30+"px");
-        $(".patern_01 .swiper-button-prev").css("top", swiperHeight+16+"px");
-        $(".patern_01 .swiper-button-next").css("top", swiperHeight+16+"px");
+        $(".patern_01 .swiper-container").css("height", swiperHeight + 30 +"px");
+        $(".patern_01 .swiper-button-prev").css("top", swiperHeight + 16 +"px");
+        $(".patern_01 .swiper-button-next").css("top", swiperHeight + 16 +"px");
     },200);
 
 });
