@@ -249,18 +249,22 @@ footer .anothersite_link_area{
 }
 
 footer .wblink_area{
-    margin: 40px 0 20px;
+    margin: 40px 0 40px;
 }
 
 footer .footer_summary{
-    margin: 10px 0 s40px;
+    margin-top: 10px;
 }
 
 footer .footer_summary_item{
     display: inline-block;
     font-size: 12px;
     padding: 0 10px 0 4px;
-    border-right: 1px solid #dcdcdc;
+    border-right: 1px solid #404040;
+}
+
+footer .footer_summary_item:first-child{
+    border-left: 1px solid #404040;
 }
 
 footer .snslink_area a{
@@ -272,6 +276,7 @@ footer .cheer{
     font-size: 16px;
     width: 350px;
     margin: 0 auto;
+    font-weight: bold;
 }
 
 footer .footer_base{
