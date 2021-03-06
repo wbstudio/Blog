@@ -182,6 +182,7 @@ h3{
 
 .category_list .category_explain p{
     margin-top: 10px;
+    overflow: hidden;
 }
 
 

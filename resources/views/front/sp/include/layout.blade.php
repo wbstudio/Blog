@@ -7,9 +7,10 @@
         <link rel="stylesheet" id="paddle-fonts-css" href="https://fonts.googleapis.com/css?family=Montserrat%3A400%2C700" type="text/css" media="all">        
         <link rel="stylesheet" href="{{ asset('css/front/sp/common.css') }}">
         <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
         <script src="{{ asset('js/front/sp/common.js') }}"></script>
+        <script src="{{ asset('js/front/tools/readmore.min.js') }}"></script>
         @yield('head')
     </head>
     <body>
