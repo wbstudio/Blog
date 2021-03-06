@@ -186,6 +186,9 @@ h3{
     margin-bottom: 3px;
 }
 
+.btn_close{
+    color:#a1a1a1;
+}
 
 .category_list .category_pickup_article{
     text-align: center;
