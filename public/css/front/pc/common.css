@@ -207,7 +207,7 @@ footer{
 
 footer .footter_iiner{
     max-width: 1024px;
-    margin: 20px auto 50px;
+    margin: 20px auto;
 }
 
 footer .footer_blog_area{
@@ -249,7 +249,7 @@ footer .anothersite_link_area{
 }
 
 footer .wblink_area{
-    margin: 40px 0 40px;
+    margin-top: 40px;
 }
 
 footer .footer_summary{
@@ -265,6 +265,10 @@ footer .footer_summary_item{
 
 footer .footer_summary_item:first-child{
     border-left: 1px solid #404040;
+}
+
+footer .snslink_area{
+    margin-top: 40px;
 }
 
 footer .snslink_area a{

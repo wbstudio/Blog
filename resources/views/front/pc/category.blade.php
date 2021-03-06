@@ -144,7 +144,7 @@
                 </div>
             </div>
             <div class="category_explain">
-                <p>
+                <p title="カテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明text">
                     カテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明text
                 </p>
             </div>
