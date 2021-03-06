@@ -190,6 +190,10 @@ h3{
     color:#a1a1a1;
 }
 
+.btn_close,.btn{
+    text-align: right;
+}
+
 .category_list .category_pickup_article{
     text-align: center;
     display: flex;
