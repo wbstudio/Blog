@@ -183,12 +183,14 @@ h3{
 .category_list .category_explain p{
     margin-top: 10px;
     overflow: hidden;
+    margin-bottom: 3px;
 }
 
 
 .category_list .category_pickup_article{
     text-align: center;
     display: flex;
+    margin-top: 15px;
 }
 
 .category_list .category_pickup_article .article_mass{

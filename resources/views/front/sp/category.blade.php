@@ -8,8 +8,8 @@
 jQuery(function () {
     $('.open').readmore({
         speed: 750,
-        collapsedHeight: 105,
-        moreLink: '<a class="btn" href="#"><span>続きを読む</span></a>',//続きを読むボタンタグ
+        collapsedHeight: 41,
+        moreLink: '<a class="btn" href="#"><span>...[続きを読む]</span></a>',//続きを読むボタンタグ
         lessLink: '<a class="btn_close" href="#"><span>閉じる</span></a>'//閉じるボタンタグ
     });
 });
