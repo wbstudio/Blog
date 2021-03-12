@@ -186,11 +186,12 @@ h3{
     margin-bottom: 3px;
 }
 
-.btn_close{
+.category_explain a.btn_close{
     color:#a1a1a1;
 }
 
-.btn_close,.btn{
+.category_explain a.btn_close,
+.category_explain a.btn{
     text-align: right;
 }
 

@@ -24,9 +24,9 @@ Route::get('/', [\App\Http\Controllers\Front\TopController::class, 'index'])->na
 Route::get('/category', [\App\Http\Controllers\Front\ListController::class, 'categoryList'])->name('categoryList');
 Route::get('/auther/{auther_id}', [\App\Http\Controllers\Front\ListController::class, 'onlyAuther'])->name('list.onlyAuther');
 Route::get('/category/{category_id}', [\App\Http\Controllers\Front\ListController::class, 'onlyCategory'])->name('list.onlyCategory');
-Route::get('/article/{article_id}', [\App\Http\Controllers\Front\ArticleController::class, 'articleDetail'])->name('detail.article');
 Route::get('/auther/{auther_id}/category/{category_id}', [\App\Http\Controllers\Front\ListController::class, 'bothAutherAndCategory'])->name('list.bothAutherAndCategory');
 Route::post('/search', [\App\Http\Controllers\Front\ListController::class, 'searchBox'])->name('list.searchWordList');
+Route::get('/article/{article_id}', [\App\Http\Controllers\Front\ArticleController::class, 'articleDetail'])->name('detail.article');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');

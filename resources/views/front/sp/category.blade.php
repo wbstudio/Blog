@@ -4,17 +4,6 @@
 <meta name="csrf-token" content="{{ csrf_token() }}">
 <link rel="stylesheet" href="{{ asset('css/front/sp/list.css') }}">
 <link rel="stylesheet" href="{{ asset('css/front/sp/auther.css') }}">
-<script>
-jQuery(function () {
-    $('.open').readmore({
-        speed: 750,
-        collapsedHeight: 41,
-        moreLink: '<a class="btn" href="#"><span>...[続きを読む]</span></a>',//続きを読むボタンタグ
-        lessLink: '<a class="btn_close" href="#"><span>閉じる</span></a>'//閉じるボタンタグ
-    });
-});
-</script>
-
 @endsection
 
 @section('content')
@@ -149,7 +138,7 @@ jQuery(function () {
             </div>
             <div class="category_explain">
                 <div class="inner_auther">テスト名前テスト名前の記事</div>
-                <p class="open">カテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明text</p>
+                <p class="hidden_area_open">カテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明text</p>
             </div>
             <div class="category_pickup_article">
                 <div class="article_mass">
@@ -188,7 +177,7 @@ jQuery(function () {
             </div>
             <div class="category_explain">
                 <div class="inner_auther">テスト名前テスト名前の記事</div>
-                <p class="open">カテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明text</p>
+                <p class="hidden_area_open">カテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明text</p>
             </div>
             <div class="category_pickup_article">
                 <div class="article_mass">

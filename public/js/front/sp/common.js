@@ -17,4 +17,15 @@ $(function(){
         $(".patern_01 .swiper-button-next").css("top", swiperHeight + 16 +"px");
     },200);
 
+    //続きを読むbutton
+    $('.hidden_area_open').readmore({
+        speed: 750,
+        collapsedHeight: 41,
+        moreLink: '<a class="btn" href="#"><span>...[続きを読む]</span></a>',
+        lessLink: '<a class="btn_close" href="#"><span>閉じる</span></a>'
+    });
+
 });
+
+
+
