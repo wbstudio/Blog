@@ -18,12 +18,12 @@
         <div class="article_info_category">-Category001</div>
     </div>
     <h2 class="article_title">{{$article->title}}</h2>
+    <div class="article_info_date">更新日時:0000/00/00</div>
+    <div class="article_main">{!!$article->main!!}</div>
     <div class="article_tag_area">
         <a href=""><div class="tag_single">:00000</div></a>
         <a href=""><div class="tag_single">:00000</div></a>
     </div>
-    <div class="article_info_date">更新日時:0000/00/00</div>
-    <div class="article_main">{!!$article->main!!}</div>
 </section>
 <!--
 <section id="same_auther_category">

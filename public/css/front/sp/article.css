@@ -6,7 +6,7 @@
     background: #FFF;
     font-size:24px;
     padding-left: 0;
-    margin: 0;
+    margin: 5px 0 0;
     text-align: left;
 }
 
@@ -16,10 +16,8 @@
 }
 
 .article_info_date{
-    font-size: 13px;
-    text-align: right;
+    font-size: 11px;
     color: rgb(189, 189, 189);
-    margin-top: 50px;
 }
 
 .article_info_area img{
@@ -38,19 +36,20 @@
     padding: 3.5px 5px;
     line-height: 1;
     text-decoration: none;
-    color: var(--main-lightcolor);
+    color: #949494;
     background-color: #FFF;
-    border: 1px solid var(--main-lightcolor);
+    border: 1px solid #949494;
     border-radius: 2em;    
 }
 
 
 .article_main{
-    margin-bottom: 100px;
+    margin: 45px 0 30px;
 }
 
 .article_main img{
     max-width: 100%;
     height: auto;
 }
+
 
