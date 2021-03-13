@@ -21,11 +21,11 @@
     <div class="article_info_date">更新日時:0000/00/00</div>
     <div class="article_main">{!!$article->main!!}</div>
     <div class="article_tag_area">
+        タグ：
         <a href=""><div class="tag_single">:00000</div></a>
         <a href=""><div class="tag_single">:00000</div></a>
     </div>
 </section>
-<!--
 <section id="same_auther_category">
     <div class="title">
         他のCategory001の記事
@@ -41,7 +41,7 @@
         </div>
         <div class="next">
             <a href="">
-                ＞次の記事
+                次の記事＞
                 <div class="next_link">
                     aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
                 </div>
@@ -49,11 +49,11 @@
         </div>
     </div>
 </section>
--->
 
 
 
 <section id="relation">
+    <div class="head_title">関連記事</div>
     <div class="relative_category">
         <div class="relative_title">この記事を読んだあなたへのお勧め</div>
         <div class="pick_up patern_01">
