@@ -25,6 +25,9 @@ $(function(){
         lessLink: '<a class="btn_close" href="#"><span>閉じる</span></a>'
     });
 
+    //ckEditor内のimg
+    $(".article_main img").css("height", "auto");
+
 });
 
 

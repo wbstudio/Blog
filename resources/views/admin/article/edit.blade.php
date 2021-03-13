@@ -14,7 +14,7 @@
     <form method="POST" action="./{{$article->id}}" class="edit_place"  enctype="multipart/form-data">
     @csrf
         <table>
-        <tr>
+            <tr>
                 <th>auther<br>auther_category</th>
                 <td>
                 <select class="auther" name="auther">
