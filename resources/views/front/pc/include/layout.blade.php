@@ -14,7 +14,7 @@
             <div class="header_first_area">
                 <div class="header_title_area">
                     <a href="{{ route('topPage') }}">
-                        <img src="{{ asset('images/front/test_logo.png') }}" height="45px">
+                        <img src="{{ asset('images/front/logo.png') }}" height="45px">
                     </a>
                 </div>
                 <div class="header_btn_area">

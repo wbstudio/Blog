@@ -1,7 +1,7 @@
 <div class="footter_iiner">
     <div class="site_title_area">
         <a href="{{ route('topPage') }}">
-            <img src="{{ asset('images/front/test_logo.png') }}">
+            <img src="{{ asset('images/front/logo.png') }}">
         </a>
     </div>
     <div class="site_contents_area">
