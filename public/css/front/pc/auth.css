@@ -1,0 +1,70 @@
+form.login{
+    width:75%;
+    margin: 70px auto 0;
+}
+
+form.login table{
+    width: 100%;
+}
+
+td.title{
+    width: 5%;
+    text-align: right;
+    padding: 10px;
+    font-weight: bold;
+}
+
+#name,
+#email,
+#password,
+#password_confirmation{
+    height: 30px;
+    width: 100%;
+}
+
+#name:focus,
+#email:focus,
+#password:focus,
+#password_confirmation:focus {
+    box-shadow: 0 0 5px 0 #404040;
+    border: 2px solid #404040 !important;
+    outline: 0;
+}
+
+.out_form{
+    text-align: center;
+}
+
+#remenber_check,
+#pass_forget,
+#sign_forget,
+#login_submit,
+#register_submit{
+    display: block;
+    margin-bottom: 40px;
+}
+
+#register_submit,
+#login_submit{
+    width: 180px;
+    height: 40px;
+    margin: 0 auto 10px;
+    border-style: none;
+    box-shadow: 2px 2px 3px 1px #666;
+    -moz-box-shadow: 2px 2px 3px 1px #666;
+    -webkit-box-shadow: 2px 2px 3px 1px #666;
+    color: #404040;
+    font-weight: bold;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+#register_submit:hover,
+#login_submit:hover{
+    color: #fff;
+    background-color: #dcdcdc;
+}
+
+#register_submit{
+    margin-top: 30px;
+}

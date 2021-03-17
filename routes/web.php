@@ -19,6 +19,8 @@ if (preg_match("/iPhone|iPod|Android.*Mobile|Windows.*Phone/", $_SERVER['HTTP_US
     $user_agent = "pc";
 }
 define("USER_AGENT", $user_agent);
+
+
 //非会員閲覧可能ページ
 Route::get('/', [\App\Http\Controllers\Front\TopController::class, 'index'])->name('topPage');
 Route::get('/category', [\App\Http\Controllers\Front\ListController::class, 'categoryList'])->name('categoryList');
@@ -31,6 +33,14 @@ Route::get('/article/{article_id}', [\App\Http\Controllers\Front\ArticleControll
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/inquiry', function () {
+    // return view('dashboard');
+});
+
+// Route::middleware(['auth:sanctum', 'verified'])->get('/inquiry', [\App\Http\Controllers\Front\InquiryController::class, 'showFrom'])->name('inquiry.showForm');
+// Route::middleware(['auth:sanctum', 'verified'])->post('/inquiry', [\App\Http\Controllers\Front\InquiryController::class, 'confirm'])->name('inquiry.confirm');
+// Route::middleware(['auth:sanctum', 'verified'])->post('/inquiry/send', [\App\Http\Controllers\Front\InquiryController::class, 'send'])->name('inquiry.send');
 
 
 //無料会員以上閲覧可能ページ→status=2
