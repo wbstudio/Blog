@@ -30,7 +30,7 @@
             <td class="input_area"><x-jet-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="new-password" /></td>
             </tr>
             <tr>
-            <td class="title"><x-jet-label for="password_confirmation" value="{{ __('パスワード<br>確認用') }}" /></td>
+            <td class="title"><x-jet-label for="password_confirmation" value="{{ __('パスワード\r\n確認用') }}" /></td>
             <td class="input_area"><x-jet-input id="password_confirmation" class="block mt-1 w-full" type="password" name="password_confirmation" required autocomplete="new-password" /></td>
             </tr>
         </table>
