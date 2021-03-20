@@ -9,10 +9,14 @@ form.login table{
 }
 
 td.title{
-    width: 20%;
+    width: 17%;
     text-align: right;
     padding: 10px;
     font-weight: bold;
+}
+
+td.input_area{
+    width: 83%;
 }
 
 #name,
@@ -96,6 +100,9 @@ td.title{
 
     td.title{
         width: 25%;
+    }
+    td.input_area {
+        width: 75%;
     }
     
 }/*min-width: 481px*/
