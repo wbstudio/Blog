@@ -45,25 +45,40 @@ td.title{
 }
 
 #register_submit,
-#login_submit{
-    width: 180px;
-    height: 40px;
-    margin: 0 auto 10px;
-    border-style: none;
-    box-shadow: 2px 2px 3px 1px #666;
-    -moz-box-shadow: 2px 2px 3px 1px #666;
-    -webkit-box-shadow: 2px 2px 3px 1px #666;
-    color: #404040;
-    font-weight: bold;
-    background-color: #fff;
-    border-radius: 10px;
-}
+#login_submit {
+    background: #FFDABF;
+    background-image: -webkit-linear-gradient(top, #FFDABF, #F49000);
+    background-image: -moz-linear-gradient(top, #FFDABF, #F49000);
+    background-image: -ms-linear-gradient(top, #FFDABF, #F49000);
+    background-image: -o-linear-gradient(top, #FFDABF, #F49000);
+    background-image: -webkit-gradient(to bottom, #FFDABF, #F49000);
+    -webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+    border-radius: 13px;
+    height: 45px;
+    line-height: 45px;
+    color: #FFFFFF;
+    font-family: Arial;
+    width: 289px;
+    font-size: 49px;
+    font-weight: 500;
+    padding: 21px;
+    -webkit-box-shadow: 0 1px 5px 0 #858585;
+    -moz-box-shadow: 0 1px 5px 0 #858585;
+    box-shadow: 0 1px 5px 0 #858585;
+    text-shadow: -2px 3px 5px #5F3800;
+    border: solid #A46000 1px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+ }
 
-#register_submit:hover,
+/* #register_submit:hover,
 #login_submit:hover{
     color: #fff;
     background-color: #dcdcdc;
-}
+} */
 
 #register_submit{
     margin-top: 30px;

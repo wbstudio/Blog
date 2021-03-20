@@ -34,9 +34,8 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/inquiry', function () {
-    // return view('dashboard');
-});
+Route::middleware(['auth:sanctum', 'verified'])->get('/inquiry', [\App\Http\Controllers\Front\InquiryController::class, 'showFrom'])->name('inquiry.showForm');
+Route::middleware(['auth:sanctum', 'verified'])->post('/inquiry', [\App\Http\Controllers\Front\InquiryController::class, 'confirm'])->name('inquiry.confirm');
 
 // Route::middleware(['auth:sanctum', 'verified'])->get('/inquiry', [\App\Http\Controllers\Front\InquiryController::class, 'showFrom'])->name('inquiry.showForm');
 // Route::middleware(['auth:sanctum', 'verified'])->post('/inquiry', [\App\Http\Controllers\Front\InquiryController::class, 'confirm'])->name('inquiry.confirm');
