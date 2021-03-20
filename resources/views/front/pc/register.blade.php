@@ -18,19 +18,19 @@
     <div>
         <table>
             <tr>
-                <td class="title"><x-jet-label for="name" value="{{ __('Name') }}" /></td>
+                <td class="title"><x-jet-label for="name" value="{{ __('名前') }}" /></td>
                 <td class="input_area"><x-jet-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" /></td>
             </tr>
             <tr>
-            <td class="title"><x-jet-label for="email" value="{{ __('Email') }}" /></td>
+            <td class="title"><x-jet-label for="email" value="{{ __('メール') }}" /></td>
             <td class="input_area"><x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required /></td>
             </tr>
             <tr>
-            <td class="title"><x-jet-label for="password" value="{{ __('Password') }}" /></td>
+            <td class="title"><x-jet-label for="password" value="{{ __('パスワード') }}" /></td>
             <td class="input_area"><x-jet-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="new-password" /></td>
             </tr>
             <tr>
-            <td class="title"><x-jet-label for="password_confirmation" value="{{ __('Confirm Password') }}" /></td>
+            <td class="title"><x-jet-label for="password_confirmation" value="{{ __('パスワード確認用') }}" /></td>
             <td class="input_area"><x-jet-input id="password_confirmation" class="block mt-1 w-full" type="password" name="password_confirmation" required autocomplete="new-password" /></td>
             </tr>
         </table>
