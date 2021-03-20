@@ -3,8 +3,6 @@
 @section('head')
 <meta name="csrf-token" content="{{ csrf_token() }}">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 <link rel="stylesheet" href="{{ asset('css/front/pc/auth.css') }}">
 @endsection
 
@@ -13,7 +11,7 @@
 <div id="login">
 <section>
 <h2 class="ja">会員登録</h2>
-<form method="POST" action="{{ route('register') }}">
+<form class="register" method="POST" action="{{ route('register') }}">
     @csrf
     <div>
         <table>
