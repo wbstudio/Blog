@@ -59,10 +59,10 @@ td.title{
     line-height: 45px;
     color: #FFFFFF;
     font-family: Arial;
-    width: 289px;
-    font-size: 49px;
+    width: 200px;
+    font-size: 20px;
     font-weight: 500;
-    padding: 21px;
+    padding: 0px;
     -webkit-box-shadow: 0 1px 5px 0 #858585;
     -moz-box-shadow: 0 1px 5px 0 #858585;
     box-shadow: 0 1px 5px 0 #858585;
@@ -74,11 +74,10 @@ td.title{
     text-align: center;
  }
 
-/* #register_submit:hover,
+#register_submit:hover,
 #login_submit:hover{
-    color: #fff;
-    background-color: #dcdcdc;
-} */
+    opacity: 0.5;
+}
 
 #register_submit{
     margin-top: 30px;
