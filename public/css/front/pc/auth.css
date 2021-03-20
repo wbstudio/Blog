@@ -55,7 +55,7 @@ td.title{
     -webkit-border-radius: 13px;
     -moz-border-radius: 13px;
     border-radius: 13px;
-    height: 45px;
+    /* height: 45px; */
     line-height: 45px;
     color: #FFFFFF;
     font-family: Arial;
