@@ -34,19 +34,15 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
 
+//member
+Route::middleware(['auth:sanctum', 'verified'])->get('/member', [\App\Http\Controllers\Front\MemberController::class, 'index'])->name('member.index');
+//怪異情報編集
+Route::middleware(['auth:sanctum', 'verified'])->get('/member/setting', [\App\Http\Controllers\Front\MemberController::class, 'settingShowFrom'])->name('member.settingShowFrom');
+Route::middleware(['auth:sanctum', 'verified'])->post('/member/setting', [\App\Http\Controllers\Front\MemberController::class, 'settingUpdate'])->name('member.settingUpdate');
+//inquiry
 Route::middleware(['auth:sanctum', 'verified'])->get('/inquiry', [\App\Http\Controllers\Front\InquiryController::class, 'showFrom'])->name('inquiry.showForm');
-Route::middleware(['auth:sanctum', 'verified'])->post('/inquiry', [\App\Http\Controllers\Front\InquiryController::class, 'confirm'])->name('inquiry.confirm');
-
-// Route::middleware(['auth:sanctum', 'verified'])->get('/inquiry', [\App\Http\Controllers\Front\InquiryController::class, 'showFrom'])->name('inquiry.showForm');
-// Route::middleware(['auth:sanctum', 'verified'])->post('/inquiry', [\App\Http\Controllers\Front\InquiryController::class, 'confirm'])->name('inquiry.confirm');
-// Route::middleware(['auth:sanctum', 'verified'])->post('/inquiry/send', [\App\Http\Controllers\Front\InquiryController::class, 'send'])->name('inquiry.send');
-
-
-//無料会員以上閲覧可能ページ→status=2
-
-
-//有料会員閲覧可能ページ→status=3
-
+Route::middleware(['auth:sanctum', 'verified'])->post('/inquiry/confirm', [\App\Http\Controllers\Front\InquiryController::class, 'confirm'])->name('inquiry.confirm');
+Route::middleware(['auth:sanctum', 'verified'])->post('/inquiry/thanks', [\App\Http\Controllers\Front\InquiryController::class, 'thanks'])->name('inquiry.thanks');
 
 //管理者権限ページ
 // ログイン周り

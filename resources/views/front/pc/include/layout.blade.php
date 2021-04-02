@@ -24,6 +24,7 @@
                         <input type="image" class="search" src="{{ asset('images/front/icon_search_button.svg') }}">
                     </form>
                     @auth
+                        <a href="{{ route('member.index') }}" class="login">会員ページ</a>
                     @else
                         <a href="{{ route('login') }}" class="login">ログイン</a>
                         <a href="{{ route('register') }}" class="regist_member">新規登録</a>
