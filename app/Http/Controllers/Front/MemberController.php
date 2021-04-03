@@ -100,7 +100,6 @@ class MemberController extends Controller
 
         $dispData = [];
 
-var_dump($request->input('user_id'));
         $user = new User();
         $user = User::where("id",$request->input('user_id'))->first();
         $user->password = Hash::make($request->input('newpassword'));

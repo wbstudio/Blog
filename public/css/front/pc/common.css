@@ -220,6 +220,7 @@ footer .footer_blog_area{
 footer .site_contents_blog h3{
     margin-bottom: 0;
     border-bottom: 1px solid #404040;
+    text-align: center;
 }
 
 footer .footer_blog_area .blog_auther{
