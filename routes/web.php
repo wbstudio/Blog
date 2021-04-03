@@ -21,7 +21,9 @@ if (preg_match("/iPhone|iPod|Android.*Mobile|Windows.*Phone/", $_SERVER['HTTP_US
 define("USER_AGENT", $user_agent);
 
 
-//非会員閲覧可能ページ
+//******************************//
+//  非会員閲覧可能ページ
+//******************************//
 Route::get('/', [\App\Http\Controllers\Front\TopController::class, 'index'])->name('topPage');
 Route::get('/category', [\App\Http\Controllers\Front\ListController::class, 'categoryList'])->name('categoryList');
 Route::get('/auther/{auther_id}', [\App\Http\Controllers\Front\ListController::class, 'onlyAuther'])->name('list.onlyAuther');
@@ -29,11 +31,19 @@ Route::get('/category/{category_id}', [\App\Http\Controllers\Front\ListControlle
 Route::get('/auther/{auther_id}/category/{category_id}', [\App\Http\Controllers\Front\ListController::class, 'bothAutherAndCategory'])->name('list.bothAutherAndCategory');
 Route::post('/search', [\App\Http\Controllers\Front\ListController::class, 'searchBox'])->name('list.searchWordList');
 Route::get('/article/{article_id}', [\App\Http\Controllers\Front\ArticleController::class, 'articleDetail'])->name('detail.article');
+//アドレス忘れ
+Route::get('/password-forget', [\App\Http\Controllers\Front\MemberController::class, 'passwordForgetShowform'])->name('password-forget.showForm');
+Route::post('/password-forget', [\App\Http\Controllers\Front\MemberController::class, 'passwordForgetMailSend'])->name('password-forget.mailSend');
+Route::get('/password-reset/{rand_number_01}/{user_id}/{rand_number_02}', [\App\Http\Controllers\Front\MemberController::class, 'passwordResetShowform'])->name('password-forget.resetShowform');
+Route::post('/password-reset', [\App\Http\Controllers\Front\MemberController::class, 'passwordResetEdit'])->name('password-forget.resetEdit');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
 
+//******************************//
+//  会員閲覧可能ページ
+//******************************//
 //member
 Route::middleware(['auth:sanctum', 'verified'])->get('/member', [\App\Http\Controllers\Front\MemberController::class, 'index'])->name('member.index');
 //怪異情報編集
@@ -44,7 +54,9 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/inquiry', [\App\Http\Cont
 Route::middleware(['auth:sanctum', 'verified'])->post('/inquiry/confirm', [\App\Http\Controllers\Front\InquiryController::class, 'confirm'])->name('inquiry.confirm');
 Route::middleware(['auth:sanctum', 'verified'])->post('/inquiry/thanks', [\App\Http\Controllers\Front\InquiryController::class, 'thanks'])->name('inquiry.thanks');
 
-//管理者権限ページ
+//******************************//
+//  管理者権限ページ
+//******************************//
 // ログイン周り
 Route::get('admin', [\App\Http\Controllers\Admin\AdminController::class, 'showLoginForm']);
 Route::post('admin', [\App\Http\Controllers\Admin\AdminController::class, 'login']);

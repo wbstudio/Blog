@@ -34,7 +34,7 @@
             {{ __('Login') }}
         </x-jet-button>
         @if (Route::has('password.request'))
-            <a id="pass_forget" class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
+            <a id="pass_forget" class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password-forget.showForm') }}">
                 {{ __('あれれ？パスワードなんだっけ？') }}
             </a>
         @endif

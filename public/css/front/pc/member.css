@@ -77,6 +77,25 @@ td.button button:hover{
     opacity: 0.7;
 }
 
+form.pass_forget_form .forget_pass_mail{
+    height: 30px;
+    width: 60%;
+}
+
+form.pass_forget_form .forget_pass_button,
+form.pass_rest_form .reset_pass_button{
+    height: 30px;
+    width: 70px;
+    background: #FFF;
+    border: 1px solid rgb(118, 118, 118);
+    border-radius: 3px;
+}
+
+form.pass_rest_form .reset_pass_button{
+    float: right;
+}
+
+
 @media screen and (max-width: 900px){
 
     .title{
