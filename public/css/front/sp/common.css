@@ -215,6 +215,20 @@ main{
     border-top: 1px solid #404040;
 }
 
+footer{
+    border-top: 1px solid #dcdcdc;
+    padding-top: 5px;
+}
+
+footer .site_title_area{
+    text-align: right;
+}
+
+footer .site_title_area img{
+    width: 100px;
+    margin-right: 5px;
+}
+
 @media screen and (max-width: 330px){
 
     .modal__content ul li {

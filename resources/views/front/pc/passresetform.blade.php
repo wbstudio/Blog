@@ -16,7 +16,7 @@
     <div>
         新しいパスワードを入力してください。
     </div>
-    <table >
+    <table>
         <tr>
             <td class="title">新しいパスワード</td>
             <td class="input_area"><input type="password" name="newpassword" class="reset_pass"></td>

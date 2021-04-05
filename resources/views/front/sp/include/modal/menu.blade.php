@@ -19,16 +19,33 @@
                             </div>
                         </form>
                     </li>
-
+                    @auth
                     <li>
-                        <a href="">
+                        <a href="{{ route('member.index') }}" class="login">
                             <div class="link_mass">
-                            <div class="link_name">02あいうえおあいうえおあいうえお</div>
+                            <div class="link_name">会員ページ</div>
                                 <div class="go_button"></div>
                             </div>
                         </a>
                     </li>
-
+                    @else
+                    <li>
+                        <a href="{{ route('login') }}" class="login">
+                            <div class="link_mass">
+                            <div class="link_name">ログイン</div>
+                                <div class="go_button"></div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('register') }}" class="login">
+                            <div class="link_mass">
+                            <div class="link_name">新規登録</div>
+                                <div class="go_button"></div>
+                            </div>
+                        </a>
+                    </li>
+                    @endauth
                     <li>
                         <a href="">
                             <div class="link_mass">
@@ -91,6 +108,18 @@
                             </div>
                         </a>
                     </li>
+                    @auth
+                    <li>
+                        <form method="POST" action="{{ route('logout') }}">
+                            @csrf
+                            <x-jet-dropdown-link href="{{ route('logout') }}"
+                                                onclick="event.preventDefault();
+                                                            this.closest('form').submit();">
+                                {{ __('ログアウト') }}
+                            </x-jet-dropdown-link>
+                        </form>
+                    </li>
+                    @endauth
 
                 </ul>
             </div>

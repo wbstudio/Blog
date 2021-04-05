@@ -17,7 +17,7 @@
     @csrf
     <div>
         <table>
-        <tr>
+            <tr>
                 <td class="title"><label for="email" id="email_label">アドレス</label></td>
                 <td class="input_area">
                     <input id="email" type="email" name="email" value="@if(!empty(old('email')) && old('email') == 0) {{ old('email') }} @else {{$userInfo->email}} @endif" required>

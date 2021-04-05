@@ -1,0 +1,124 @@
+.isset_form,
+.member_page{
+    padding-top: 15px;
+    margin-bottom: 15px;
+}
+
+.long_str{
+    font-size: 28px;
+}
+
+.common_message{
+    margin-bottom: 20px;
+}
+
+.input_area{
+    margin-bottom: 20px;
+}
+
+.member_form{
+    margin-bottom: 60px;
+}
+
+.member_form .input_area .title{
+    font-weight: bold;
+}
+
+.member_form .input_area .form input[type="text"],
+.member_form .input_area .form input[type="email"],
+.member_form .input_area .form input[type="password"]{
+    height: 27px;
+    width: 98%;
+}
+
+.member_form .input_area .form input[type="radio"]{
+    vertical-align: text-top;
+}
+
+.member_form .input_area .form textarea{
+    height: 200px;
+    width: 98%;
+    resize: vertical;
+}
+
+.member_form .input_area .select_auther{
+    margin-top: 10px;
+}
+
+.member_form .without_text_sum{
+    text-align: center;
+}
+
+.remenber_check{
+    margin-bottom: 40px;
+}
+
+#remember_me{
+    margin-left: 0;
+}
+
+.button button{
+    font-size: 18px;
+    padding:5px 50px;
+    background: #FFF;
+    border: 1px solid #404040;
+    border-radius: 5px;
+    margin-bottom: 3px;
+}
+
+.small p{
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.button button:hover{
+    opacity: 0.7;
+}
+
+.button button span,
+.button button img{
+    display: inline-block;
+}
+
+.button button img{
+    width: 12px;
+    vertical-align: middle;
+}
+
+.member_form .without_text_sum a#pass_forget{
+    font-size: 14px;
+}
+
+#member_top .link_mass{
+    text-align: center;
+    width:80%;
+    margin: 0 auto 30px;
+    border: 1px solid #404040;
+    border-radius: 5px;
+    padding: 5px 0;
+}
+
+#member_top .link_mass a{
+    text-decoration: none;
+}
+
+.logout_button{
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+#member_top .link_mass .link_up{
+    font-size: 20px;
+}
+
+#member_top .link_mass .link_down{
+    font-size: 12px;
+}
+
+.member_form .form_area{
+    margin-bottom: 80px;
+}
+
+.member_form .edit_button{
+    margin-bottom: 45px;
+}

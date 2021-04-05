@@ -33,6 +33,12 @@ class MemberController extends Controller
     }
 
     public function settingUpdate(Request $request) {
+
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required|email',
+        ]);
+
         $userInfo = Auth::user();
         $dispData = [
             'userInfo' => $userInfo,
@@ -40,7 +46,9 @@ class MemberController extends Controller
 
         if (Hash::check($request["password"], $userInfo["password"])) {
             // 一致したときの処理
-            var_dump("一致");
+            $request->validate([
+                'newpassword' => 'required', 'string', 'min:8', 'confirmed',
+            ]);
         } else {
             // 一致しなかったときの処理
             var_dump("不一致");
