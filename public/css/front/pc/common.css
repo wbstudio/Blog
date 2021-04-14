@@ -145,6 +145,7 @@ main{
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
     overflow: hidden;
+    word-break: break-all;
 }
 
 .side_navi_auther,

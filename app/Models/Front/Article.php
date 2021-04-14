@@ -9,6 +9,12 @@ use Illuminate\Support\Facades\DB;
 class Article extends Model
 {
     use HasFactory;
+    protected $dates = [
+        'release_at', //追加する。
+        'created_at',
+        'updated_at',
+        'deleted_at'
+    ];
 
     public function getArticleDataByid($id)
     {
