@@ -47,7 +47,7 @@ class MemberController extends Controller
         if (Hash::check($request["password"], $userInfo["password"])) {
             // 一致したときの処理
             $request->validate([
-                'newpassword' => 'required', 'string', 'min:8', 'confirmed',
+                'newpassword' => ['required', 'string', 'min:8', 'confirmed'],
             ]);
         } else {
             // 一致しなかったときの処理
@@ -103,7 +103,7 @@ class MemberController extends Controller
     public function passwordResetEdit(Request $request) {
 
         $request->validate([
-            'newpassword' => 'required', 'string', 'min:8', 'confirmed',
+            'newpassword' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
 
         $dispData = [];

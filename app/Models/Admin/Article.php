@@ -106,6 +106,40 @@ class Article extends Model
         return $dispData;
     }
 
+    public function getPureArticlesList()
+    {
+        $columnList = [
+            "id",
+            "auther",
+            "auther_category",
+            "main_category",
+            "tag",
+            "channel",
+            "title",
+            "heading",
+            "main",
+            "eyecatch",
+            "status",
+            "release_at",
+            "end_at",
+            "count",
+            "good",
+            "created_at",
+            "updated_at",
+        ];
+
+
+        $whereList = [
+            ["delete_flag","=",0],
+        ];
+
+        $dispData =$this::from("articles")
+                    ->where($whereList)
+                    ->get($columnList);
+
+        return $dispData;
+    }
+
 
 
 }

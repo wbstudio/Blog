@@ -19,6 +19,7 @@
                     <a href="{{route('memberList')}}"><li>会員管理</li></a>
                     <a href="{{route('inquiryList')}}"><li>問い合わせ管理</li></a>
                     <a href="{{route('tagList')}}"><li>タグ管理</li></a>
+                    <a href="{{route('admin.pickup.list')}}"><li>PickUp</li></a>
                 </ol>
             </div>
             <div id="content" class="content">

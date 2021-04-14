@@ -43,7 +43,7 @@
                         <h3>Blog</h3>
                         <div class="footer_blog_area">
                             <div class="blog_auther">
-                                <h4><a href="">テスト名前</a></h4>
+                                <h4 class="footer_accordion"><a href="">テスト名前</a></h4>
                                 <ul>
                                     <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
                                     <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
@@ -53,7 +53,7 @@
                                 </ul>
                             </div>
                             <div class="blog_auther">
-                                <h4><a href="">テスト名前</a></h4>
+                                <h4 class="footer_accordion"><a href="">テスト名前</a></h4>
                                 <ul>
                                     <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
                                     <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
@@ -63,7 +63,7 @@
                                 </ul>
                             </div>
                             <div class="blog_auther">
-                                <h4><a href="">テスト名前</a></h4>
+                                <h4 class="footer_accordion"><a href="">テスト名前</a></h4>
                                 <ul>
                                     <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
                                     <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
@@ -73,7 +73,7 @@
                                 </ul>
                             </div>
                             <div class="blog_auther">
-                                <h4><a href="">テスト名前</a></h4>
+                                <h4 class="footer_accordion"><a href="">テスト名前</a></h4>
                                 <ul>
                                     <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
                                     <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
@@ -83,7 +83,7 @@
                                 </ul>
                             </div>
                             <div class="blog_auther">
-                                <h4><a href="">テスト名前</a></h4>
+                                <h4 class="footer_accordion"><a href="">テスト名前</a></h4>
                                 <ul>
                                     <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
                                     <li><a href="">カテゴリー名前(大カテゴリー)</a></li>

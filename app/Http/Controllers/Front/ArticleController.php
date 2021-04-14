@@ -22,12 +22,11 @@ class ArticleController extends Controller
         $containTags = null;
 
         if(isset($articles->tag)){
+            //DAO
             $containTags = explode(",",$articles->tag);
+            $mdTag = new Tag();
+            $tagsData = $mdTag->getArticleTagsList($containTags);
         }
-
-        //DAO
-        $mdTag = new Tag();
-        $tagsData = $mdTag->getArticleTagsList($containTags);
 
         if($articles->end_at != "9999-12-31 23:59:00"){
             $articles->editEndFlag = 1;

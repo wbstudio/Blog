@@ -53,105 +53,29 @@
         </div>
 
         <div id="top_page_main">
-
+            @if(isset($pickupList) && count($pickupList) > 0)
             <div class="pick_up patern_01 top_area">
                 <h3>Pick Up</h3>
                 <div>
                     <div class="swiper-container">
                         <div class="swiper-wrapper">
+                            @foreach ($pickupList as $index => $pickup)
                             <div class="swiper-slide">
                                 <div class="swiper-slide_inner">
-                                    <a href="">
+                                    <a href="{{ route('detail.article', ['article_id' => $pickup->id]) }}">
                                         <img src="{{ asset('images/front/top_link/image_190_150.png') }}" class="">
-                                        <div class="title">01タイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテスト</div>
+                                        <div class="title">{{$pickup -> title}}</div>
                                     </a>
-                                    <div class="auther"><span>著者:</span><a href="">test名前</a></div>
-                                    <div class="category"><span>カテゴリー:</span><a href="">testカテゴリー</a></div>
-                                    <div class="update_date">更新日:2021/00/00</div>
+                                    <div class="auther"><span>著者:</span><a href="{{ route('list.onlyAuther', ['auther_id' => $pickup->auther]) }}">{{config("auther.$pickup->auther.name")}}</a></div>
+                                    <div class="category"><span>カテゴリー:</span><a href="{{ route('list.bothAutherAndCategory', ['auther_id'=>$pickup->auther,'category_id'=>0]) }}">{{config("auther.$pickup->auther.category.$pickup->auther_category.name")}}</a></div>
+                                    <div class="update_date">更新日:{{$pickup->release_at}}</div>
                                 </div>
                             </div>
-                            <div class="swiper-slide">
-                                <div class="swiper-slide_inner">
-                                    <a href="">
-                                        <img src="{{ asset('images/front/top_link/image_190_150.png') }}" class="">
-                                        <div class="title">02タイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテスト</div>
-                                    </a>
-                                    <div class="auther"><span>著者:</span><a href="">test名前</a></div>
-                                    <div class="category"><span>カテゴリー:</span><a href="">testカテゴリー</a></div>
-                                    <div class="update_date">更新日:2021/00/00</div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="swiper-slide_inner">
-                                    <a href="">
-                                        <img src="{{ asset('images/front/top_link/image_190_150.png') }}" class="">
-                                        <div class="title">03タイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテスト</div>
-                                    </a>
-                                    <div class="auther"><span>著者:</span><a href="">test名前</a></div>
-                                    <div class="category"><span>カテゴリー:</span><a href="">testカテゴリー</a></div>
-                                    <div class="update_date">更新日:2021/00/00</div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="swiper-slide_inner">
-                                    <a href="">
-                                        <img src="{{ asset('images/front/top_link/image_190_150.png') }}" class="">
-                                        <div class="title">04タイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテスト</div>
-                                    </a>
-                                    <div class="auther"><span>著者:</span><a href="">test名前</a></div>
-                                    <div class="category"><span>カテゴリー:</span><a href="">testカテゴリー</a></div>
-                                    <div class="update_date">更新日:2021/00/00</div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="swiper-slide_inner">
-                                    <a href="">
-                                        <img src="{{ asset('images/front/top_link/image_190_150.png') }}" class="">
-                                        <div class="title">05タイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテスト</div>
-                                    </a>
-                                    <div class="auther"><span>著者:</span><a href="">test名前</a></div>
-                                    <div class="category"><span>カテゴリー:</span><a href="">testカテゴリー</a></div>
-                                    <div class="update_date">更新日:2021/00/00</div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="swiper-slide_inner">
-                                    <a href="">
-                                        <img src="{{ asset('images/front/top_link/image_190_150.png') }}" class="">
-                                        <div class="title">06タイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテスト</div>
-                                    </a>
-                                    <div class="auther"><span>著者:</span><a href="">test名前</a></div>
-                                    <div class="category"><span>カテゴリー:</span><a href="">testカテゴリー</a></div>
-                                    <div class="update_date">更新日:2021/00/00</div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="swiper-slide_inner">
-                                    <a href="">
-                                        <img src="{{ asset('images/front/top_link/image_190_150.png') }}" class="">
-                                        <div class="title">07タイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテスト</div>
-                                    </a>
-                                    <div class="auther"><span>著者:</span><a href="">test名前</a></div>
-                                    <div class="category"><span>カテゴリー:</span><a href="">testカテゴリー</a></div>
-                                    <div class="update_date">更新日:2021/00/00</div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="swiper-slide_inner">
-                                    <a href="">
-                                        <img src="{{ asset('images/front/top_link/image_190_150.png') }}" class="">
-                                        <div class="title">08タイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテスト</div>
-                                    </a>
-                                    <div class="auther"><span>著者:</span><a href="">test名前</a></div>
-                                    <div class="category"><span>カテゴリー:</span><a href="">testカテゴリー</a></div>
-                                    <div class="update_date">更新日:2021/00/00</div>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
                         <div class="swiper-pagination"></div>
                         <div class="swiper-button-prev"></div>
                         <div class="swiper-button-next"></div>
-                    
                     </div>
                     <script>
                         const mySwiper = new Swiper('.swiper-container', {
@@ -177,6 +101,7 @@
                     </script>
                 </div>
             </div>
+            @endif
 
 
             <div id=side_navi class="content">

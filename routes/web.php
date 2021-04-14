@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+ 
 if (preg_match("/iPhone|iPod|Android.*Mobile|Windows.*Phone/", $_SERVER['HTTP_USER_AGENT'])) {
     $user_agent = "sp";
 } else {
@@ -78,6 +78,16 @@ Route::prefix('admin')->middleware('auth:admin')->group(function(){
         Route::get('/edit/{id}', [\App\Http\Controllers\Admin\ArticleController::class, 'edit']);
         Route::post('/edit/{id}', [\App\Http\Controllers\Admin\ArticleController::class, 'update']);
         // Route::post('/edit', [\App\Http\Controllers\Admin\ArticleController::class, 'update']);
+    });
+
+    //記事管理
+    Route::group(['prefix' => 'pickup'], function () {
+        Route::get('list', [\App\Http\Controllers\Admin\PickupController::class, 'getList'])->name('admin.pickup.list');
+        Route::post('delete', [\App\Http\Controllers\Admin\PickupController::class, 'delete'])->name('admin.pickup.delete');
+        Route::get('/regist/status/{status}', [\App\Http\Controllers\Admin\PickupController::class, 'registShowForm'])->name('admin.pickup.registShowForm');
+        Route::post('/regist', [\App\Http\Controllers\Admin\PickupController::class, 'registInsert'])->name('admin.pickup.registInsert');
+        Route::get('/edit/{pickup_id}/status/{status}', [\App\Http\Controllers\Admin\PickupController::class, 'editShowForm'])->name('admin.pickup.editShowForm');
+        Route::post('/edit/{id}', [\App\Http\Controllers\Admin\PickupController::class, 'editUpdate'])->name('admin.pickup.editUpdate');
     });
 
     //問い合わせ管理

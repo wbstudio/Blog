@@ -28,6 +28,12 @@ $(function(){
     //ckEditor内のimg
     $(".article_main img").css("height", "auto");
 
+    //footterアコーディオン
+    $(function(){
+        $("h4.footer_accordion").on("click", function() {
+            $(this).next().slideToggle();
+        });
+    });
 });
 
 

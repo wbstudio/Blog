@@ -77,6 +77,7 @@ h3{
 }
 
 .patern_01 .title{
+    word-wrap: break-word;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
