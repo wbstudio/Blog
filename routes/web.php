@@ -13,12 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
  
-// if (preg_match("/iPhone|iPod|Android.*Mobile|Windows.*Phone/", $_SERVER['HTTP_USER_AGENT'])) {
-//     $user_agent = "sp";
-// } else {
-//     $user_agent = "pc";
-// }
-// define("USER_AGENT", $user_agent);
+if (preg_match("/iPhone|iPod|Android.*Mobile|Windows.*Phone/", $_SERVER['HTTP_USER_AGENT'])) {
+    $user_agent = "sp";
+} else {
+    $user_agent = "pc";
+}
+define("USER_AGENT", $user_agent);
 
 
 //******************************//
