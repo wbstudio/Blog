@@ -53,7 +53,7 @@
         </div>
 
         <div id="top_page_main">
-            @if(isset($pickupList) && count($pickupList) > 0)
+            @if(isset($pickupList) && is_countable($pickupList))
             <div class="pick_up patern_01 top_area">
                 <h3>Pick Up</h3>
                 <div>
