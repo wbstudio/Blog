@@ -159,12 +159,20 @@ class ArticleController extends Controller
             ]);
 
         $article = new Article();
+
         $releaseDate = $request->input('release_year')."-".$request->input('release_month')."-".$request->input('release_day')." ".$request->input('release_hour').":".$request->input('release_minute');
         if($request->input('endstatus') == "on"){
             $endDate = $request->input('end_year')."-".$request->input('end_month')."-".$request->input('end_day')." ".$request->input('end_hour').":".$request->input('end_minute');
         }else{
             $endDate = "9999-12-31 23:59";
         }
+
+        $inputTags = $request->input("tag");
+        $tags = null;
+        if(isset($inputTags) && $inputTags != null){
+            $tags = join(",",$request->input("tag"));
+        }
+
         #Greetingモデルクラスのプロパティに値を代入
         $article->auther = $request->input('auther');
         $article->auther_category = $request->input('auther_category');
@@ -174,7 +182,7 @@ class ArticleController extends Controller
         $article->eyecatch = $upload_image;
         $article->main = $request->input('main');
         $article->channel = $request->input('channel');
-        $article->tag = join(",",$request->input("tag"));
+        $article->tag = $tags;
         $article->release_at = $releaseDate;
         $article->end_at = $endDate;
         $article->count = 371;
@@ -245,6 +253,13 @@ class ArticleController extends Controller
         }else{
             $endDate = "9999-12-31 23:59";
         }
+
+        $inputTags = $request->input("tag");
+        $tags = null;
+        if(isset($inputTags) && $inputTags != null){
+            $tags = join(",",$request->input("tag"));
+        }
+
         // #Greetingモデルクラスのプロパティに値を代入
         $article = Article::where("id",$request->input('id'))->first();
         $article->auther = $request->input('auther');
@@ -257,7 +272,7 @@ class ArticleController extends Controller
         }
         $article->main = $request->input('main');
         $article->channel = $request->input('channel');
-        $article->tag = join(",",$request->input("tag"));
+        $article->tag = $tags;
         $article->release_at = $releaseDate;
         $article->end_at = $endDate;
         $article->status = $request->input('status');

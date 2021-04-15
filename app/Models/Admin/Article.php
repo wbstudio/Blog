@@ -131,6 +131,7 @@ class Article extends Model
 
         $whereList = [
             ["delete_flag","=",0],
+            ["status","=",2],
         ];
 
         $dispData =$this::from("articles")

@@ -80,6 +80,7 @@ class Article extends Model
 
         $whereList = [
             ["delete_flag","=",0],
+            ["status","=",2],
         ];
 
         $dispData =$this::from("articles")
@@ -129,6 +130,7 @@ class Article extends Model
 
         $whereList = [
             ["delete_flag","=",0],
+            ["status","=",2],
         ];
 
         $dispData =$this::from("articles")
@@ -163,6 +165,42 @@ class Article extends Model
 
         $whereList = [
             ["delete_flag","=",0],
+            ["status","=",2],
+        ];
+
+        $dispData =$this::from("articles")
+                    ->where($whereList)
+                    ->orderBy('count', 'desc')
+                    ->limit(5)
+                    ->get($columnList);
+
+        return $dispData;
+    }
+
+    public function getArticlesListNews()
+    {
+        $columnList = [
+            "id",
+            "auther",
+            "auther_category",
+            "main_category",
+            "tag",
+            "channel",
+            "title",
+            "heading",
+            "eyecatch",
+            "status",
+            "release_at",
+            "end_at",
+            "count",
+            "good",
+            "created_at",
+            "updated_at",
+        ];
+
+        $whereList = [
+            ["delete_flag","=",0],
+            ["status","=",4],
         ];
 
         $dispData =$this::from("articles")

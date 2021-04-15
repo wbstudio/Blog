@@ -35,14 +35,12 @@
                 </div>
             </div>
             <div class="header_second_area">
-                <a href=""><img src="{{ asset('images/front/top_link/test_link.png') }}"></a>
-                <a href=""><img src="{{ asset('images/front/top_link/test_link.png') }}"></a>
-                <a href=""><img src="{{ asset('images/front/top_link/test_link.png') }}"></a>
-                <a href=""><img src="{{ asset('images/front/top_link/test_link.png') }}"></a>
-                <a href=""><img src="{{ asset('images/front/top_link/test_link.png') }}"></a>
-                <a href=""><img src="{{ asset('images/front/top_link/test_link.png') }}"></a>
-                <a href=""><img src="{{ asset('images/front/top_link/test_link.png') }}"></a>
-                <a href=""><img src="{{ asset('images/front/top_link/test_link.png') }}"></a>
+            <!--8つまでこのCSSでいけるはず-->
+                <a href="{{ route('autherList') }}">Blogger</a>
+                <a href="{{ route('categoryList') }}">Category</a>
+                <a href="{{ route('inquiry.showForm') }}">Contact</a>
+                <a href="{{ route('login') }}">How to use</a>
+                <a href="{{ route('login') }}">This Blog is...</a>
             </div>
         </header>
 
@@ -107,22 +105,32 @@
             <div id=side_navi class="content">
                 @if(isset($newsList) && is_countable($newsList))
                 <div class="side_news">
-                    <div class="side_title">topics</div>
+                    <div class="side_title">News</div>
                     <ul>
                         @foreach($newsList as $index => $news)
                         <li>
-                            <a href="{{ route('detail.article', ['article_id' => 0]) }}"><span class="side_navi_date">11月11日(newIcon)</span>
-                                <p title="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" class="side_navi_title">
-                                    リンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンクリンク
+                            <a href="{{ route('detail.article', ['article_id' => $news->id]) }}">
+                                <span class="side_navi_date">
+                                    {{ $news->release_at->format('Y/m/d') }}
+                                    @if($news->release_at > $threeDaysAgo)
+                                    <img src="{{ asset('images/front/icon_new.png') }}" width="34px">
+                                    @endif
+                                </span>
+                                <p title="{{$news->title}}" class="side_navi_title">
+                                    {{$news->title}}
                                 </p>
                             </a>
                             <div class="side_navi_auther">
+                            @if(isset($news->auther))
                                 <span style="color:#ccc;">筆者:</span>
-                                <a href="{{ route('list.onlyAuther', ['auther_id' => 0]) }}">名前テスト</a>
+                                <a href="{{ route('list.onlyAuther', ['auther_id' => $news->auther]) }}">{{config("auther.$news->auther.name")}}</a>
+                            @endif
                             </div>
                             <div class="side_navi_category">
+                            @if(isset($news->category_id))
                                 <span style="color:#ccc;">カテゴリー:</span>
-                                <a href="{{ route('list.bothAutherAndCategory', ['auther_id' => 0,'category_id' => 0]) }}">名前テスト</a>
+                                <a href="{{ route('list.bothAutherAndCategory', ['auther_id' => $news->auther,'category_id' => $news->auther_category]) }}">{{config("auther.$news->auther.category.$news->auther_category.name")}}</a>
+                            @endif
                             </div>
                         </li>
                         @endforeach
@@ -133,7 +141,7 @@
 
                 @if(isset($newArticlesList) && is_countable($newArticlesList))
                 <div class="side_recently">
-                    <div class="side_title">News</div>
+                    <div class="side_title">Update</div>
                     <ul>
                         @foreach($newArticlesList as $index => $newArticle)
                         <li>

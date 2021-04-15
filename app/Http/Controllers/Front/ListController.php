@@ -25,6 +25,11 @@ class ListController extends Controller
         return view('front.'.USER_AGENT.'.categorylist',$dispData);
     }
 
+    public function autherList() {
+        $dispData = array();
+        return view('front.'.USER_AGENT.'.autherlist',$dispData);
+    }
+
     public function bothAutherAndCategory($auther_id,$category_id) {
         $dispData = array();
         return view('front.'.USER_AGENT.'.articlelist',$dispData);

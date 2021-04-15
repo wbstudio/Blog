@@ -36,7 +36,7 @@ class AvailController extends Controller
         //更新情報
         $newArticlesArticleData = $mdArticle->getArticlesListNewArticles();
         //News（config的な役割←configでobject使えないから）
-        $newsData = ConfigureController::getNewsObj();
+        $newsData = $mdArticle->getArticlesListNews();
         //Ranking
         $rankingArticleData = $mdArticle->getArticlesListRanking();
 

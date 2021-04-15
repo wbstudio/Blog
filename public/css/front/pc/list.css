@@ -315,6 +315,117 @@ a:hover{
     margin-bottom: 0;
 }
 
+/*
+Blogger
+*/
+
+.blogger_odd{
+    padding-right: 20px;
+    margin: 10px 0 0px;
+    color: var(--main-color);
+}
+
+.blogger_odd img{
+    border-radius: 50%;
+    width:135px;
+    height: 135px;
+    align: left;
+    position: relative;
+    left: 15px;
+}
+
+.blogger_odd .blogger_name{
+    font-weight: bold;
+    font-family: Montserrat;
+    float: right;
+    position: relative;
+    font-size: 36px;
+    text-align: right;
+    width: 590px;
+    border-bottom: 3px solid var(--main-color);
+    line-height: 1em;
+    top: 12px;
+    padding-right: 10px;
+    z-index: 1;
+}
+
+.blogger_odd .blogger_explain{
+    width: 600px;
+    position: relative;
+    top: -74px;
+    left: 175px;
+}
+
+.blogger_even{
+    padding-left: 20px;
+    margin: 10px 0 0px;
+    color: var(--main-color);
+}
+.blogger_even img{
+    border-radius: 50%;
+    width:135px;
+    height: 135px;
+    align: right;
+    margin-left: 18px;
+}
+
+.blogger_even .blogger_name{
+    font-weight: bold;
+    font-family: Montserrat;
+    float: left;
+    position: relative;
+    font-size: 36px;
+    text-align: left;
+    width: 594px;
+    border-bottom: 3px solid var(--main-color);
+    line-height: 1em;
+    top: 12px;
+    padding-left: 10px;
+    z-index: 1;
+}
+
+.blogger_even .blogger_explain{
+    width: 600px;
+    position: relative;
+    top: -74px;
+}
+
+#blogger .blogger_explain_title{
+    font-family: Montserrat;
+    padding-bottom: 3px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#blogger .blogger_explain_detail{
+    font-size: 12px;
+    margin: 0 0 12px;
+    font-weight: 600;
+}
+
+
+#blogger .to_blogger_category{
+    text-align: center;
+    position: relative;
+    top: -55px;
+}
+
+#blogger .to_blogger_category a{
+    border: 2px solid var(--main-color);
+    padding: 10px 20px;
+    text-decoration: none;
+    color: var(--main-color);
+    font-weight: bold;
+    /* transition: color,border 0.5s ease 0s; */
+}
+
+
+#blogger .to_blogger_category a:hover{
+    /* background-color:#e7e7e7; */
+    color: #949494;
+    border: 2px solid #949494;
+  }
+
 
   /****************************
 *

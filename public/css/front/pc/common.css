@@ -78,11 +78,18 @@ header{
 .header_second_area a{
     color: #000;
     text-decoration: none;
-    display:inline-block;
+    display: inline-block;
     padding: 3px 0px;
-    font-size: 12px;
-    width:11%;
+    font-size: 15px;
+    width: 11%;
     vertical-align: -webkit-baseline-middle;
+    font-weight: bold;
+    margin-top: 6px;
+}
+
+.header_second_area a:hover{
+    text-decoration: none;
+    background: #dcdcdc;
 }
 
 .header_second_area a img{
@@ -312,6 +319,11 @@ footer .footer_base{
     .section_inner{
         padding: 0;
     }
+
+    .header_second_area a{
+        font-size: 12px;
+    }
+    
     
 
 }/*min-width: 481px*/
