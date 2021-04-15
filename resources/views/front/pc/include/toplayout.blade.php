@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=yes">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script src="{{ asset('js/front/pc/common.js') }}"></script>
         <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
         <link rel="stylesheet" href="{{ asset('css/front/pc/common.css') }}">
         <link rel="stylesheet" href="{{ asset('css/front/pc/list.css') }}">
@@ -36,11 +37,37 @@
             </div>
             <div class="header_second_area">
             <!--8つまでこのCSSでいけるはず-->
-                <a href="{{ route('autherList') }}">Blogger</a>
-                <a href="{{ route('categoryList') }}">Category</a>
-                <a href="{{ route('inquiry.showForm') }}">Contact</a>
-                <a href="{{ route('login') }}">How to use</a>
-                <a href="{{ route('login') }}">This Blog is...</a>
+            <ul class="header_second_area_list">
+                <li class="header_second_area_mass has-sub">
+                    <a href="{{ route('autherList') }}">Blogger</a>
+                    <ul class="sub narrow">
+                        <li><a href="">test_name</a></li>
+                        <li><a href="">test_name</a></li>
+                        <li><a href="">test_name</a></li>
+                        <li><a href="">test_name</a></li>
+                        <li><a href="">test_name</a></li>
+                    </ul>
+                </li>
+                <li class="header_second_area_mass has-sub">
+                    <a href="{{ route('categoryList') }}">Category</a>
+                    <ul class="sub">
+                        <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
+                        <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
+                        <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
+                        <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
+                        <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
+                    </ul>
+                    </li>
+                <li class="header_second_area_mass no-sub">
+                    <a href="{{ route('inquiry.showForm') }}">Contact</a>
+                    </li>
+                <li class="header_second_area_mass no-sub">
+                    <a href="{{ route('login') }}">How to use</a>
+                    </li>
+                <li class="header_second_area_mass no-sub">
+                    <a href="{{ route('login') }}">This Blog is...</a>
+                </li>
+            </ul>
             </div>
         </header>
 

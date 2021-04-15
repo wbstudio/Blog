@@ -75,13 +75,18 @@ header{
     border-bottom: 1px solid #ccc;
 }
 
+.header_second_area .header_second_area_mass{
+    width: 11%;
+    display: inline-block;
+    border-left: 1px solid #dcdcdc;
+}
+
 .header_second_area a{
+    width: 100%;
     color: #000;
     text-decoration: none;
-    display: inline-block;
     padding: 3px 0px;
     font-size: 15px;
-    width: 11%;
     vertical-align: -webkit-baseline-middle;
     font-weight: bold;
     margin-top: 6px;
@@ -96,7 +101,33 @@ header{
     width:72px;
     height: 30px;
 }
-/**************
+
+.header_second_area ul{
+    position: absolute;
+    padding: 0;
+    width: 100%;
+    margin: 0;
+}
+
+.header_second_area ul.sub{
+    display: none;
+    list-style: none;
+    width: 220px;
+    background: #f5f5f5;
+    top: 37px;
+    font-weight: normal;
+}
+
+.header_second_area ul.sub li{
+    border-bottom: 1px solid #dcdcdc;
+    padding: 5px;
+}
+
+.header_second_area ul.narrow{
+    width: 11%;
+}
+    
+    /**************
 *main
 ***************/
 main{

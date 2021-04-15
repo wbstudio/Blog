@@ -7,6 +7,7 @@
         <link rel="stylesheet" id="paddle-fonts-css" href="https://fonts.googleapis.com/css?family=Montserrat%3A400%2C700" type="text/css" media="all">        
         <link rel="stylesheet" href="{{ asset('css/front/pc/common.css') }}">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="{{ asset('js/front/pc/common.js') }}"></script>
         @yield('head')
     </head>
     <body>
@@ -32,14 +33,38 @@
                 </div>
             </div>
             <div class="header_second_area">
-                <a href=""><img src="{{ asset('images/front/top_link/test_link.png') }}"></a>
-                <a href=""><img src="{{ asset('images/front/top_link/test_link.png') }}"></a>
-                <a href=""><img src="{{ asset('images/front/top_link/test_link.png') }}"></a>
-                <a href=""><img src="{{ asset('images/front/top_link/test_link.png') }}"></a>
-                <a href=""><img src="{{ asset('images/front/top_link/test_link.png') }}"></a>
-                <a href=""><img src="{{ asset('images/front/top_link/test_link.png') }}"></a>
-                <a href=""><img src="{{ asset('images/front/top_link/test_link.png') }}"></a>
-                <a href=""><img src="{{ asset('images/front/top_link/test_link.png') }}"></a>
+            <!--8つまでこのCSSでいけるはず-->
+            <ul class="header_second_area_list">
+                <li class="header_second_area_mass has-sub">
+                    <a href="{{ route('autherList') }}">Blogger</a>
+                    <ul class="sub narrow">
+                        <li><a href="">test_name</a></li>
+                        <li><a href="">test_name</a></li>
+                        <li><a href="">test_name</a></li>
+                        <li><a href="">test_name</a></li>
+                        <li><a href="">test_name</a></li>
+                    </ul>
+                </li>
+                <li class="header_second_area_mass has-sub">
+                    <a href="{{ route('categoryList') }}">Category</a>
+                    <ul class="sub">
+                        <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
+                        <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
+                        <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
+                        <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
+                        <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
+                    </ul>
+                    </li>
+                <li class="header_second_area_mass no-sub">
+                    <a href="{{ route('inquiry.showForm') }}">Contact</a>
+                    </li>
+                <li class="header_second_area_mass no-sub">
+                    <a href="{{ route('login') }}">How to use</a>
+                    </li>
+                <li class="header_second_area_mass no-sub">
+                    <a href="{{ route('login') }}">This Blog is...</a>
+                </li>
+            </ul>
             </div>
         </header>
 
