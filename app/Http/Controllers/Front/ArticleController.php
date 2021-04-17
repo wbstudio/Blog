@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use \App\Models\Front\Article;
 use \App\Models\Front\Tag;
+use \App\Http\Controllers\Front\Avail;
+use DateTime;
 
 class ArticleController extends Controller
 {
@@ -13,6 +15,7 @@ class ArticleController extends Controller
     public function articleDetail($article_id) {
 
         $dispData = array();
+
         //DAO
         $mdArticle = new Article();
         $articlesData = $mdArticle->getArticleDataByid($article_id);
@@ -20,6 +23,11 @@ class ArticleController extends Controller
         $articles->editEndFlag = 0;
         $tagsData = null;
         $containTags = null;
+
+        //layout+pickup部分
+        $layoutData = AvailController::fillInLayout($articles->id,NULL);
+        $threeDaysAgo = new DateTime();
+        $threeDaysAgo->modify('-3 days');//1日後
 
         if(isset($articles->tag)){
             //DAO
@@ -39,6 +47,11 @@ class ArticleController extends Controller
             'maincategoryhidden' => $articles["main_category"],
             'statushidden' => $articles["status"],
             'tags' => $tagsData,
+            'pickupList' => $layoutData ->pickup,
+            'newsList' => $layoutData ->news,
+            'newArticlesList' => $layoutData ->newArticles,
+            'rankingList' => $layoutData ->ranking,
+            'threeDaysAgo' => $threeDaysAgo,
         ];
         
         return view('front.'.USER_AGENT.'.article',$dispData);

@@ -9,6 +9,8 @@ use App\Mail\InquiryUserMail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use \App\Models\Front\Inquiry;
+use \App\Http\Controllers\Front\Avail;
+use DateTime;
 
 class InquiryController extends Controller
 {
@@ -16,9 +18,20 @@ class InquiryController extends Controller
     public function showFrom() {
         // $dispData = array();
         // return view('front.'.USER_AGENT.'.auther',$dispData);
+
+        //layout+pickup
+        $layoutData = AvailController::fillInLayout(NULL,NULL);
+        $threeDaysAgo = new DateTime();
+        $threeDaysAgo->modify('-3 days');//1日後
+
         $userInfo = Auth::user();
         $dispData = [
             'userInfo' => $userInfo,
+            'pickupList' => $layoutData ->pickup,
+            'newsList' => $layoutData ->news,
+            'newArticlesList' => $layoutData ->newArticles,
+            'rankingList' => $layoutData ->ranking,
+            'threeDaysAgo' => $threeDaysAgo,
         ];
         
         return view('front.'.USER_AGENT.'.inquiryForm',$dispData);
@@ -34,8 +47,18 @@ class InquiryController extends Controller
             'message'  => 'required',
         ]);
 
+        //layout+pickup
+        $layoutData = AvailController::fillInLayout(NULL,NULL);
+        $threeDaysAgo = new DateTime();
+        $threeDaysAgo->modify('-3 days');//1日後
+
         $dispData = [
             'request' => $request,
+            'pickupList' => $layoutData ->pickup,
+            'newsList' => $layoutData ->news,
+            'newArticlesList' => $layoutData ->newArticles,
+            'rankingList' => $layoutData ->ranking,
+            'threeDaysAgo' => $threeDaysAgo,
         ];
 
         return view('front.'.USER_AGENT.'.inquiryConfirm',$dispData);
@@ -64,6 +87,11 @@ class InquiryController extends Controller
             $Inquiry = new Inquiry();
             $request->session()->regenerateToken();
 
+            //layout+pickup
+            $layoutData = AvailController::fillInLayout(NULL,NULL);
+            $threeDaysAgo = new DateTime();
+            $threeDaysAgo->modify('-3 days');//1日後
+
             $Inquiry->email = $request->input('email');
             $Inquiry->member_id = $request->input('member_id');
             $Inquiry->comment = $request->input('message');
@@ -74,9 +102,18 @@ class InquiryController extends Controller
             // #Greetingモデルクラスのsaveメソッドを実行
             $Inquiry->save();
 
+            $dispData = [
+                'pickupList' => $layoutData ->pickup,
+                'newsList' => $layoutData ->news,
+                'newArticlesList' => $layoutData ->newArticles,
+                'rankingList' => $layoutData ->ranking,
+                'threeDaysAgo' => $threeDaysAgo,
+            ];
+    
+
             // //送信完了ページのviewを表示
             // return view('front.'.USER_AGENT.'.inquiryThanks',$dispData);
-            return view('front.'.USER_AGENT.'.inquiryThanks');
+            return view('front.'.USER_AGENT.'.inquiryThanks',$dispData);
             
         }
 
