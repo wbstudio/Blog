@@ -34,4 +34,31 @@ class Tag extends Model
 
         return $aList;
     }
+
+    public function getAllTagsList()
+    {
+        $columnList = [
+            "id",
+            "name",
+            "status",
+            "delete_flag",
+            "created_at",
+            "updated_at",
+        ];
+
+        $whereList = [
+            ["delete_flag","=",0],
+        ];
+
+        $dispData =$this::from("tags")
+                    ->where($whereList)
+                    ->get($columnList);
+        $aList = null;
+        if($dispData){
+            foreach($dispData as $tag){
+                $aList[$tag->id]  = $tag->name;
+            }
+        }
+        return $aList;
+    }
 }

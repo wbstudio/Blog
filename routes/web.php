@@ -29,8 +29,10 @@ Route::get('/auther', [\App\Http\Controllers\Front\ListController::class, 'authe
 Route::get('/category', [\App\Http\Controllers\Front\ListController::class, 'categoryList'])->name('categoryList');
 Route::get('/auther/{auther_id}', [\App\Http\Controllers\Front\ListController::class, 'onlyAuther'])->name('list.onlyAuther');
 Route::get('/category/{category_id}', [\App\Http\Controllers\Front\ListController::class, 'onlyCategory'])->name('list.onlyCategory');
-Route::get('/auther/{auther_id}/category/{category_id}', [\App\Http\Controllers\Front\ListController::class, 'bothAutherAndCategory'])->name('list.bothAutherAndCategory');
+Route::get('/auther/{auther_id}/category/{category_id}/page/{page}', [\App\Http\Controllers\Front\ListController::class, 'bothAutherAndCategory'])->name('list.bothAutherAndCategory');
+Route::get('/tag/{tag_id}/page/{page}', [\App\Http\Controllers\Front\ListController::class, 'tagArticleList'])->name('list.tagArticleList');
 Route::post('/search', [\App\Http\Controllers\Front\ListController::class, 'searchBox'])->name('list.searchWordList');
+Route::get('/search/{searchWord}/page/{page}', [\App\Http\Controllers\Front\ListController::class, 'searchPagenation']);
 Route::get('/article/{article_id}', [\App\Http\Controllers\Front\ArticleController::class, 'articleDetail'])->name('detail.article');
 //アドレス忘れ
 Route::get('/password-forget', [\App\Http\Controllers\Front\MemberController::class, 'passwordForgetShowform'])->name('password-forget.showForm');

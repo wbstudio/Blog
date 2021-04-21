@@ -8,56 +8,18 @@
         <div class="site_contents_blog">
             <h3>Blog</h3>
             <div class="footer_blog_area">
+
+                @foreach(Config::get('auther') as $keyAuther => $confAuther)
                 <div class="blog_auther">
-                    <h4><a href="">テスト名前</a></h4>
+                    <h4><a href="{{ route('list.onlyAuther', ['auther_id' => $keyAuther]) }}">{{$confAuther["name"]}}</a></h4>
                     <ul>
-                        <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
-                        <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
-                        <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
-                        <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
-                        <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
+                        @foreach($confAuther["category"] as $keyCategory => $confAutherCategory)
+                        <li><a href="{{ route('list.bothAutherAndCategory', ['auther_id' => $keyAuther,'category_id' => $keyCategory,'page'=>1]) }}">{{$confAutherCategory["name"]}}</a></li>
+                        @endforeach
                     </ul>
                 </div>
-                <div class="blog_auther">
-                    <h4><a href="">テスト名前</a></h4>
-                    <ul>
-                        <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
-                        <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
-                        <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
-                        <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
-                        <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
-                    </ul>
-                </div>
-                <div class="blog_auther">
-                    <h4><a href="">テスト名前</a></h4>
-                    <ul>
-                        <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
-                        <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
-                        <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
-                        <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
-                        <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
-                    </ul>
-                </div>
-                <div class="blog_auther">
-                    <h4><a href="">テスト名前</a></h4>
-                    <ul>
-                        <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
-                        <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
-                        <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
-                        <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
-                        <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
-                    </ul>
-                </div>
-                <div class="blog_auther">
-                    <h4><a href="">テスト名前</a></h4>
-                    <ul>
-                        <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
-                        <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
-                        <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
-                        <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
-                        <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
-                    </ul>
-                </div>
+                @endforeach
+
             </div>
         </div>
     </div>
@@ -69,7 +31,7 @@
             <a href=""><img src="{{ asset('images/front/Youtube_black.svg') }}"></a>
             <div class="cheer">
                 wakuwakuBlog公式SNSもやっています。<br>
-                フォロー・＝＝＝よろしくお願いします。
+                フォロー・チャンネル登録等よろしくお願いします。
             </div>
         </div>
         <div class="wblink_area">

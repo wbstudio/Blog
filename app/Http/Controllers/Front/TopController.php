@@ -12,8 +12,8 @@ class TopController extends Controller
 
     public function index() {
         $dispData = array();
+        //layout+pickup
         $layoutData = AvailController::fillInLayout(NULL,NULL);
-
         $threeDaysAgo = new DateTime();
         $threeDaysAgo->modify('-3 days');//1日後
 

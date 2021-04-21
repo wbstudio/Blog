@@ -265,8 +265,9 @@ footer .site_contents_blog h3{
 footer .footer_blog_area .blog_auther{
     margin-top: 18px;
     margin-bottom: 18px;
-    margin-right: 10px;
+    margin-right: 53px;
     display: inline-block;
+    vertical-align: top;
 }
 
 footer .footer_blog_area h4{
@@ -276,9 +277,10 @@ footer .footer_blog_area h4{
 
 footer .footer_blog_area ul{
     list-style: none;
-    font-size: 12px;
-    padding: 0;
+    font-size: 10px;
+    padding: 5px 0 0;
     margin: 0;
+    text-align: left;
 }
 
 footer .footer_blog_area ul li{
@@ -362,7 +364,7 @@ footer .footer_base{
 @media screen and (max-width: 900px){
 
     footer .footer_blog_area .blog_auther{
-        margin-right: 8px;
+        margin-right: 53px;
     }
 
     footer .footer_blog_area ul{

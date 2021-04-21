@@ -85,6 +85,7 @@ h3{
     font-size: 14px;
     font-weight: bold;
     margin: 10px 0 2px;
+    height: 2.7em;
 }
 
 .patern_01 .auther,
@@ -203,7 +204,7 @@ a:hover{
 }
 
 .category_mass td.single_category_title{
-    width: 55%;
+    width: 80%;
     padding: 7px 0;
 }
 
@@ -253,6 +254,7 @@ a:hover{
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
     overflow: hidden;
+    word-break: break-all;
 }
 
 .article_list_explain{

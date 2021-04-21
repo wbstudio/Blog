@@ -39,7 +39,6 @@ class Pickup extends Model
         }else{
             $whereList[] = ["category_id","=",9999];
         }
-
         $dispData =$this::from("pickups")
                     ->where($whereList)
                     ->get($columnList);

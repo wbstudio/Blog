@@ -5,6 +5,7 @@ namespace App\Models\Front;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Config;
 
 class Article extends Model
 {
@@ -210,6 +211,292 @@ class Article extends Model
                     ->get($columnList);
 
         return $dispData;
+    }
+
+    public function getCategoryArticlesListByPageInfo($auther=null,$category=null)
+    {
+
+        $columnList = [
+            "id",
+            "auther",
+            "auther_category",
+            "main_category",
+            "tag",
+            "channel",
+            "title",
+            "heading",
+            "eyecatch",
+            "status",
+            "release_at",
+            "end_at",
+            "count",
+            "good",
+            "created_at",
+            "updated_at",
+        ];
+
+
+        $whereList = [
+            ["delete_flag","=",0],
+            ["status","=",2],
+        ];
+
+        if(isset($auther) && $auther != null){
+            $whereList[] = ["auther","=",$auther];
+            $orderelement = "auther_category";
+        }
+
+        if(isset($category) && $category != null){
+            $whereList[] = ["auther_category","=",$category];
+            $orderelement = "auther";
+        }
+
+        $dispData =$this::from("articles")
+                    ->where($whereList)
+                    ->orderby($orderelement)
+                    ->get($columnList);
+
+        $returnData = [];
+        if(isset($dispData)){
+            foreach($dispData as $val){
+                $returnData[$val[$orderelement]][] = $val;
+            }            
+        }
+
+        return $returnData;
+    }
+
+    public function getDisplyArticleList($auther=null,$category=null,$searchWord=null,$page,$per_page)
+    {
+
+        $columnList = [
+            "id",
+            "auther",
+            "auther_category",
+            "main_category",
+            "tag",
+            "channel",
+            "title",
+            "heading",
+            "eyecatch",
+            "status",
+            "release_at",
+            "end_at",
+            "count",
+            "good",
+            "created_at",
+            "updated_at",
+        ];
+
+
+
+        $whereList = [
+            ["delete_flag","=",0],
+            ["status","=",2],
+        ];
+
+        if(isset($auther) && $auther != null && isset($category) && $category != null){
+            $whereList[] = ["auther","=",$auther];
+            $whereList[] = ["auther_category","=",$category];
+        }
+
+        if(isset($searchWord) && $searchWord != null){
+            $searchWordList = explode(" ",$searchWord);
+            foreach($searchWordList as $searchWordmass){
+                $whereList[] = ["main","like","%$searchWordmass%"];
+            }
+        }
+
+        $offset = 0;
+        $limit = $per_page;
+        if(isset($page) && $page != 1){
+            $offset = ($page - 1) * $per_page;
+        }
+
+
+        $dispData["data"] =$this::from("articles")
+                    ->where($whereList)
+                    ->orderby("release_at","desc")
+                    ->offset($offset)
+                    ->limit($limit)
+                    ->get($columnList);
+
+        $dispData["AllCnt"] = DB::table('articles')->where($whereList)->count();
+            
+        return $dispData;
+    }
+
+    public function getDisplyArticleListByTagId($tagId=null,$page,$per_page)
+    {
+
+        $columnList = [
+            "id",
+            "auther",
+            "auther_category",
+            "main_category",
+            "tag",
+            "channel",
+            "title",
+            "heading",
+            "eyecatch",
+            "status",
+            "release_at",
+            "end_at",
+            "count",
+            "good",
+            "created_at",
+            "updated_at",
+        ];
+
+
+        $whereList = [
+            ["delete_flag","=",0],
+            ["status","=",2],
+        ];
+
+        $offset = 0;
+        $limit = $per_page;
+        if(isset($page) && $page != 1){
+            $offset = ($page - 1) * $per_page;
+        }
+
+
+        $dispData["data"] =$this::from("articles")
+                    ->where($whereList)
+                    ->whereRaw('FIND_IN_SET('.$tagId.',tag)')
+                    ->orderby("release_at","desc")
+                    ->offset($offset)
+                    ->limit($limit)
+                    ->get($columnList);
+
+        $dispData["AllCnt"] = DB::table('articles')->where($whereList)->whereRaw('FIND_IN_SET('.$tagId.',tag)')->count();
+
+        return $dispData;
+    }
+
+
+    public function getArticlesListPerAuther()
+    {
+
+        $columnList = [
+            "id",
+            "auther",
+            "auther_category",
+            "main_category",
+            "tag",
+            "channel",
+            "title",
+            "heading",
+            "eyecatch",
+            "status",
+            "release_at",
+            "end_at",
+            "count",
+            "good",
+            "created_at",
+            "updated_at",
+        ];
+
+
+
+        $confAuther= config('auther');
+        foreach($confAuther as $key => $val){
+            $whereList = null;
+            $whereList = [
+                ["delete_flag","=",0],
+                ["status","=",2],
+                ["auther","=",$key]
+            ];
+            $dispData[$key] =$this::from("articles")
+                            ->where($whereList)
+                            ->orderby("release_at","desc")
+                            ->get($columnList);
+        }
+
+        return $dispData;
+    }
+
+    public function getArticlesListPerCategory()
+    {
+
+        $columnList = [
+            "id",
+            "auther",
+            "auther_category",
+            "main_category",
+            "tag",
+            "channel",
+            "title",
+            "heading",
+            "eyecatch",
+            "status",
+            "release_at",
+            "end_at",
+            "count",
+            "good",
+            "created_at",
+            "updated_at",
+        ];
+
+
+
+        $confAuther= config('category');
+        foreach($confAuther as $key => $val){
+            $whereList = null;
+            $whereList = [
+                ["delete_flag","=",0],
+                ["status","=",2],
+                ["auther_category","=",$key]
+            ];
+            $dispData[$key] =$this::from("articles")
+                            ->where($whereList)
+                            ->orderby("release_at","desc")
+                            ->get($columnList);
+        }
+
+        return $dispData;
+    }
+    
+
+    public function getArticlesListByCategoryId($category_id)
+    {
+
+        $columnList = [
+            "id",
+            "auther",
+            "auther_category",
+            "main_category",
+            "tag",
+            "channel",
+            "title",
+            "heading",
+            "eyecatch",
+            "status",
+            "release_at",
+            "end_at",
+            "count",
+            "good",
+            "created_at",
+            "updated_at",
+        ];
+
+        $whereList = null;
+        $whereList = [
+            ["delete_flag","=",0],
+            ["status","=",2],
+            ["auther_category","=",$category_id]
+        ];
+
+        $dispData =$this::from("articles")
+                        ->where($whereList)
+                        ->orderby("release_at","desc")
+                        ->get($columnList);
+
+        foreach($dispData as $val){
+            $aList[$val["auther"]][] = $val;
+        }
+
+        return $aList;
     }
 
 
