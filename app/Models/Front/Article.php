@@ -480,7 +480,7 @@ class Article extends Model
             "updated_at",
         ];
 
-        $whereList = null;
+        $aList = null;
         $whereList = [
             ["delete_flag","=",0],
             ["status","=",2],
@@ -497,6 +497,275 @@ class Article extends Model
         }
 
         return $aList;
+    }
+
+    public function getArticleLinkDataTOPrevNext($auther,$category,$release)
+    {
+
+        $columnList = [
+            "id",
+            "auther",
+            "auther_category",
+            "main_category",
+            "tag",
+            "channel",
+            "title",
+            "heading",
+            "eyecatch",
+            "status",
+            "release_at",
+            "end_at",
+            "count",
+            "good",
+            "created_at",
+            "updated_at",
+        ];
+
+        $whereList = [
+            ["delete_flag","=",0],
+            ["status","=",2],
+            ["auther","=",$auther],
+            ["auther_category","=",$category],
+            ["release_at",">",$release],
+        ];
+
+        $dispData["next"] =$this::from("articles")
+                        ->where($whereList)
+                        ->orderby("release_at","asc")
+                        ->limit(1)
+                        ->get($columnList);
+
+        $whereList = [
+            ["delete_flag","=",0],
+            ["status","=",2],
+            ["auther","=",$auther],
+            ["auther_category","=",$category],
+            ["release_at","<",$release],
+        ];
+                
+        $dispData["prev"] =$this::from("articles")
+                        ->where($whereList)
+                        ->orderby("release_at","desc")
+                        ->limit(1)
+                        ->get($columnList);
+
+        return $dispData;
+    }
+
+    public function getArticleLinkDataReccommend($auther,$category,$tags,$id)
+    {
+
+        $columnList = [
+            "id",
+            "auther",
+            "auther_category",
+            "main_category",
+            "tag",
+            "channel",
+            "title",
+            "heading",
+            "eyecatch",
+            "status",
+            "release_at",
+            "end_at",
+            "count",
+            "good",
+            "created_at",
+            "updated_at",
+        ];
+
+        $returnObjBase = null;
+
+        //autherとcategoryが同じ
+        $whereListSameCategory = [
+            ["delete_flag","=",0],
+            ["status","=",2],
+            ["auther","=",$auther],
+            ["auther_category","=",$category],
+            ["id","!=",$id],
+        ];
+
+        $dispData01 =$this::from("articles")
+                        ->where($whereListSameCategory)
+                        ->orderby("release_at","desc")
+                        ->limit(8)
+                        ->get($columnList);
+
+        //Tagが同じ
+        $whereListSameTag = [
+            ["delete_flag","=",0],
+            ["status","=",2],
+            ["id","!=",$id],
+        ];
+        if(isset($dispData01) && count($dispData01) > 0){
+            foreach($dispData01 as $disp01){
+                $whereListSameCategoryOtherAuther[] = ["id","!=",$disp01->id];
+                $whereListSameAutherOtherCategory[] = ["id","!=",$disp01->id];
+                $returnObjBase[] = $disp01;
+            }
+        }
+
+        //auther違うcategoryが同じ
+        $whereListSameCategoryOtherAuther = [
+            ["delete_flag","=",0],
+            ["status","=",2],
+            ["id","!=",$id],
+            ["auther","!=",$auther],
+            ["auther_category","=",$category],
+        ];
+        $dispData03 =$this::from("articles")
+                        ->where($whereListSameCategoryOtherAuther)
+                        ->orderby("release_at","desc")
+                        ->limit(4)
+                        ->get($columnList);
+
+        
+
+        //category違うがauther同じ
+        $whereListSameAutherOtherCategory = [
+            ["delete_flag","=",0],
+            ["status","=",2],
+            ["id","!=",$id],
+            ["auther","=",$auther],
+            ["auther_category","!=",$category],
+        ];
+        if(isset($dispData03) && count($dispData03) > 0){
+            foreach($dispData03 as $disp03){
+                $whereListSameAutherOtherCategory[] = ["id","!=",$disp03->id];
+                $returnObjBase[] = $disp03;
+            }
+        }
+        $dispData04 =$this::from("articles")
+                        ->where($whereListSameAutherOtherCategory)
+                        ->orderby("release_at","desc")
+                        ->limit(4)
+                        ->get($columnList);
+        if(isset($dispData04) && count($dispData04) > 0){
+            foreach($dispData04 as $disp04){
+                $returnObjBase[] = $disp04;
+            }
+        }
+
+        $cnt = 0;
+
+        if(isset($returnObjBase) && count($returnObjBase)){
+            shuffle($returnObjBase);
+            $cnt = count($returnObjBase);
+        }
+        if($cnt > 8){
+            for($i = 1;$i < 8;$i++){
+                $returnObj[] =  $returnObjBase[$i];
+            }
+        }else{
+            $returnObj = $returnObjBase;
+        }
+
+        return $returnObj;
+    }
+
+    public function getArticleLinkDataToCategory($auther,$category,$id)
+    {
+
+        $dispData = null;
+
+        $columnList = [
+            "id",
+            "auther",
+            "auther_category",
+            "main_category",
+            "tag",
+            "channel",
+            "title",
+            "heading",
+            "eyecatch",
+            "status",
+            "release_at",
+            "end_at",
+            "count",
+            "good",
+            "created_at",
+            "updated_at",
+        ];
+
+        $whereList = [
+            ["delete_flag","=",0],
+            ["status","=",2],
+            ["auther","=",$auther],
+            ["auther_category","=",$category],
+            ["id","!=",$id],
+        ];
+
+        $dispData =$this::from("articles")
+                        ->where($whereList)
+                        ->orderby("release_at","desc")
+                        ->limit(8)
+                        ->get($columnList);
+
+
+        return $dispData;
+    }
+
+    public function getArticleLinkDataToTags($tagsArray,$id)
+    {
+
+        $columnList = [
+            "id",
+            "auther",
+            "auther_category",
+            "main_category",
+            "tag",
+            "channel",
+            "title",
+            "heading",
+            "eyecatch",
+            "status",
+            "release_at",
+            "end_at",
+            "count",
+            "good",
+            "created_at",
+            "updated_at",
+        ];
+
+        $whereList = [
+            ["delete_flag","=",0],
+            ["status","=",2],
+        ];
+
+        $returnData = null;
+
+        if(isset($tagsArray) && $tagsArray != NULL){
+            foreach($tagsArray as $key => $tag){
+                $dispData = null;
+                $dispData = $this::from("articles")
+                ->where($whereList)
+                ->whereRaw('FIND_IN_SET('.$tag.',tag)')
+                ->orderby("release_at","desc")
+                ->limit(8)
+                ->get($columnList);
+                if(isset($dispData) && count($dispData) > 0){
+                    foreach($dispData as $dataBydD){
+                        $returnData[] = $dataBydD;
+                    }
+                }
+            }
+        }
+
+        $cnt = 0;
+        if(isset($returnData) && count($returnData) > 0){
+            shuffle($returnData);
+            $cnt = count($returnData);
+        }
+        if($cnt > 8){
+            for($i = 1;$i < 8;$i++){
+                $returnObj[] =  $returnData[$i];
+            }
+        }else{
+            $returnObj = $returnData;
+        }
+
+        return $returnObj;
+
     }
 
 

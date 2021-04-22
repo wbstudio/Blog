@@ -12,7 +12,7 @@
 <div class="container">
 <div id="category" class="">
     <section id="category">
-        <h2 class="ja">Categoryのページ</h2>
+        <h2 class="ja">{{config("category.$categoryId.name")}}のページ</h2>
         @if(isset($pickupList) && is_countable($pickupList))
         <div class="pick_up patern_01">
             <h3>Pick Up</h3>

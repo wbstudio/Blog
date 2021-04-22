@@ -17,131 +17,72 @@
     <section id="article_area">
         <div class="article_info_area">
             <div class="article_info_writer">
-                <img src="{{ asset('images/front/top_link/face_test.png') }}" class="">
-                @テスト名前テスト名前
+                <img src="{{ asset('images/front/introduct/'.$confAuther['imgPath']) }}" class="">
+                {{$confAuther['name']}}
             </div>
-            <div class="article_info_category">-Category001</div>
-            <div class="article_info_date">更新日時:0000/00/00</div>
+            <div class="article_info_category">-{{$confAuther['category'][$article->auther_category]['name']}}</div>
+            <div class="article_info_date">更新日時:{{$article->release_at->format('Y/m/d')}}</div>
         </div>
         <h2 class="article_title">{{$article->title}}</h2>
         <div class="article_tag_area">
-            <a href=""><div class="tag_single">:00000</div></a>
-            <a href=""><div class="tag_single">:00000</div></a>
+            @if(isset($tags) && count($tags) > 0)
+            @foreach($tags as $tag)
+            <a href="{{ route('list.tagArticleList', ['tag_id' => $tag->id,'page' => 1]) }}"><div class="tag_single">{{$tag->name}}</div></a>
+            @endforeach        
+            @endif
         </div>
         <div class="article_main">{!!$article->main!!}</div>
     </section>
-
+@if($article->status == 2)
+    @if(isset($prevData[0]) && !empty($prevData[0]) || (isset($nextData[0]) && !empty($nextData[0])))
     <section id="same_auther_category">
         <div class="title">
-            他のCategory001の記事
+            他の{{$confAuther['category'][$article->auther_category]['name']}}の記事
         </div>
         <div class="link_area">
+            @if(isset($prevData[0]) && !empty($prevData[0]))
             <div class="preview">
-                <a href="">
+                <a href="{{ route('detail.article', ['article_id' => $prevData[0]->id]) }}">
                     ＜前の記事
-                    <div class="preview_link">
-                        aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-                    </div>
+                    <div class="preview_link">{{$prevData[0]->title}}</div>
                 </a>
             </div>
+            @endif
+            @if(isset($nextData[0]) && !empty($nextData[0]))
             <div class="next">
-                <a href="">
+                <a href="{{ route('detail.article', ['article_id' => $nextData[0]->id]) }}">
                     ＞次の記事
-                    <div class="next_link">
-                        aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-                    </div>
+                    <div class="next_link">{{$nextData[0]->title}}</div>
                 </a>
             </div>
+            @endif
         </div>
     </section>
+    @endif
 
     <section id="relative">
     <div class="relative_title">関連記事</div>
+
+    @if(isset($recommendData) && count($recommendData) > 0)
     <div class="pick_up patern_01">
         <h3>この記事を読んだあなたへのお勧め</h3>
         <div>
             <div class="swiper-container swiper_number_01">
                 <div class="swiper-wrapper">
+
+                    @foreach($recommendData as $key => $articleData)
                     <div class="swiper-slide">
                         <div>
-                            <a href="">
+                            <a href="{{ route('detail.article', ['article_id' => $articleData->id]) }}">
                                 <img src="{{ asset('images/front/top_link/image_190_150.png') }}" class="">
-                                <div class="title">01タイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテスト</div>
+                                <div class="title">{{$articleData->title}}</div>
                             </a>
-                            <div class="category"><span>カテゴリー</span><a href="">testカテゴリー</a></div>
-                            <div class="update_date">更新日 2021/00/00</div>
+                            <div class="auther"><span>著者</span><a href="{{ route('list.onlyAuther', ['auther_id' => $articleData->id]) }}">{{config("auther.$articleData->auther.name")}}</a></div>
+                            <div class="category"><span>カテゴリー</span><a href="{{ route('list.bothAutherAndCategory', ['auther_id'=>$articleData->auther,'category_id'=>$articleData->auther_category,'page'=>1]) }}">{{config("auther.$articleData->auther.category.$articleData->auther_category.name")}}</a></div>
+                            <div class="update_date">更新日 {{ $articleData->release_at->format('Y/m/d') }}</div>
                         </div>
                     </div>
-                    <div class="swiper-slide">
-                        <div>
-                            <a href="">
-                                <img src="{{ asset('images/front/top_link/image_190_150.png') }}" class="">
-                                <div class="title">02タイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテスト</div>
-                            </a>
-                            <div class="category"><span>カテゴリー</span><a href="">testカテゴリー</a></div>
-                            <div class="update_date">更新日 2021/00/00</div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div>
-                            <a href="">
-                                <img src="{{ asset('images/front/top_link/image_190_150.png') }}" class="">
-                                <div class="title">03タイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテスト</div>
-                            </a>
-                            <div class="category"><span>カテゴリー</span><a href="">testカテゴリー</a></div>
-                            <div class="update_date">更新日 2021/00/00</div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div>
-                            <a href="">
-                                <img src="{{ asset('images/front/top_link/image_190_150.png') }}" class="">
-                                <div class="title">04タイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテスト</div>
-                            </a>
-                            <div class="category"><span>カテゴリー</span><a href="">testカテゴリー</a></div>
-                            <div class="update_date">更新日 2021/00/00</div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div>
-                            <a href="">
-                                <img src="{{ asset('images/front/top_link/image_190_150.png') }}" class="">
-                                <div class="title">05タイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテスト</div>
-                            </a>
-                            <div class="category"><span>カテゴリー</span><a href="">testカテゴリー</a></div>
-                            <div class="update_date">更新日 2021/00/00</div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div>
-                            <a href="">
-                                <img src="{{ asset('images/front/top_link/image_190_150.png') }}" class="">
-                                <div class="title">06タイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテスト</div>
-                            </a>
-                            <div class="category"><span>カテゴリー</span><a href="">testカテゴリー</a></div>
-                            <div class="update_date">更新日 2021/00/00</div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div>
-                            <a href="">
-                                <img src="{{ asset('images/front/top_link/image_190_150.png') }}" class="">
-                                <div class="title">07タイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテスト</div>
-                            </a>
-                            <div class="category"><span>カテゴリー</span><a href="">testカテゴリー</a></div>
-                            <div class="update_date">更新日 2021/00/00</div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div>
-                            <a href="">
-                                <img src="{{ asset('images/front/top_link/image_190_150.png') }}" class="">
-                                <div class="title">08タイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテスト</div>
-                            </a>
-                            <div class="category"><span>カテゴリー</span><a href="">testカテゴリー</a></div>
-                            <div class="update_date">更新日 2021/00/00</div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
                 <div class="swiper-pagination"></div>
                 <div class="swiper-button-prev"></div>
@@ -172,91 +113,29 @@
             </script>
         </div>
     </div>
+    @endif
+
+    @if(isset($categoryRelativeData) && count($categoryRelativeData) > 0)
     <div class="pick_up patern_01">
-        <h3>同じタグのついている記事</h3>
+        <h3>カテゴリーがcategory001の記事</h3>
         <div>
             <div class="swiper-container swiper_number_02">
                 <div class="swiper-wrapper">
+
+                    @foreach($categoryRelativeData as $key => $articleData)
                     <div class="swiper-slide">
                         <div>
-                            <a href="">
+                            <a href="{{ route('detail.article', ['article_id' => $articleData->id]) }}">
                                 <img src="{{ asset('images/front/top_link/image_190_150.png') }}" class="">
-                                <div class="title">01タイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテスト</div>
+                                <div class="title">{{$articleData->title}}</div>
                             </a>
-                            <div class="category"><span>カテゴリー</span><a href="">testカテゴリー</a></div>
-                            <div class="update_date">更新日 2021/00/00</div>
+                            <div class="auther"><span>著者</span><a href="{{ route('list.onlyAuther', ['auther_id' => $articleData->id]) }}">{{config("auther.$articleData->auther.name")}}</a></div>
+                            <div class="category"><span>カテゴリー</span><a href="{{ route('list.bothAutherAndCategory', ['auther_id'=>$articleData->auther,'category_id'=>$articleData->auther_category,'page'=>1]) }}">{{config("auther.$articleData->auther.category.$articleData->auther_category.name")}}</a></div>
+                            <div class="update_date">更新日 {{ $articleData->release_at->format('Y/m/d') }}</div>
                         </div>
                     </div>
-                    <div class="swiper-slide">
-                        <div>
-                            <a href="">
-                                <img src="{{ asset('images/front/top_link/image_190_150.png') }}" class="">
-                                <div class="title">02タイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテスト</div>
-                            </a>
-                            <div class="category"><span>カテゴリー</span><a href="">testカテゴリー</a></div>
-                            <div class="update_date">更新日 2021/00/00</div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div>
-                            <a href="">
-                                <img src="{{ asset('images/front/top_link/image_190_150.png') }}" class="">
-                                <div class="title">03タイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテスト</div>
-                            </a>
-                            <div class="category"><span>カテゴリー</span><a href="">testカテゴリー</a></div>
-                            <div class="update_date">更新日 2021/00/00</div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div>
-                            <a href="">
-                                <img src="{{ asset('images/front/top_link/image_190_150.png') }}" class="">
-                                <div class="title">04タイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテスト</div>
-                            </a>
-                            <div class="category"><span>カテゴリー</span><a href="">testカテゴリー</a></div>
-                            <div class="update_date">更新日 2021/00/00</div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div>
-                            <a href="">
-                                <img src="{{ asset('images/front/top_link/image_190_150.png') }}" class="">
-                                <div class="title">05タイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテスト</div>
-                            </a>
-                            <div class="category"><span>カテゴリー</span><a href="">testカテゴリー</a></div>
-                            <div class="update_date">更新日 2021/00/00</div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div>
-                            <a href="">
-                                <img src="{{ asset('images/front/top_link/image_190_150.png') }}" class="">
-                                <div class="title">06タイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテスト</div>
-                            </a>
-                            <div class="category"><span>カテゴリー</span><a href="">testカテゴリー</a></div>
-                            <div class="update_date">更新日 2021/00/00</div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div>
-                            <a href="">
-                                <img src="{{ asset('images/front/top_link/image_190_150.png') }}" class="">
-                                <div class="title">07タイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテスト</div>
-                            </a>
-                            <div class="category"><span>カテゴリー</span><a href="">testカテゴリー</a></div>
-                            <div class="update_date">更新日 2021/00/00</div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div>
-                            <a href="">
-                                <img src="{{ asset('images/front/top_link/image_190_150.png') }}" class="">
-                                <div class="title">08タイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテスト</div>
-                            </a>
-                            <div class="category"><span>カテゴリー</span><a href="">testカテゴリー</a></div>
-                            <div class="update_date">更新日 2021/00/00</div>
-                        </div>
-                    </div>
+                    @endforeach
+
                 </div>
                 <div class="swiper-pagination"></div>
                 <div class="swiper-button-prev"></div>
@@ -287,91 +166,27 @@
             </script>
         </div>
     </div>
+    @endif
+    @if(isset($tagsRelativeData) && count($tagsRelativeData) > 0)
     <div class="pick_up patern_01">
-        <h3>カテゴリーがcategory001の記事</h3>
+        <h3>同じタグのついている記事</h3>
         <div>
             <div class="swiper-container swiper_number_03">
                 <div class="swiper-wrapper">
+                    @foreach($tagsRelativeData as $key => $articleData)
                     <div class="swiper-slide">
                         <div>
-                            <a href="">
+                            <a href="{{ route('detail.article', ['article_id' => $articleData->id]) }}">
                                 <img src="{{ asset('images/front/top_link/image_190_150.png') }}" class="">
-                                <div class="title">01タイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテスト</div>
+                                <div class="title">{{$articleData->title}}</div>
                             </a>
-                            <div class="category"><span>カテゴリー</span><a href="">testカテゴリー</a></div>
-                            <div class="update_date">更新日 2021/00/00</div>
+                            <div class="auther"><span>著者</span><a href="{{ route('list.onlyAuther', ['auther_id' => $articleData->id]) }}">{{config("auther.$articleData->auther.name")}}</a></div>
+                            <div class="category"><span>カテゴリー</span><a href="{{ route('list.bothAutherAndCategory', ['auther_id'=>$articleData->auther,'category_id'=>$articleData->auther_category,'page'=>1]) }}">{{config("auther.$articleData->auther.category.$articleData->auther_category.name")}}</a></div>
+                            <div class="update_date">更新日 {{ $articleData->release_at->format('Y/m/d') }}</div>
                         </div>
                     </div>
-                    <div class="swiper-slide">
-                        <div>
-                            <a href="">
-                                <img src="{{ asset('images/front/top_link/image_190_150.png') }}" class="">
-                                <div class="title">02タイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテスト</div>
-                            </a>
-                            <div class="category"><span>カテゴリー</span><a href="">testカテゴリー</a></div>
-                            <div class="update_date">更新日 2021/00/00</div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div>
-                            <a href="">
-                                <img src="{{ asset('images/front/top_link/image_190_150.png') }}" class="">
-                                <div class="title">03タイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテスト</div>
-                            </a>
-                            <div class="category"><span>カテゴリー</span><a href="">testカテゴリー</a></div>
-                            <div class="update_date">更新日 2021/00/00</div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div>
-                            <a href="">
-                                <img src="{{ asset('images/front/top_link/image_190_150.png') }}" class="">
-                                <div class="title">04タイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテスト</div>
-                            </a>
-                            <div class="category"><span>カテゴリー</span><a href="">testカテゴリー</a></div>
-                            <div class="update_date">更新日 2021/00/00</div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div>
-                            <a href="">
-                                <img src="{{ asset('images/front/top_link/image_190_150.png') }}" class="">
-                                <div class="title">05タイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテスト</div>
-                            </a>
-                            <div class="category"><span>カテゴリー</span><a href="">testカテゴリー</a></div>
-                            <div class="update_date">更新日 2021/00/00</div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div>
-                            <a href="">
-                                <img src="{{ asset('images/front/top_link/image_190_150.png') }}" class="">
-                                <div class="title">06タイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテスト</div>
-                            </a>
-                            <div class="category"><span>カテゴリー</span><a href="">testカテゴリー</a></div>
-                            <div class="update_date">更新日 2021/00/00</div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div>
-                            <a href="">
-                                <img src="{{ asset('images/front/top_link/image_190_150.png') }}" class="">
-                                <div class="title">07タイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテスト</div>
-                            </a>
-                            <div class="category"><span>カテゴリー</span><a href="">testカテゴリー</a></div>
-                            <div class="update_date">更新日 2021/00/00</div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div>
-                            <a href="">
-                                <img src="{{ asset('images/front/top_link/image_190_150.png') }}" class="">
-                                <div class="title">08タイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテストタイトルテスト</div>
-                            </a>
-                            <div class="category"><span>カテゴリー</span><a href="">testカテゴリー</a></div>
-                            <div class="update_date">更新日 2021/00/00</div>
-                        </div>
-                    </div>
+                    @endforeach
+
                 </div>
                 <div class="swiper-pagination"></div>
                 <div class="swiper-button-prev"></div>
@@ -402,7 +217,9 @@
             </script>
         </div>
     </div>
+    @endif
     </section>
+@endif
 
 </div>
 </div>

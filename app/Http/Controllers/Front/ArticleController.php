@@ -15,7 +15,7 @@ class ArticleController extends Controller
     public function articleDetail($article_id) {
 
         $dispData = array();
-
+        $tagsData = null;
         //DAO
         $mdArticle = new Article();
         $articlesData = $mdArticle->getArticleDataByid($article_id);
@@ -23,6 +23,8 @@ class ArticleController extends Controller
         $articles->editEndFlag = 0;
         $tagsData = null;
         $containTags = null;
+
+        $confAuther = config('auther')[$articles->auther];
 
         //layout+pickup部分
         $layoutData = AvailController::fillInLayout($articles->id,NULL);
@@ -40,6 +42,17 @@ class ArticleController extends Controller
             $articles->editEndFlag = 1;
         }
 
+        $linkPrevNextData = null;
+        $recommendData = null;
+        $categoryRelativeData = null;
+        $tagsRelativeData = null;
+        if($articles->status == 2){
+            $linkPrevNextData = $mdArticle->getArticleLinkDataTOPrevNext($articles->auther,$articles->auther_category,$articles->release_at);
+            $recommendData = $mdArticle->getArticleLinkDataReccommend($articles->auther,$articles->auther_category,$articles->tag,$articles->id);
+            $categoryRelativeData = $mdArticle->getArticleLinkDataToCategory($articles->auther,$articles->auther_category,$articles->id);
+            $tagsRelativeData = $mdArticle->getArticleLinkDataToTags($containTags,$articles->id);
+        }
+
         $dispData = [
             'article' => $articles,
             'autherhidden' => $articles["auther"],
@@ -52,7 +65,17 @@ class ArticleController extends Controller
             'newArticlesList' => $layoutData ->newArticles,
             'rankingList' => $layoutData ->ranking,
             'threeDaysAgo' => $threeDaysAgo,
+            'confAuther' => $confAuther,
+            'prevData' => $linkPrevNextData["prev"],
+            'nextData' => $linkPrevNextData["next"],
+            'recommendData' => $recommendData,
+            'categoryRelativeData' => $categoryRelativeData,
+            'tagsRelativeData' => $tagsRelativeData,
         ];
+
+        $article = Article::where("id",$article_id)->first();
+        $article->count = $articles->count +1;
+        $article->save();
         
         return view('front.'.USER_AGENT.'.article',$dispData);
 
