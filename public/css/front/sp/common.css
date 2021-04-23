@@ -244,6 +244,10 @@ footer .blog_auther ul{
     display:none;
 }
 
+.modal__content ul.hide_link li{
+    padding:5px 10px;
+}
+
 @media screen and (max-width: 330px){
 
     .modal__content ul li {

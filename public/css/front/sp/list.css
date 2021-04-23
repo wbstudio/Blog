@@ -248,9 +248,21 @@ h3{
 }
 
 /**articleList*/
+.article_list_area{
+    margin: 10px 0 20px;
+}
+
 .article_list_mass{
     border-bottom: 1px solid #dcdcdc;
     display: flex;
+}
+
+.article_list_mass a{
+    width: 100%;
+}
+
+.article_list_mass:first-of-type{
+    border-top: 1px solid #dcdcdc;
 }
 
 .article_list_mass img{
@@ -278,6 +290,7 @@ h3{
     margin: 0;
     font-size: 14px;
     font-weight: bold;
+    word-break: break-all;
 }
 
 .article_list_mass .auther{
@@ -290,7 +303,9 @@ h3{
     height: 0;
 }
 
-
+#pagenator{
+    padding: 0 0 20px;
+}
 
 
 

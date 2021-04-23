@@ -31,7 +31,6 @@
     <section id="category">
     <h2>Category</h2>
     <div class="category_inner">
-
         @foreach(Config::get('category') as $keyCategory => $confCategory)
         <div class="category_mass">
             <div class="category_title_area">

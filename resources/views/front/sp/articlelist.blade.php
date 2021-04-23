@@ -13,169 +13,58 @@
     <div class="search_list">
     <div class="title">検索結果:</div>
     <div class="inner">
-        <p>
-            検索結果,検索結果,検索結果,検索結果,検索結果,検索結果,検索結果,検索結果,検索結果,検索結果,検索結果,検索結果,検索結果,検索結果,検索結果,検索結果,検索結果,検索結果,検索結果,検索結果,検索結果,検索結果,検索結果,検索結果,検索結果,検索結果</div>
-        </p>
+        <p>{{$addTitle}}</p>
     </div>
 
     <div class="article_list_area">
-
+        @if(isset($articles) && is_countable($articles))
+        @foreach($articles as $article)
         <div class="article_list_mass">
-            <a href="">
+            <a href="{{ route('detail.article', ['article_id' => $article->id]) }}">
                 <img src="{{ asset('images/front/top_link/image_190_150.png') }}">
                 <div class="title">
-                    <p>
-                    タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001
-                    </p>
+                    <p>{{$article->title}}</p>
                 </div>
-                <div class="auther">テスト名前テスト名前</div>
+                <div class="auther">{{config("auther.".$article->auther.".name")}}</div>
             </a>
         </div>
-
-
-        <div class="article_list_mass">
-            <a href="">
-                <img src="{{ asset('images/front/top_link/image_190_150.png') }}">
-                <div class="title">
-                    <p>
-                    タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001
-                    </p>
-                </div>
-                <div class="auther">テスト名前テスト名前</div>
-            </a>
-        </div>
-
-
-        <div class="article_list_mass">
-            <a href="">
-                <img src="{{ asset('images/front/top_link/image_190_150.png') }}">
-                <div class="title">
-                    <p>
-                    タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001
-                    </p>
-                </div>
-                <div class="auther">テスト名前テスト名前</div>
-            </a>
-        </div>
-
-
-        <div class="article_list_mass">
-            <a href="">
-                <img src="{{ asset('images/front/top_link/image_190_150.png') }}">
-                <div class="title">
-                    <p>
-                    タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001
-                    </p>
-                </div>
-                <div class="auther">テスト名前テスト名前</div>
-            </a>
-        </div>
-
-
-        <div class="article_list_mass">
-            <a href="">
-                <img src="{{ asset('images/front/top_link/image_190_150.png') }}">
-                <div class="title">
-                    <p>
-                    タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001
-                    </p>
-                </div>
-                <div class="auther">テスト名前テスト名前</div>
-            </a>
-        </div>
-
-
-        <div class="article_list_mass">
-            <a href="">
-                <img src="{{ asset('images/front/top_link/image_190_150.png') }}">
-                <div class="title">
-                    <p>
-                    タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001
-                    </p>
-                </div>
-                <div class="auther">テスト名前テスト名前</div>
-            </a>
-        </div>
-
-
-        <div class="article_list_mass">
-            <a href="">
-                <img src="{{ asset('images/front/top_link/image_190_150.png') }}">
-                <div class="title">
-                    <p>
-                    タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001
-                    </p>
-                </div>
-                <div class="auther">テスト名前テスト名前</div>
-            </a>
-        </div>
-
-
-        <div class="article_list_mass">
-            <a href="">
-                <img src="{{ asset('images/front/top_link/image_190_150.png') }}">
-                <div class="title">
-                    <p>
-                    タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001
-                    </p>
-                </div>
-                <div class="auther">テスト名前テスト名前</div>
-            </a>
-        </div>
-
-
-        <div class="article_list_mass">
-            <a href="">
-                <img src="{{ asset('images/front/top_link/image_190_150.png') }}">
-                <div class="title">
-                    <p>
-                    タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001
-                    </p>
-                </div>
-                <div class="auther">テスト名前テスト名前</div>
-            </a>
-        </div>
-
-
-        <div class="article_list_mass">
-            <a href="">
-                <img src="{{ asset('images/front/top_link/image_190_150.png') }}">
-                <div class="title">
-                    <p>
-                    タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001
-                    </p>
-                </div>
-                <div class="auther">テスト名前テスト名前</div>
-            </a>
-        </div>
-
-
-        <div class="article_list_mass">
-            <a href="">
-                <img src="{{ asset('images/front/top_link/image_190_150.png') }}">
-                <div class="title">
-                    <p>
-                    タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001
-                    </p>
-                </div>
-                <div class="auther">テスト名前テスト名前</div>
-            </a>
-        </div>
-
-
-        <div class="article_list_mass">
-            <a href="">
-                <img src="{{ asset('images/front/top_link/image_190_150.png') }}">
-                <div class="title">
-                    <p>
-                    タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001タイトル0001
-                    </p>
-                </div>
-                <div class="auther">テスト名前テスト名前</div>
-            </a>
-        </div>
-
+        @endforeach
+		@else
+		<div>記事がないです</div>
+		@endif
     </div>
+
+    <div id="pagenator">
+		@isset($pagenator -> firstPageNum)
+		<a href="{{route('topPage')}}/{{$baseUrl}}{{$pagenator -> firstPageNum}}">最初</a>
+		@endisset
+		@isset($pagenator -> prePageNum)
+		<a href="{{route('topPage')}}/{{$baseUrl}}{{$pagenator -> prePageNum}}">前へ</a>
+		@endisset
+		@isset($pagenator -> firstPageNum)
+		...
+		@endisset
+		@isset($pagenator -> linkNum)
+			@foreach($pagenator -> linkNum as $key => $Num)
+			@if($page == $Num)
+			<span style="background:#FF0;">{{$Num}}</span>
+			@else
+			<a href="{{route('topPage')}}/{{$baseUrl}}{{$Num}}">{{$Num}}</a>
+			@endif
+			@endforeach
+		@endisset
+		@isset($pagenator -> lastPageNum)
+		...
+		@endisset
+		@isset($pagenator -> nextPageNum)
+		<a href="{{route('topPage')}}/{{$baseUrl}}{{$pagenator -> nextPageNum}}">次へ</a>
+		@endisset
+		@isset($pagenator -> lastPageNum)
+		<a href="{{route('topPage')}}/{{$baseUrl}}{{$pagenator -> lastPageNum}}">最後</a>
+		@endisset
+	</div>
+
+
 </section>
 
 </div>
