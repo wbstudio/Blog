@@ -16,7 +16,7 @@
     <body>
         <header>
             <div>
-                <a href="">
+                <a href="{{ route('topPage') }}">
                     <img src="{{ asset('images/front/logo.png') }}" height="45px">
                 </a>
                 <div class="menu_icon">
@@ -27,7 +27,7 @@
         @include('front.sp.include.modal.menu')
         <main>
         <div id="content" class="content">
-            @yield('content')
+        @yield('content')
         </div>
         </main>
         
@@ -42,56 +42,17 @@
                     <div class="site_contents_blog">
                         <h3>Blog</h3>
                         <div class="footer_blog_area">
+                            @foreach(Config::get('auther') as $keyAuther => $confAuther)
                             <div class="blog_auther">
-                                <h4 class="footer_accordion"><a href="">テスト名前</a></h4>
+                                <h4 class="footer_accordion">{{$confAuther["name"]}}</h4>
                                 <ul>
-                                    <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
-                                    <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
-                                    <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
-                                    <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
-                                    <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
+                                    <li class="to_auther"><a href="{{ route('list.onlyAuther', ['auther_id' => $keyAuther]) }}">{{$confAuther["name"]}}のページへ</a></li>
+                                    @foreach($confAuther["category"] as $keyCategory => $confAutherCategory)
+                                    <li class="to_article_list"><a href="{{ route('list.bothAutherAndCategory', ['auther_id' => $keyAuther,'category_id' => $keyCategory,'page'=>1]) }}">{{$confAutherCategory["name"]}}</a></li>
+                                    @endforeach
                                 </ul>
                             </div>
-                            <div class="blog_auther">
-                                <h4 class="footer_accordion"><a href="">テスト名前</a></h4>
-                                <ul>
-                                    <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
-                                    <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
-                                    <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
-                                    <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
-                                    <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
-                                </ul>
-                            </div>
-                            <div class="blog_auther">
-                                <h4 class="footer_accordion"><a href="">テスト名前</a></h4>
-                                <ul>
-                                    <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
-                                    <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
-                                    <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
-                                    <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
-                                    <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
-                                </ul>
-                            </div>
-                            <div class="blog_auther">
-                                <h4 class="footer_accordion"><a href="">テスト名前</a></h4>
-                                <ul>
-                                    <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
-                                    <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
-                                    <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
-                                    <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
-                                    <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
-                                </ul>
-                            </div>
-                            <div class="blog_auther">
-                                <h4 class="footer_accordion"><a href="">テスト名前</a></h4>
-                                <ul>
-                                    <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
-                                    <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
-                                    <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
-                                    <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
-                                    <li><a href="">カテゴリー名前(大カテゴリー)</a></li>
-                                </ul>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>
@@ -103,7 +64,7 @@
                         <a href=""><img src="{{ asset('images/front/Youtube_black.svg') }}"></a>
                         <div class="cheer">
                             wakuwakuBlog公式SNSもやっています。<br>
-                            フォロー・＝＝＝よろしくお願いします。
+                            フォロー・チャンネル登録よろしくお願いします。
                         </div>
                     </div>
                     <div class="wblink_area">

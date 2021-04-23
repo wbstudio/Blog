@@ -144,7 +144,6 @@ header .menu_icon img{
 }
 
 .modal__content ul{
-    height: 40px;
     padding-left: 0px;
     margin: 0;
     list-style: none;
@@ -160,14 +159,23 @@ header .menu_icon img{
     text-decoration: none;
 }
 
-.modal__content ul li .go_button{
-    background-image: url(/images/front/icon_next.svg);
+.modal__content ul li .back{
     background-repeat: no-repeat;
-    width: 16px;
-    height: 16px;
+    width: 18px;
+    height: 18px;
     float: right;
     position: relative;
     top: -1.2em;
+    background-image: url(/images/front/icon_to_link.svg);
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+}
+
+.modal__content .link_name{
+    font-weight: bold;
 }
 
 .modal__content .modal_search_li{
@@ -190,6 +198,9 @@ header .menu_icon img{
     top: -21px;
 }
 
+.modal__content ul.hide_link{
+    display: none;
+}
 
 /**main*/
 main{

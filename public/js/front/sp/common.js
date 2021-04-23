@@ -12,9 +12,9 @@ $(function(){
     //sliderHight
     setTimeout(function(){
         var swiperHeight = $(".swiper-slide_inner").outerHeight(true);
-        $(".patern_01 .swiper-container").css("height", swiperHeight + 30 +"px");
-        $(".patern_01 .swiper-button-prev").css("top", swiperHeight + 16 +"px");
-        $(".patern_01 .swiper-button-next").css("top", swiperHeight + 16 +"px");
+        $(".patern_01 .swiper-container").css("height", swiperHeight + 50 +"px");
+        $(".patern_01 .swiper-button-prev").css("top", swiperHeight + 36 +"px");
+        $(".patern_01 .swiper-button-next").css("top", swiperHeight + 36 +"px");
     },200);
 
     //続きを読むbutton
@@ -28,11 +28,17 @@ $(function(){
     //ckEditor内のimg
     $(".article_main img").css("height", "auto");
 
-    //footterアコーディオン
+    //footter+menuアコーディオン
     $(function(){
+
         $("h4.footer_accordion").on("click", function() {
             $(this).next().slideToggle();
         });
+
+        $(".modal__content .display_other").on("click", function() {
+            $(this).next().slideToggle();
+        });
+
     });
 });
 

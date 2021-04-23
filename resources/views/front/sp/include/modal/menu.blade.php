@@ -24,7 +24,6 @@
                         <a href="{{ route('member.index') }}" class="login">
                             <div class="link_mass">
                             <div class="link_name">会員ページ</div>
-                                <div class="go_button"></div>
                             </div>
                         </a>
                     </li>
@@ -33,7 +32,6 @@
                         <a href="{{ route('login') }}" class="login">
                             <div class="link_mass">
                             <div class="link_name">ログイン</div>
-                                <div class="go_button"></div>
                             </div>
                         </a>
                     </li>
@@ -41,16 +39,40 @@
                         <a href="{{ route('register') }}" class="login">
                             <div class="link_mass">
                             <div class="link_name">新規登録</div>
-                                <div class="go_button"></div>
                             </div>
                         </a>
                     </li>
                     @endauth
                     <li>
+                        <div class="link_mass display_other">
+                        <div class="link_name">Blogger</div>
+                            <div class="go_button back"></div>
+                        </div>
+                        <ul class="hide_link">
+                            <li><a href="{{ route('autherList') }}">Blogger List</a></li>
+                            @foreach(Config::get('auther') as $keyAuther => $confAuther)
+                            <li><a href="{{ route('list.onlyAuther', ['auther_id' => $keyAuther]) }}">{{$confAuther["name"]}}のページ</a></li>
+                            @endforeach
+                        </ul>
+                    </li>
+
+                    <li>
+                        <div class="link_mass display_other">
+                        <div class="link_name">Category</div>
+                            <div class="go_button back"></div>
+                        </div>
+                        <ul class="hide_link">
+                            <li><a href="{{ route('categoryList') }}">Category List</a></li>
+                            @foreach(Config::get('category') as $keyCategory => $confCategory)
+                            <li><a href="{{ route('list.onlyCategory', ['category_id' => $keyCategory]) }}">{{$confCategory["name"]}}のページ</a></li>
+                            @endforeach
+                        </ul>
+                    </li>
+
+                    <li>
                         <a href="">
                             <div class="link_mass">
-                            <div class="link_name">03あいうえおあいうえおあいうえお</div>
-                                <div class="go_button"></div>
+                            <div class="link_name">お問い合わせ</div>
                             </div>
                         </a>
                     </li>
@@ -58,8 +80,7 @@
                     <li>
                         <a href="">
                             <div class="link_mass">
-                            <div class="link_name">04あいうえおあいうえおあいうえお</div>
-                                <div class="go_button"></div>
+                            <div class="link_name">wakuwakuBlogとは？</div>
                             </div>
                         </a>
                     </li>
@@ -67,47 +88,11 @@
                     <li>
                         <a href="">
                             <div class="link_mass">
-                            <div class="link_name">05あいうえおあいうえおあいうえお</div>
-                                <div class="go_button"></div>
+                            <div class="link_name">サイトの使い方</div>
                             </div>
                         </a>
                     </li>
 
-                    <li>
-                        <a href="">
-                            <div class="link_mass">
-                            <div class="link_name">06あいうえおあいうえおあいうえお</div>
-                                <div class="go_button"></div>
-                            </div>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="">
-                            <div class="link_mass">
-                            <div class="link_name">07あいうえおあいうえおあいうえお</div>
-                                <div class="go_button"></div>
-                            </div>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="">
-                            <div class="link_mass">
-                            <div class="link_name">08あいうえおあいうえおあいうえお</div>
-                                <div class="go_button"></div>
-                            </div>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="">
-                            <div class="link_mass">
-                            <div class="link_name">09あいうえおあいうえおあいうえお</div>
-                                <div class="go_button"></div>
-                            </div>
-                        </a>
-                    </li>
                     @auth
                     <li>
                         <form method="POST" action="{{ route('logout') }}">

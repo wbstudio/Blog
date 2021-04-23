@@ -37,6 +37,8 @@ h3{
     font-size: 14px;
     font-weight: bold;
     margin: 10px auto 2px;
+    height: 39px;
+    word-break: break-all;
 }
 
 .patern_01 .swiper-slide .auther,
@@ -218,7 +220,7 @@ h3{
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
     overflow: hidden;
-
+    height: 36px;
 }
 
 .category_list .category_pickup_article .update_date{
