@@ -61,7 +61,7 @@
     <h2>Blogger</h2>
     @foreach(Config::get('auther') as $keyAuther => $confAuther)
     <div class="auther_mass">
-        <img src="{{ asset('images/front/introduct/'.$confAuther['imgPath']) }}">
+        <img src="{{ asset('images/front/introduct/'.$confAuther['imgPath']) }}" class="face_pic">
         <div class="auther_name">{{$confAuther['name']}}</div>
         <div class="auther_profile_area">
             <div class="auther_category_title">よく書くこと</div>

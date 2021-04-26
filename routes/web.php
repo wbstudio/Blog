@@ -40,9 +40,7 @@ Route::post('/password-forget', [\App\Http\Controllers\Front\MemberController::c
 Route::get('/password-reset/{rand_number_01}/{user_id}/{rand_number_02}', [\App\Http\Controllers\Front\MemberController::class, 'passwordResetShowform'])->name('password-forget.resetShowform');
 Route::post('/password-reset', [\App\Http\Controllers\Front\MemberController::class, 'passwordResetEdit'])->name('password-forget.resetEdit');
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function (){ return view('dashboard');})->name('dashboard');
 
 //******************************//
 //  会員閲覧可能ページ

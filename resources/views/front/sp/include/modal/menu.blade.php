@@ -70,7 +70,7 @@
                     </li>
 
                     <li>
-                        <a href="">
+                        <a href="{{ route('inquiry.showForm') }}">
                             <div class="link_mass">
                             <div class="link_name">お問い合わせ</div>
                             </div>

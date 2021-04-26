@@ -13,7 +13,7 @@
 <section>
     <h2 class="first_h2 narrow">Introduction</h2>
     <div class="auther_mass">
-        <img src="{{ asset('images/front/introduct/'.config('auther.'.$autherId.'.imgPath')) }}">
+        <img src="{{ asset('images/front/introduct/'.config('auther.'.$autherId.'.imgPath')) }}"  class="face_pic">
         <div class="auther_name">{!! nl2br(e(config("auther.".$autherId.".name"))) !!}</div>
         <div class="auther_profile_area">
             <div class="auther_profile_title">profile</div>

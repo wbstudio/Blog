@@ -74,17 +74,43 @@ class MemberController extends Controller
             'threeDaysAgo' => $threeDaysAgo,
         ];
 
-        if (Hash::check($request["password"], $userInfo["password"])) {
-            // 一致したときの処理
-            $request->validate([
-                'newpassword' => ['required', 'string', 'min:8', 'confirmed'],
-            ]);
-        } else {
-            // 一致しなかったときの処理
-            var_dump("不一致");
+        if(isset($request["action"]) && $request["action"] == "text_area"){
+
+                // 一致したときの処理
+                $request->validate([
+                    'name' => ['required'],
+                    'email' => ['required', 'email'],
+                ]);
+
+                $user = new User();
+                $user = User::where("id",$userInfo->id)->first();
+                $user->name = $request->input('name');
+                $user->email = $request->input('email');
+                $user->save();
+
+                return redirect()->route('member.settingShowFrom');
+        
+        }else{
+
+            if (Hash::check($request["password"], $userInfo["password"])) {
+
+                // 一致したときの処理
+                $request->validate([
+                    'newpassword' => ['required', 'string', 'min:8', 'confirmed'],
+                ]);
+
+                $user = new User();
+                $user = User::where("id",$userInfo->id)->first();
+                $user->password = Hash::make($request->input('newpassword'));
+                $user->save();
+
+                return redirect()->route('member.settingShowFrom');
+            } else {
+                // 一致しなかったときの処理
+                return back()->with(['passWrongFlag' => 1]);
+            }
         }
         
-        // return view('front.'.USER_AGENT.'.memberSetting',$dispData);
     }
 
     //pass忘れ-フォーム

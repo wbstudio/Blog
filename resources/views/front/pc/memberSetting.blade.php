@@ -35,6 +35,9 @@
             <td class="title">ぱすわーど</td>
             <td class="input_area"><input type="password" name="password"></td>
         </tr>
+        @if (session('passWrongFlag')) 
+            <tr><td></td><td class="alert alert-danger">現在のパスワードが違います</td></tr>
+        @endif
         <tr>
             <td class="title big_title">新しいパスワード</td>
             <td class="input_area"><input type="password" name="new_password"></td>
