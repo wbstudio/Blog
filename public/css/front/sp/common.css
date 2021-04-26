@@ -159,7 +159,7 @@ header .menu_icon img{
     text-decoration: none;
 }
 
-.modal__content ul li .back{
+.modal__content ul li .down{
     background-repeat: no-repeat;
     width: 18px;
     height: 18px;
@@ -172,6 +172,21 @@ header .menu_icon img{
     -moz-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     -o-transform: rotate(90deg);
+}
+
+.modal__content ul li .up{
+    background-repeat: no-repeat;
+    width: 18px;
+    height: 18px;
+    float: right;
+    position: relative;
+    top: -1.2em;
+    background-image: url(/images/front/icon_to_link.svg);
+    transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
 }
 
 .modal__content .link_name{
@@ -198,8 +213,12 @@ header .menu_icon img{
     top: -21px;
 }
 
-.modal__content ul.hide_link{
+.modal__content ul li ul.hide_link{
     display: none;
+}
+
+.modal__content ul li ul.hide_link a{
+    font-size: 13px;
 }
 
 /**main*/
@@ -214,6 +233,7 @@ main{
 
 .footer_summary{
     text-align: center;
+    margin-bottom: 7px;
 }
 
 .footer_summary_item{
@@ -244,8 +264,70 @@ footer .blog_auther ul{
     display:none;
 }
 
+footer h4.footer_accordion{
+    margin-left: 5px;
+    margin-bottom: 0px;
+}
+
+footer h4.footer_accordion img.down{
+    width: 16px;
+    float: right;
+    position: relative;
+    right: 10px;
+    transform: rotate(90deg);
+}
+
+footer h4.footer_accordion img.up{
+    width: 16px;
+    float: right;
+    position: relative;
+    right: 10px;
+    transform: rotate(270deg);
+}
+
+footer .blog_auther ul{
+    margin-top: 0px;
+}
+
+footer .blog_auther ul li.to_auther{
+    list-style: none;
+    margin-left: -15px;
+    font-size: 14px;
+}
+
+footer .blog_auther ul li.to_article_list{
+    list-style: none;
+    margin-left: -10px;
+    font-size: 12px;
+}
+
+footer .site_contents_area{
+    margin-bottom: 20px;
+}
+
+footer .anothersite_link_area{
+    text-align: center;
+}
+
+footer .anothersite_link_area .cheer{
+    font-size: 14px;
+    font-weight: bold;
+}
+
 .modal__content ul.hide_link li{
     padding:5px 10px;
+}
+
+footer .snslink_area{
+    margin-bottom: 25px;
+}
+
+footer .wblink_area img{
+    margin-bottom: 15px;
+}
+
+footer .wblink_area img{
+    margin-bottom: 15px;
 }
 
 @media screen and (max-width: 330px){

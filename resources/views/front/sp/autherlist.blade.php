@@ -28,7 +28,7 @@
             </ul>
         </div>
 
-        @if(isset($articlesListPerAuther[$keyAuther]) && is_countable($articlesListPerAuther[$keyAuther]))
+        @if(isset($articlesListPerAuther[$keyAuther]) && is_countable($articlesListPerAuther[$keyAuther]) && count($articlesListPerAuther[$keyAuther]) > 0)
         <div class="pick_up patern_01">
             <h3>{{$confAuther['name']}}のPick Up</h3>
             <div>

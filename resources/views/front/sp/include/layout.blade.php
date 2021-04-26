@@ -44,11 +44,14 @@
                         <div class="footer_blog_area">
                             @foreach(Config::get('auther') as $keyAuther => $confAuther)
                             <div class="blog_auther">
-                                <h4 class="footer_accordion">{{$confAuther["name"]}}</h4>
+                                <h4 class="footer_accordion"><span>{{$confAuther["name"]}}</span><img src="{{ asset('images/front/icon_to_link.svg') }}" class="down"></h4>
                                 <ul>
                                     <li class="to_auther"><a href="{{ route('list.onlyAuther', ['auther_id' => $keyAuther]) }}">{{$confAuther["name"]}}のページへ</a></li>
                                     @foreach($confAuther["category"] as $keyCategory => $confAutherCategory)
-                                    <li class="to_article_list"><a href="{{ route('list.bothAutherAndCategory', ['auther_id' => $keyAuther,'category_id' => $keyCategory,'page'=>1]) }}">{{$confAutherCategory["name"]}}</a></li>
+                                    <li class="to_article_list">
+                                        @if($loop->last)<span>└</span>@else<span>├</span>@endif
+                                        <a href="{{ route('list.bothAutherAndCategory', ['auther_id' => $keyAuther,'category_id' => $keyCategory,'page'=>1]) }}">{{$confAutherCategory["name"]}}</a>
+                                    </li>
                                     @endforeach
                                 </ul>
                             </div>

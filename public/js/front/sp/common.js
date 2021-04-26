@@ -33,10 +33,26 @@ $(function(){
 
         $("h4.footer_accordion").on("click", function() {
             $(this).next().slideToggle();
+
+            if($(this).find("img").hasClass('down')){
+                $(this).find("img").removeClass('down');
+                $(this).find("img").addClass('up');
+            }else if($(this).find("img").hasClass('up')){
+                $(this).find("img").removeClass('up');
+                $(this).find("img").addClass('down');
+            }
         });
 
         $(".modal__content .display_other").on("click", function() {
             $(this).next().slideToggle();
+
+            if($(this).find(".go_button").hasClass('down')){
+                $(this).find(".go_button").removeClass('down');
+                $(this).find(".go_button").addClass('up');
+            }else if($(this).find(".go_button").hasClass('up')){
+                $(this).find(".go_button").removeClass('up');
+                $(this).find(".go_button").addClass('down');
+            }
         });
 
     });

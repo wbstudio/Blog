@@ -46,7 +46,7 @@
                     <li>
                         <div class="link_mass display_other">
                         <div class="link_name">Blogger</div>
-                            <div class="go_button back"></div>
+                            <div class="go_button down"></div>
                         </div>
                         <ul class="hide_link">
                             <li><a href="{{ route('autherList') }}">Blogger List</a></li>
@@ -59,7 +59,7 @@
                     <li>
                         <div class="link_mass display_other">
                         <div class="link_name">Category</div>
-                            <div class="go_button back"></div>
+                            <div class="go_button down"></div>
                         </div>
                         <ul class="hide_link">
                             <li><a href="{{ route('categoryList') }}">Category List</a></li>
