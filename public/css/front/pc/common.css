@@ -94,6 +94,9 @@ header{
 
 .header_second_area a:hover{
     text-decoration: none;
+}
+
+.header_second_area li:hover{
     background: #dcdcdc;
 }
 
