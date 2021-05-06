@@ -73,8 +73,8 @@
                     <div class="wblink_area">
                         <a href=""><img src="{{ asset('images/front/top_link/logo_test.png') }}"></a>
                         <div class="footer_summary">
-                            <div class="footer_summary_item"><a href="">wakuwakublogとは？</a></div>
-                            <div class="footer_summary_item"><a href="">お問い合わせ</a></div>
+                            <div class="footer_summary_item"><a href="{{ route('thisblogis') }}">wakuwakublogとは？</a></div>
+                            <div class="footer_summary_item"><a href="{{ route('inquiry.showForm') }}">お問い合わせ</a></div>
                             <div class="footer_summary_item"><a href="">運営会社</a></div>
                             <div class="footer_summary_item"><a href="">利用規約</a></div>
                             <div class="footer_summary_item"><a href="">個人情報保護方針</a></div>
@@ -83,7 +83,7 @@
                 </div>
             </div>
             <div class="footer_base">
-                &copy; 2017 o-saka
+                &copy; 2021 wb-studio
             </div>
         </footer>
     </body>

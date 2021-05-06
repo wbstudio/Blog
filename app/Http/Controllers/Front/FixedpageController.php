@@ -7,10 +7,10 @@ use Illuminate\Http\Request;
 use \App\Http\Controllers\Front\Avail;
 use DateTime;
 
-class TopController extends Controller
+class FixedpageController extends Controller
 {
-
-    public function index() {
+    //
+    public function thisblogis() {
         $dispData = array();
         //layout+pickup
         $layoutData = AvailController::fillInLayout(NULL,NULL);
@@ -25,11 +25,11 @@ class TopController extends Controller
             'threeDaysAgo' => $threeDaysAgo,
         ];
 
-        return view('front.'.USER_AGENT.'.top',$dispData);
+        return view('front.'.USER_AGENT.'.thisblogis',$dispData);
 
     }
 
-    public function test($test_id) {
+    public function howtouse() {
         $dispData = array();
         //layout+pickup
         $layoutData = AvailController::fillInLayout(NULL,NULL);
@@ -42,10 +42,9 @@ class TopController extends Controller
             'newArticlesList' => $layoutData ->newArticles,
             'rankingList' => $layoutData ->ranking,
             'threeDaysAgo' => $threeDaysAgo,
-            'test_id' => $test_id
         ];
 
-        return view('front.'.USER_AGENT.'.toptest',$dispData);
+        return view('front.'.USER_AGENT.'.howtouse',$dispData);
 
     }
 

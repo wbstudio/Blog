@@ -25,6 +25,7 @@ define("USER_AGENT", $user_agent);
 //  非会員閲覧可能ページ
 //******************************//
 Route::get('/', [\App\Http\Controllers\Front\TopController::class, 'index'])->name('topPage');
+Route::get('/top/{test_id}', [\App\Http\Controllers\Front\TopController::class, 'test'])->name('topPageTest');
 Route::get('/auther', [\App\Http\Controllers\Front\ListController::class, 'autherList'])->name('autherList');
 Route::get('/category', [\App\Http\Controllers\Front\ListController::class, 'categoryList'])->name('categoryList');
 Route::get('/auther/{auther_id}', [\App\Http\Controllers\Front\ListController::class, 'onlyAuther'])->name('list.onlyAuther');
@@ -34,6 +35,8 @@ Route::get('/tag/{tag_id}/page/{page}', [\App\Http\Controllers\Front\ListControl
 Route::post('/search', [\App\Http\Controllers\Front\ListController::class, 'searchBox'])->name('list.searchWordList');
 Route::get('/search/{searchWord}/page/{page}', [\App\Http\Controllers\Front\ListController::class, 'searchPagenation']);
 Route::get('/article/{article_id}', [\App\Http\Controllers\Front\ArticleController::class, 'articleDetail'])->name('detail.article');
+Route::get('/howtouse', [\App\Http\Controllers\Front\FixedpageController::class, 'howtouse'])->name('howtouse');
+Route::get('/thisblogis', [\App\Http\Controllers\Front\FixedpageController::class, 'thisblogis'])->name('thisblogis');
 //アドレス忘れ
 Route::get('/password-forget', [\App\Http\Controllers\Front\MemberController::class, 'passwordForgetShowform'])->name('password-forget.showForm');
 Route::post('/password-forget', [\App\Http\Controllers\Front\MemberController::class, 'passwordForgetMailSend'])->name('password-forget.mailSend');

@@ -58,17 +58,17 @@
                     <a href="{{ route('inquiry.showForm') }}">Contact</a>
                     </li>
                 <li class="header_second_area_mass no-sub">
-                    <a href="{{ route('login') }}">How to use</a>
+                    <a href="{{ route('howtouse') }}">How to use</a>
                     </li>
                 <li class="header_second_area_mass no-sub">
-                    <a href="{{ route('login') }}">This Blog is...</a>
+                    <a href="{{ route('thisblogis') }}">This Blog is...</a>
                 </li>
             </ul>
             </div>
         </header>
 
         <div id="site_intro">
-            <a href="">
+            <a href="{{ route('thisblogis') }}">
                 <img  src="{{ asset('images/front/top_link/test_image_1920_550.png') }}" width="100%">
             </a>
         </div>

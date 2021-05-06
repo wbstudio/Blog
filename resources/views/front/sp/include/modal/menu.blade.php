@@ -78,7 +78,7 @@
                     </li>
 
                     <li>
-                        <a href="">
+                        <a href="{{ route('thisblogis') }}">
                             <div class="link_mass">
                             <div class="link_name">wakuwakuBlogとは？</div>
                             </div>
@@ -86,7 +86,7 @@
                     </li>
 
                     <li>
-                        <a href="">
+                        <a href="{{ route('howtouse') }}">
                             <div class="link_mass">
                             <div class="link_name">サイトの使い方</div>
                             </div>
