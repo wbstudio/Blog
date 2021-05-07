@@ -8,7 +8,7 @@
 
 @section('content')
 <a href="{{ route('thisblogis') }}">
-    <video src="{{ asset('images/front/top_link/top_image_1_sp.mp4') }}" width="100%" muted autoplay loop></video>
+    <video src="{{ asset('images/front/top_link/top_image_1_sp.mp4') }}" width="100%" muted autoplay loop playsinline></video>
 </a>
 <div class="container">
 <div id="top_page" class="">
