@@ -7,8 +7,8 @@
 @endsection
 
 @section('content')
-<a href="">
-    <img src="{{ asset('images/front/sp/top_image.png') }}" width="100%">
+<a href="{{ route('thisblogis') }}">
+    <video src="{{ asset('images/front/top_link/top_image_1_sp.mp4') }}" width="100%" muted autoplay loop></video>
 </a>
 <div class="container">
 <div id="top_page" class="">
