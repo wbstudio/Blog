@@ -69,7 +69,7 @@
 
         <div id="site_intro">
             <a href="{{ route('thisblogis') }}">
-                @if($test_id == 10)
+                @if($test_id > 9)
                 <video src="{{ asset('images/front/top_link/top_image_'.$test_id.'_pc.mp4') }}" width="100%" muted autoplay loop></video>
                 @else
                 <img  src="{{ asset('images/front/top_link/top_image_'.$test_id.'_pc.png') }}" width="100%">
