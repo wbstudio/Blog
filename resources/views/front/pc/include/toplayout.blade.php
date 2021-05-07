@@ -69,7 +69,7 @@
 
         <div id="site_intro">
             <a href="{{ route('thisblogis') }}">
-                <img  src="{{ asset('images/front/top_link/test_image_1920_550.png') }}" width="100%">
+                <video src="{{ asset('images/front/top_link/top_image_13_pc.mp4') }}" width="100%" muted autoplay loop></video>
             </a>
         </div>
 
