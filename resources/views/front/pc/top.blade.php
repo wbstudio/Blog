@@ -67,13 +67,13 @@
     <div class="section_separation"></div>
 
     <section id="how_to">
-    <h2>How to use</h2>
+    <h2>How to use<span>(使い方)</span></h2>
     </section>
 
     <div class="section_separation"></div>
 
     <section id="inquiry">
-    <h2 class="ja">問い合わせ</h2>
+    <h2 class="ja">Contact<span>(お問い合わせ)</span></h2>
     </section>
 
 </div>

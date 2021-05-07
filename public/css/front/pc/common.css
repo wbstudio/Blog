@@ -223,6 +223,12 @@ h2.ja{
     font-size: 55px;
 }
 
+h2 span{
+    font-size: 0.4em;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
 .section_separation{
     padding: 40px;
 }
