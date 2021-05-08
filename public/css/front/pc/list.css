@@ -1,11 +1,9 @@
-
 /**Swiper[patern_01]*/
-
 h3{
     text-align: center;
     border-bottom: 1px solid #404040;
+    padding-bottom: 5px;
 }
-
 
 .patern_01 .swiper-container{
     height:280px;
@@ -300,7 +298,6 @@ a:hover{
     bottom: 0;
 }
 
-
 .category_list_inner{
     margin: 10px 0 120px;
 }
@@ -317,10 +314,7 @@ a:hover{
     margin-bottom: 0;
 }
 
-/*
-Blogger
-*/
-
+/*Blogger*/
 .blogger_odd{
     padding-right: 20px;
     margin: 10px 0 0px;
@@ -405,7 +399,6 @@ Blogger
     font-weight: 600;
 }
 
-
 #blogger .to_blogger_category{
     text-align: center;
     position: relative;
@@ -421,15 +414,13 @@ Blogger
     /* transition: color,border 0.5s ease 0s; */
 }
 
-
 #blogger .to_blogger_category a:hover{
     /* background-color:#e7e7e7; */
     color: #949494;
     border: 2px solid #949494;
   }
 
-
-  /****************************
+/****************************
 *
 **iPad(1023px以下)用-レスポンシブ
 *
@@ -457,7 +448,6 @@ Blogger
         right: 300px;
     }
 
-
     /*Category*/
     .category_mass td.single_category_update {
         font-size: 10px;
@@ -471,7 +461,5 @@ Blogger
     .category_mass_inner_single:last-child{
         display: none;
     }
-                
-    
       
 }/*min-width: 481px*/
