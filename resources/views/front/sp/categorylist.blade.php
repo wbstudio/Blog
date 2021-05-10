@@ -50,7 +50,11 @@
                             <div class="swiper-slide">
                                 <div class="swiper-slide_inner">
                                     <a href="{{ route('detail.article', ['article_id' => $articleData->id]) }}">
-                                        <img src="{{ asset('images/front/top_link/image_190_150.png') }}" class="">
+                                        @if(isset($articleData->eyecatch))
+                                        <img src="{{ asset('images/admin/article/eyecatch/' .$articleData->eyecatch)}}" class="">
+                                        @else
+                                        <img src="{{ asset('images/admin/article/eyecatch/no_image.png')}}" class="">
+                                        @endif
                                         <div class="title">{{$articleData->title}}</div>
                                     </a>
                                     <div class="category"><span>カテゴリー</span><a href="{{ route('list.bothAutherAndCategory', ['auther_id' => $articleData->auther,'category_id' => $articleData->auther_category,'page'=>1]) }}">{{config("auther.$articleData->auther.category.$articleData->auther_category.name")}}</a></div>

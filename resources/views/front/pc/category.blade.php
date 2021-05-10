@@ -23,7 +23,11 @@
                         <div class="swiper-slide">
                             <div class="swiper-slide_inner">
                                 <a href="{{ route('detail.article', ['article_id' => $pickup->id]) }}">
-                                    <img src="{{ asset('images/front/top_link/image_190_150.png') }}" class="">
+                                    @if(isset($pickup->eyecatch))
+                                    <img src="{{ asset('images/admin/article/eyecatch/' .$pickup->eyecatch)}}" class="">
+                                    @else
+                                    <img src="{{ asset('images/admin/article/eyecatch/no_image.png')}}" class="">
+                                    @endif
                                     <div class="title">{{$pickup -> title}}</div>
                                 </a>
                                 <div class="auther"><span>著者:</span><a href="{{ route('list.onlyAuther', ['auther_id' => $pickup->auther]) }}">{{config("auther.$pickup->auther.name")}}</a></div>
@@ -85,15 +89,21 @@
             </div>
             <div class="category_mass_inner">
                 @foreach($articlesListByCategoryId[$keyAuther] as $key => $articleList)
+                @if($key < 4)
                 <div class="category_mass_inner_single">
                     <div class="category_mass_inner_contents">
                         <a href="{{ route('detail.article', ['article_id' => $articleList->id]) }}">
-                            <img src="{{ asset('images/front/top_link/image_190_150.png') }}" class="">
+                            @if(isset($articleList->eyecatch))
+                            <img src="{{ asset('images/admin/article/eyecatch/' .$articleList->eyecatch)}}" class="">
+                            @else
+                            <img src="{{ asset('images/admin/article/eyecatch/no_image.png')}}" class="">
+                            @endif
                             <div class="title">{{$articleList -> title}}</div>
                         </a>
                         <div class="update_date">更新日:{{ $articleList->release_at->format('Y/m/d') }}</div>
                     </div>
                 </div>
+                @endif
                 @endforeach
             </div>
         </div>

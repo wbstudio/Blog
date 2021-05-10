@@ -21,7 +21,11 @@
         @foreach($articles as $article)
         <div class="article_list_mass">
             <a href="{{ route('detail.article', ['article_id' => $article->id]) }}">
-                <img src="{{ asset('images/front/top_link/image_190_150.png') }}">
+				@if(isset($article->eyecatch))
+                <img src="{{ asset('images/admin/article/eyecatch/' .$article->eyecatch)}}">
+                @else
+                <img src="{{ asset('images/admin/article/eyecatch/no_image.png')}}" class="">
+                @endif
                 <div class="title">
                     <p>{{$article->title}}</p>
                 </div>

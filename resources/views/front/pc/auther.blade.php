@@ -45,7 +45,11 @@
                         <div class="swiper-slide">
                             <div class="swiper-slide_inner">
                                 <a href="{{ route('detail.article', ['article_id' => $pickup->id]) }}">
-                                    <img src="{{ asset('images/front/top_link/image_190_150.png') }}" class="">
+                                    @if(isset($pickup->eyecatch))
+                                    <img src="{{ asset('images/admin/article/eyecatch/' .$pickup->eyecatch)}}" class="">
+                                    @else
+                                    <img src="{{ asset('images/admin/article/eyecatch/no_image.png')}}" class="">
+                                    @endif
                                     <div class="title">{{$pickup -> title}}</div>
                                 </a>
                                 <div class="auther"><span>著者:</span><a href="{{ route('list.onlyAuther', ['auther_id' => $pickup->auther]) }}">{{config("auther.$pickup->auther.name")}}</a></div>
@@ -114,16 +118,22 @@
                 </p>
             </div>
             <div class="category_mass_inner">
-                @foreach($categoryArticlesList[$key] as $categoryArticle)
+                @foreach($categoryArticlesList[$key] as $index => $categoryArticle)
+                @if($index < 4)
                 <div class="category_mass_inner_single">
                     <div class="category_mass_inner_contents">
                         <a href="{{ route('detail.article', ['article_id' => $categoryArticle->id]) }}">
-                            <img src="{{ asset('images/front/top_link/image_190_150.png') }}" class="">
+                            @if(isset($categoryArticle->eyecatch))
+                            <img src="{{ asset('images/admin/article/eyecatch/' .$categoryArticle->eyecatch)}}" class="">
+                            @else
+                            <img src="{{ asset('images/admin/article/eyecatch/no_image.png')}}" class="">
+                            @endif
                             <div class="title">{{$categoryArticle->title}}</div>
                         </a>
                         <div class="update_date">更新日:{{$categoryArticle->release_at->format('Y/m/d')}}</div>
                     </div>
                 </div>
+                @endif
                 @endforeach
             </div>
         </div>

@@ -70,7 +70,11 @@
                         <div class="swiper-slide">
                             <div class="swiper-slide_inner">
                                 <a href="{{ route('detail.article', ['article_id' => $articleData->id]) }}">
-                                    <img src="{{ asset('images/front/top_link/image_190_150.png') }}" class="">
+                                    @if(isset($articleData->eyecatch))
+                                    <img src="{{ asset('images/admin/article/eyecatch/' .$articleData->eyecatch)}}" class="">
+                                    @else
+                                    <img src="{{ asset('images/admin/article/eyecatch/no_image.png')}}" class="">
+                                    @endif
                                     <div class="title">{{$articleData->title}}</div>
                                 </a>
                                 <div class="auther"><span>著者</span><a href="{{ route('list.onlyAuther', ['auther_id' => $articleData->id]) }}">{{config("auther.$articleData->auther.name")}}</a></div>
@@ -115,7 +119,11 @@
                         <div class="swiper-slide">
                             <div class="swiper-slide_inner">
                                 <a href="{{ route('detail.article', ['article_id' => $articleData->id]) }}">
-                                    <img src="{{ asset('images/front/top_link/image_190_150.png') }}" class="">
+                                    @if(isset($articleData->eyecatch))
+                                    <img src="{{ asset('images/admin/article/eyecatch/' .$articleData->eyecatch)}}" class="">
+                                    @else
+                                    <img src="{{ asset('images/admin/article/eyecatch/no_image.png')}}" class="">
+                                    @endif
                                     <div class="title">{{$articleData->title}}</div>
                                 </a>
                                 <div class="auther"><span>著者</span><a href="{{ route('list.onlyAuther', ['auther_id' => $articleData->id]) }}">{{config("auther.$articleData->auther.name")}}</a></div>
@@ -161,7 +169,11 @@
                         <div class="swiper-slide">
                             <div class="swiper-slide_inner">
                                 <a href="{{ route('detail.article', ['article_id' => $articleData->id]) }}">
-                                    <img src="{{ asset('images/front/top_link/image_190_150.png') }}" class="">
+                                    @if(isset($articleData->eyecatch))
+                                    <img src="{{ asset('images/admin/article/eyecatch/' .$articleData->eyecatch)}}" class="">
+                                    @else
+                                    <img src="{{ asset('images/admin/article/eyecatch/no_image.png')}}" class="">
+                                    @endif
                                     <div class="title">{{$articleData->title}}</div>
                                 </a>
                                 <div class="auther"><span>著者</span><a href="{{ route('list.onlyAuther', ['auther_id' => $articleData->id]) }}">{{config("auther.$articleData->auther.name")}}</a></div>

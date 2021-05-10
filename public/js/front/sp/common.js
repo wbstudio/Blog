@@ -17,6 +17,21 @@ $(function(){
         $(".patern_01 .swiper-button-next").css("top", swiperHeight + 36 +"px");
     },200);
 
+    //
+    var imgWidth = $(".article_mass img").css("width");
+    console.log(imgWidth);
+    if(imgWidth != undefined){
+        var numWidth = imgWidth.split("px");
+        var numHeight = numWidth[0] * 150/190;
+        $(".article_mass img").css("height",numHeight+"px");
+    }
+    //
+    var sliderImgWidth = $(".swiper-slide_inner img").css("width");
+    if(sliderImgWidth != undefined){
+        var sliderNumWidth = sliderImgWidth.split("px");
+    var sliderNumHeight = sliderNumWidth[0] * 150/190;
+    $(".swiper-slide_inner img").css("height",sliderNumHeight+"px");
+    }
     //続きを読むbutton
     $('.hidden_area_open').readmore({
         speed: 750,

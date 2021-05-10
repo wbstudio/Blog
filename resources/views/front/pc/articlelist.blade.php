@@ -16,7 +16,14 @@
 			@if(isset($articles) && is_countable($articles))
 				@foreach($articles as $article)
 				<div class="article_list_mass">
-					<div class="article_list_image_area"> <a href="{{ route('detail.article', ['article_id' => $article->id]) }}"><img src="{{ asset('images/front/articleEyeCatch/image_190_150.png') }}"></a>
+					<div class="article_list_image_area">
+						<a href="{{ route('detail.article', ['article_id' => $article->id]) }}">
+							@if(isset($article->eyecatch))
+							<img src="{{ asset('images/admin/article/eyecatch/' .$article->eyecatch)}}">
+                            @else
+                            <img src="{{ asset('images/admin/article/eyecatch/no_image.png')}}" class="">
+                            @endif
+						</a>
 						<div class="article_list_base">
 							<div class="article_list_auther">著者:<a href="{{ route('list.onlyAuther', ['auther_id' => $article->auther]) }}">{{config("auther.".$article->auther.".name")}}</a></div>
 							<div class="article_list_category">カテゴリー:<a href="{{ route('list.bothAutherAndCategory', ['auther_id' => $article->auther,'category_id' => $article->auther_category,'page' => 1]) }}">{{config("auther.".$article->auther.".category.".$article->auther_category.".name")}}</a></div>

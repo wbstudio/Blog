@@ -34,8 +34,12 @@
                     @foreach($articlesListPerAuther[$key] as $articleData)
                     <div class="swiper-slide">
                         <div>
-                            <a href="">
-                                <img src="{{ asset('images/front/top_link/image_190_150.png') }}" class="">
+                            <a href="{{ route('detail.article', ['article_id' => $articleData->id]) }}">
+                                @if(isset($articleData->eyecatch))
+                                <img src="{{ asset('images/admin/article/eyecatch/' .$articleData->eyecatch)}}" class="">
+                                @else
+                                <img src="{{ asset('images/admin/article/eyecatch/no_image.png')}}" class="">
+                                @endif
                                 <div class="title">{{$articleData->title}}</div>
                             </a>
                             <div class="category"><span>カテゴリー</span><a href="">testカテゴリー</a></div>

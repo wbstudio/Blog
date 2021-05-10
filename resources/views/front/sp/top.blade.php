@@ -22,7 +22,11 @@
                 <div class="swiper-slide">
                     <div class="swiper-slide_inner">
                         <a href="{{ route('detail.article', ['article_id' => $pickup->id]) }}">
-                            <img src="{{ asset('images/front/top_link/image_190_150.png') }}" class="">
+                            @if(isset($pickup->eyecatch))
+                            <img src="{{ asset('images/admin/article/eyecatch/' .$pickup->eyecatch)}}" class="">
+                            @else
+                            <img src="{{ asset('images/admin/article/eyecatch/no_image.png')}}" class="">
+                            @endif
                             <div class="title">{{$pickup -> title}}</div>
                         </a>
                         <div class="auther"><span>著者</span><a href="{{ route('list.onlyAuther', ['auther_id' => $pickup->auther]) }}">{{config("auther.$pickup->auther.name")}}</a></div>
