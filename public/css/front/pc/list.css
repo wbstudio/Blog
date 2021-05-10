@@ -228,6 +228,10 @@ a:hover{
     opacity: 0.7;
 }
 
+.article_list_mass .article_list_image_area img{
+    width: 190px;
+}
+
 .article_list_explain_area{
     padding: 0 5px;
 }
