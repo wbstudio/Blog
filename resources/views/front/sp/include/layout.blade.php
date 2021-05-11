@@ -71,13 +71,13 @@
                         </div>
                     </div>
                     <div class="wblink_area">
-                        <a href=""><img src="{{ asset('images/front/top_link/logo_test.png') }}"></a>
+                        <a href="{{ route('operation') }}"><img src="{{ asset('images/front/top_link/logo_test.png') }}"></a>
                         <div class="footer_summary">
-                            <div class="footer_summary_item"><a href="{{ route('thisblogis') }}">wakuwakublogとは？</a></div>
+                            <div class="footer_summary_item"><a href="{{ route('thisblogis') }}">blog-Hとは？</a></div>
                             <div class="footer_summary_item"><a href="{{ route('inquiry.showForm') }}">お問い合わせ</a></div>
-                            <div class="footer_summary_item"><a href="">運営会社</a></div>
-                            <div class="footer_summary_item"><a href="">利用規約</a></div>
-                            <div class="footer_summary_item"><a href="">個人情報保護方針</a></div>
+                            <div class="footer_summary_item"><a href="{{ route('operation') }}">運営について</a></div>
+                            <div class="footer_summary_item"><a href="{{ route('terms') }}">利用規約</a></div>
+                            <div class="footer_summary_item"><a href="{{ route('privacy') }}">個人情報保護方針</a></div>
                         </div>
                     </div>
                 </div>

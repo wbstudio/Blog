@@ -80,7 +80,7 @@
                     <li>
                         <a href="{{ route('thisblogis') }}">
                             <div class="link_mass">
-                            <div class="link_name">wakuwakuBlogとは？</div>
+                            <div class="link_name">blog-Hとは？</div>
                             </div>
                         </a>
                     </li>

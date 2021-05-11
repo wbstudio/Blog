@@ -37,6 +37,9 @@ Route::get('/search/{searchWord}/page/{page}', [\App\Http\Controllers\Front\List
 Route::get('/article/{article_id}', [\App\Http\Controllers\Front\ArticleController::class, 'articleDetail'])->name('detail.article');
 Route::get('/howtouse', [\App\Http\Controllers\Front\FixedpageController::class, 'howtouse'])->name('howtouse');
 Route::get('/thisblogis', [\App\Http\Controllers\Front\FixedpageController::class, 'thisblogis'])->name('thisblogis');
+Route::get('/operation', [\App\Http\Controllers\Front\FixedpageController::class, 'operation'])->name('operation');
+Route::get('/terms', [\App\Http\Controllers\Front\FixedpageController::class, 'terms'])->name('terms');
+Route::get('/privacy', [\App\Http\Controllers\Front\FixedpageController::class, 'privacy'])->name('privacy');
 //アドレス忘れ
 Route::get('/password-forget', [\App\Http\Controllers\Front\MemberController::class, 'passwordForgetShowform'])->name('password-forget.showForm');
 Route::post('/password-forget', [\App\Http\Controllers\Front\MemberController::class, 'passwordForgetMailSend'])->name('password-forget.mailSend');
