@@ -1,7 +1,7 @@
 $(function(){
+
     //blog部分のimg
     $(".article_main img").css("height", "auto");
-
 
     //topのアコーディオン
     $('.has-sub').mouseover(function(){

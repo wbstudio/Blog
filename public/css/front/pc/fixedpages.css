@@ -1,0 +1,73 @@
+#fixed_page{
+    margin-bottom: 80px;
+}
+
+#fixed_page .sub_title{
+    font-size: 1.3em;
+    font-weight: bold;
+    font-family: 'RocknRoll One', sans-serif;
+}
+
+#fixed_page .pink{
+    color:#ff5757;
+    font-weight: bold;
+    font-family: 'RocknRoll One', sans-serif;
+}
+
+#fixed_page .big_font{
+    font-size: 1.8em;
+}
+
+#fixed_page .small_caution{
+    font-size: 10px;
+}
+
+#fixed_page .bold{
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+#fixed_page .block_mass{
+    margin-top: 90px;
+}
+
+#fixed_page .inner_block_mass{
+    margin: 25px 0 70px;
+}
+#fixed_page .block_mass h4{
+    font-size:1.4em;
+    text-align: center;
+    border-bottom: 3px double #404040;
+}
+
+#fixed_page h5{
+    width: fit-content;
+    border-bottom: 1px solid;
+    font-family: 'RocknRoll One', sans-serif;
+    font-size: 21px;
+    margin-bottom: 0;
+}
+
+#fixed_page .name{
+    margin-top: 55px;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+#fixed_page ul{
+    font-family: 'RocknRoll One', sans-serif;
+}
+
+#fixed_page ul.outline_list{
+    list-style: square;
+    margin-bottom: 0;
+}
+
+#fixed_page ul.inline_list{
+    list-style: decimal;
+}
+
+#fixed_page .mar_left{
+    margin-left: 15px;
+}
+

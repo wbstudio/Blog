@@ -10,12 +10,10 @@
 <div class="container">
 <div id="top_page" class="">
 <section id="blogger">
-<h2 class="ja"></h2>
-
+<h2 class="ja">運営について</h2>
 <div>
+
 </div>
-
-
 </section>
 </div>
 </div>

@@ -75,9 +75,9 @@
                         <div class="footer_summary">
                             <div class="footer_summary_item"><a href="{{ route('thisblogis') }}">blog-Hとは？</a></div>
                             <div class="footer_summary_item"><a href="{{ route('inquiry.showForm') }}">お問い合わせ</a></div>
-                            <div class="footer_summary_item"><a href="{{ route('operation') }}">運営について</a></div>
+                            <!-- <div class="footer_summary_item"><a href="{{ route('operation') }}">運営について</a></div> -->
                             <div class="footer_summary_item"><a href="{{ route('terms') }}">利用規約</a></div>
-                            <div class="footer_summary_item"><a href="{{ route('privacy') }}">個人情報保護方針</a></div>
+                            <div class="footer_summary_item"><a href="{{ route('privacy') }}">プライバシーポリシー</a></div>
                         </div>
                     </div>
                 </div>
