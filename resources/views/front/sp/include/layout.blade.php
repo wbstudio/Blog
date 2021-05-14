@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=yes">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link rel="stylesheet" id="paddle-fonts-css" href="https://fonts.googleapis.com/css?family=Montserrat%3A400%2C700" type="text/css" media="all">        
+        <link href="https://fonts.googleapis.com/css2?family=RocknRoll+One&family=Stick&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="{{ asset('css/front/sp/common.css') }}">
         <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>

@@ -12,7 +12,16 @@
 <section id="blogger">
 <h2 class="ja">運営について</h2>
 <div>
-
+    <table>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
 </div>
 </section>
 </div>

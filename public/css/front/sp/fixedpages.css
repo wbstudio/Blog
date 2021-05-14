@@ -1,0 +1,20 @@
+#fixed_page h2{
+    font-size: 40px;
+    padding-top: 20px;
+    margin-bottom: 10px;
+}
+
+#fixed_page .subtitle{
+    font-family: 'RocknRoll One', sans-serif;
+    margin-bottom: 60px;
+}
+
+#fixed_page .pink{
+    color: #ff5757;
+}
+
+#fixed_page .block_mass p{
+    font-size: 0.8em;
+}
+
+
