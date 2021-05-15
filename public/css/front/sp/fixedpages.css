@@ -3,6 +3,9 @@
     padding-top: 20px;
     margin-bottom: 10px;
 }
+#fixed_page h2.ja{
+    font-size: 32px;
+}
 #fixed_page h3 {
     border-bottom: 3px double #404040;
 }
@@ -36,6 +39,10 @@
 #fixed_page p.str_str{
     font-size: 1.3em;
     font-weight: bold;
+}
+
+#fixed_page p.special{
+    font-size: 0.8em;
 }
 
 #fixed_page h5{
@@ -79,3 +86,17 @@
     margin: 25px 0 70px;
 }
 
+#fixed_page .fin_area {
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+#fixed_page .block_mass h4 {
+    font-size: 1.1em;
+    text-align: center;
+    border-bottom: 3px double #404040;
+}
+
+#fixed_page .mar_left {
+    margin-left: 15px;
+}

@@ -199,7 +199,7 @@
             <p>
                 私にはこれほどの衝撃は与えられないかもしれませんが、
             </p>
-            <p>
+            <p class="special">
                 このblogを見てあなたが<br>
                 「この人たちいつもバカみたいにくだらないことをやって楽しそうだな」と思って、<br>
                 <span class="pink y_big_font">「偏愛への</span>一歩を踏み出す<span class="pink y_big_font">きっかけ」</span>や<br>
