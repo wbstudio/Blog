@@ -138,10 +138,6 @@
         </ul>
         <div class="to_link_htu">
             <a href="{{ route('howtouse') }}">「How to use(使い方)」のページへ</a>
-            <p>
-                ※お問い合わせにはLog inが必要です。<br>
-                詳しくは
-            </p>
         </div>
     </div>
     </section>

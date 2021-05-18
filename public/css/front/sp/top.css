@@ -1,0 +1,77 @@
+#this_blog_is .to_link_tbi,
+#how_to .to_link_htu,
+#inquiry .to_link_con{
+    width: 77%;
+    margin: 25px auto;
+    text-align: center;
+    border: 2px solid #404040;
+    padding: 7px 10px;
+    border-radius: 4px;
+}
+
+#this_blog_is .to_link_tbi a,
+#how_to .to_link_htu a,
+#inquiry .to_link_con a{
+text-decoration: none;
+}
+
+#this_blog_is .red,
+#inquiry .red{
+    color: #ff5757;
+}
+
+#this_blog_is .big_font,
+#inquiry .big_font{
+    font-size: 1.3em;
+    font-family: 'RocknRoll One', sans-serif;
+}
+
+#sns_area .sns_area_title{
+    font-weight: bold;
+    font-size: 1.4em;
+    border-bottom: 3px double #404040;
+}
+
+
+#sns_area .snslink_area{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#sns_area .snslink_area img{
+    margin-right: 10px;
+}
+
+#sns_area .to_bloggerlink{
+    display: inline-block;
+    width: 45%;
+    text-align: center;
+    border: 2px solid #404040;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    padding: 5px 0;
+}
+
+#sns_area .to_bloggerlink_area a{
+    text-decoration: none;
+}
+
+#sns_area .to_bloggerlink_area{
+    text-align: center;
+}
+
+#how_to ul{
+    list-style: square;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+#inquiry .caution{
+    text-align: center;
+    font-size: 0.85em;
+}
+
+#inquiry .caution a{
+    color: #2556f7;
+}
+
