@@ -66,15 +66,107 @@
 
     <div class="section_separation"></div>
 
+    <section id="this_blog_is">
+    <h2 class="ja">{{ config('siteconfig.SITE_NAME') }}の理念</h2>
+    <div>
+        <p>
+            {{ config('siteconfig.SITE_NAME') }}の理念というか、思いを記してみました。<br>
+            ヘッダーに書いてある<br>
+            <span class="big_font">「</span><span class="red big_font">偏愛</span><span class="big_font">」</span><br>
+            <span class="big_font">「</span><span class="red big_font">大きな興味</span><span class="big_font">と</span><span class="red big_font">小さな違和感</span><span class="big_font">」</span><br>
+            とは何なのかも記してみました。<br>
+            ぜひ、読んでみてください。
+        </p>
+        <div class="to_link_tbi">
+            <a href="{{ route('thisblogis') }}">「{{ config('siteconfig.SITE_NAME') }}とは？」へ</a>
+        </div>
+    </div>
+    </section>
+
+    <div class="section_separation"></div>
+
+    <section id="sns_area">
+    <h2>SNS<span></span></h2>
+    <div>
+        <div class="sns_area_title">
+            wb-studio公式SNS
+        </div>
+        <p>
+            {{ config('siteconfig.SITE_NAME') }}を運営しているwb-studioの公式SNSをやっています。<br>
+            フォロー・チャンネル登録等の応援よろしくお願いします。
+        </p>
+        <div class="snslink_area">
+            <a href=""><img src="{{ asset('images/front/Facebook_black.svg') }}"></a>
+            <a href=""><img src="{{ asset('images/front/Instagram_black.svg') }}"></a>
+            <a href=""><img src="{{ asset('images/front/Twitter_black.svg') }}"></a>
+            <a href=""><img src="{{ asset('images/front/Youtube_black.svg') }}"></a>
+        </div>        
+        <div class="sns_area_title">
+            個人SNS
+        </div>
+        <p>
+            BloggerそれぞれのSNSもやっていたりします。<br>
+            Blogger紹介ページにリンクを用意していますので、<br>
+            こちらもフォロー・チャンネル登録等の応援よろしくお願いします。
+        </p>
+        <div class="to_bloggerlink_area">
+        @foreach(Config::get('auther') as $key => $confAuther)
+            <a href="{{ route('list.onlyAuther', ['auther_id' => $key]) }}">
+                <div class="to_bloggerlink">
+                    {{$confAuther['name']}}の部屋へ
+                </div>
+            </a>
+        @endforeach
+        </div>        
+    </div>
+    </section>
+
+    <div class="section_separation"></div>
+
     <section id="how_to">
     <h2>How to use<span>(使い方)</span></h2>
+    <div>
+        <p>
+        {{ config('siteconfig.SITE_NAME') }}の簡単な使い方をまとめてみました。<br>
+        主に以下の3つについて書いてあります。<br>
+        参考にしてみてください。
+        </p>
+        <ul>
+            <li>blogの記事の選択の仕方</li>
+            <li>お問い合わせの仕方</li>
+            <li>SNSについて</li>
+        </ul>
+        <div class="to_link_htu">
+            <a href="{{ route('howtouse') }}">「How to use(使い方)」のページへ</a>
+            <p>
+                ※お問い合わせにはLog inが必要です。<br>
+                詳しくは
+            </p>
+        </div>
+    </div>
     </section>
 
     <div class="section_separation"></div>
 
     <section id="inquiry">
     <h2 class="ja">Contact<span>(お問い合わせ)</span></h2>
+    <div>
+        <p>
+            「偏愛」を持つ者同士多くを語り合えたら嬉しいと思っていますので、<br>
+            <span class="red big_font">お友達にLINEするくらい気軽にお問い合わせ</span>してください。<br>
+        </p>
+        <div class="to_link_con">
+            <a href="{{ route('inquiry.showForm') }}">「Contact(お問い合わせ)」のページへ</a>
+        </div>
+        <p class="caution">
+            ※お問い合わせにはLoginが必要となります。<br>
+            もしわからない場合は<a href="{{ route('howtouse') }}">「How to use(お問い合わせ)」へのリンク</a>を見てみてください。
+        </p>
+    </div>
     </section>
+
+    <div class="section_separation"></div>
+    <div class="section_separation"></div>
 
 </div>
 </div>

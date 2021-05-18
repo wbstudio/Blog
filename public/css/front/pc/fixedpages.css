@@ -2,6 +2,11 @@
     margin-bottom: 80px;
 }
 
+#fixed_page h2.ja{
+    font-size: 45px;
+}
+
+
 #fixed_page .sub_title{
     font-size: 1.3em;
     font-weight: bold;

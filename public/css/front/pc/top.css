@@ -109,17 +109,96 @@ Blogger
     text-decoration: none;
     color: var(--main-color);
     font-weight: bold;
+    border-radius: 4px;
     /* transition: color,border 0.5s ease 0s; */
 }
 
+#inquiry .to_link_con,
+#how_to .to_link_htu,
+#this_blog_is .to_link_tbi{
+    text-align: center;
+}
+
+#inquiry .to_link_con{
+    margin-top: 35px;
+}
+
+#inquiry .to_link_con a,
+#how_to .to_link_htu a,
+#this_blog_is .to_link_tbi a{
+    border: 2px solid var(--main-color);
+    padding: 10px 20px;
+    text-decoration: none;
+    color: var(--main-color);
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+#how_to{
+    margin-bottom: 60px;
+}
+
+
+#how_to ul{
+    font-weight: bold;
+    font-size: 1.2em;
+    list-style: square;
+}
+
+#inquiry .red,
+#this_blog_is .red{
+    color:#ff5757;    
+}
+
+#inquiry .big_font,
+#this_blog_is .big_font{
+    font-size: 1.5em;
+    font-family: 'RocknRoll One', sans-serif;
+}
+
+#inquiry p.caution{
+    text-align: center;
+    font-size: 0.85em;
+    margin-top: 30px;
+}
+
+#inquiry a{
+    color:#2556f7;
+}
 
 #blogger .to_blogger_category a:hover{
     /* background-color:#e7e7e7; */
     color: #949494;
     border: 2px solid #949494;
   }
+#this_blog_is,
+#sns_area .snslink_area{
+    margin-bottom: 60px;
+}
 
+#sns_area .sns_area_title{
+    font-weight: bold;
+    font-size: 1.5em;
+    border-bottom: 3px double #404040;
+}
 
+#sns_area .snslink_area a{
+    margin-right: 15px;
+}
+
+#sns_area .to_bloggerlink_area{
+    display: flex;
+    margin-bottom: 60px;
+}
+
+#sns_area .to_bloggerlink_area .to_bloggerlink{
+    width: 120px;
+    padding: 6px 7px;
+    border: 2px solid;
+    text-align: center;
+    margin-right: 15px;
+    border-radius: 4px;
+}
 
   /****************************
 *

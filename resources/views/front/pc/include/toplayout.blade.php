@@ -11,6 +11,7 @@
         <link rel="stylesheet" href="{{ asset('css/front/pc/list.css') }}">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link rel="stylesheet" id="paddle-fonts-css" href="https://fonts.googleapis.com/css?family=Montserrat%3A400%2C700" type="text/css" media="all">
+        <link href="https://fonts.googleapis.com/css2?family=RocknRoll+One&family=Stick&display=swap" rel="stylesheet">
         @yield('head')
     </head>
     <body>

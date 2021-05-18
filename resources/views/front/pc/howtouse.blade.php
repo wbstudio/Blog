@@ -54,7 +54,7 @@
     </div>
 
 </div>
-<div class="block_mass">
+<div id="contact" class="block_mass">
 <h4>お問い合わせの仕方</h4>
 お問い合わせ
 
