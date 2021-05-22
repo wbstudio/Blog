@@ -10,7 +10,7 @@
 <div class="container">
 <div id="category_page" class="">
 <section>
-    <h2 class="first_h2 narrow">{{config("category.$categoryId.name")}}</h2>
+    <h2 class="first_h2 narrow ja">{{config("category.$categoryId.name")}}</h2>
     @if(isset($pickupList) && is_countable($pickupList))
     <div class="pick_up patern_01">
         <h3>Pick Up</h3>
