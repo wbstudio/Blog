@@ -78,6 +78,7 @@
     @endif
 </section>
 
+<div class="section_separater"></div>
 
 <section>
     <h2 class="first_h2 narrow">Category</h2>
@@ -127,13 +128,15 @@
 
 </section>
 
+<div class="section_separater"></div>
+
 @if(Config::get('auther.'.$autherId.'.sns_link') !== null)
 <section id="sns">
 <h2 class="first_h2 narrow">SNS</h2>
 <div>
     @foreach(Config::get('auther.'.$autherId.'.sns_link') as $key => $confSns)
-    <div>
-        <div class="sns_mass_title">{{$confSns["sns_type"]}}</div>
+    <div class="sns_mass">
+        <div class="sns_mass_title"><h6 class="sns_head">{{$confSns["sns_type"]}}</h6></div>
         <div class="sns_mass_explain">{{$confSns["explain"]}}</div>
         @if($confSns["link_type"] == "text")
         <div class="sns_mass_link">
@@ -151,6 +154,8 @@
 </div>
 </section>
 @endif
+
+<div class="section_separater"></div>
 
 </div>
 </div>

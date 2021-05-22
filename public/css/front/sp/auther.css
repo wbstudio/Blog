@@ -91,6 +91,46 @@
     margin-bottom: 10px;
 }
 
+.sns_head {
+    margin:  0;             
+    font-size:  24px;       
+    position:  relative;    
+    font-weight:  normal;   
+    display:  inline-block; 
+    background-color: #fff; 
+    margin-left: 20px;      
+    padding: 0 10px;        
+}
+.sns_mass_title {
+    position: relative;     
+    margin-bottom:15px;     
+}
+.sns_mass_title:before {
+    content:  '';           
+    background-color: #404040; 
+    display:  block;        
+    position:  absolute;    
+    left:  0;               
+    width:  100%;           
+    height:  1px;           
+    top: 0;                 
+    bottom:  0;             
+    margin:  auto;          
+}
+
+.sns_mass_explain{
+    margin: 10px 0;
+}
+
+.sns_mass_link{
+    text-align: center;
+}
+
+.sns_mass{
+    margin-bottom: 45px;
+}
+
+
 @media screen and (max-width: 380px){
 
     #auther_page .auther_mass img {
