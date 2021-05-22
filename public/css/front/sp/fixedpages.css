@@ -100,3 +100,36 @@
 #fixed_page .mar_left {
     margin-left: 15px;
 }
+
+
+#fixed_page .small_caution{
+    font-size: 0.9em;
+}
+
+#fixed_page #howtouse_area .contain_img{
+    text-align: center;
+}
+
+#fixed_page #howtouse_area img{
+    width: 96%;
+    margin: 0 auto;
+    height: auto;
+    border: 1px solid #404040;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

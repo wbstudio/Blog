@@ -123,6 +123,7 @@ h3{
     border-radius: 9px;
     position: relative;
     top: 3px;
+    font-size: 14px;
 }
 
 .category_list .category_title a{
@@ -140,7 +141,7 @@ h3{
 }
 
 .category_list .category_name{
-    font-size: 24px;
+    font-size: 22px;
 }
 
 .category_list td.auther_category{

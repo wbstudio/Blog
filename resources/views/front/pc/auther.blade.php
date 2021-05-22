@@ -144,13 +144,32 @@
 
     <div class="section_separation"></div>
 
+
+    
+    @if(Config::get('auther.'.$autherId.'.sns_link') !== null)
     <section id="sns">
     <h2>SNS</h2>
     <div>
-        <table>
-        </table>
+        @foreach(Config::get('auther.'.$autherId.'.sns_link') as $key => $confSns)
+        <div>
+            <div class="sns_mass_title">{{$confSns["sns_type"]}}</div>
+            <div class="sns_mass_explain">{{$confSns["explain"]}}</div>
+            @if($confSns["link_type"] == "text")
+            <div class="sns_mass_link">
+                <a href="{{$confSns['link_ahead']}}">{{$confSns["link_text"]}}</a>
+            </div>
+            @elseif($confSns["link_type"] == "image")
+            <div class="sns_mass_link">
+                <a href="{{$confSns['link_ahead']}}">
+                    <img src="{{ asset('images/front/' .$confSns['link_image'])}}">
+                </a>
+            </div>
+            @endif  
+        </div>
+        @endforeach
     </div>
     </section>
+    @endif
 
 </div>
 </div>
