@@ -260,6 +260,7 @@ h3{
 
 .article_list_mass a{
     width: 100%;
+    text-decoration: none;
 }
 
 .article_list_mass:first-of-type{
