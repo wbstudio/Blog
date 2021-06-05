@@ -54,6 +54,11 @@ header{
     top: -4px;
 }
 
+.header_title_area img{
+    position: relative;
+    top:2px;
+}
+
 .header_btn_area a.regist_member{
     background: var(--main-bgcolor);
     /* border: 1px solid var(--main-color); */
