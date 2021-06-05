@@ -31,6 +31,7 @@ $(function(){
         var sliderNumHeight = sliderNumWidth[0] * 150/190;
         $(".swiper-slide_inner img").css("height",sliderNumHeight+"px");
     }
+
     //続きを読むbutton
     $('.hidden_area_open').readmore({
         speed: 750,
@@ -71,6 +72,3 @@ $(function(){
 
     });
 });
-
-
-
