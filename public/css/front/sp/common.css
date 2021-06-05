@@ -76,6 +76,13 @@ header{
     /* box-shadow: 2px 2px 4px gray; */
 }
 
+header a img{
+    height: 35px;
+    position: relative;
+    top: 4px;
+    left: 7px;
+}
+
 header .menu_icon{
     float: right;
     width: 45px;
