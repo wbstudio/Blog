@@ -56,7 +56,9 @@ header{
 
 .header_title_area img{
     position: relative;
-    top:2px;
+    top: 4px;
+    height: 39px;
+    left: 10px;
 }
 
 .header_btn_area a.regist_member{
