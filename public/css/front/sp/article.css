@@ -147,7 +147,7 @@
     top: 0px;                  /* 位置調整 */
     margin:  auto;              /* 位置調整 */
     background-color:  #000;    /* 背景色指定 */
-    transform: rotate(-15deg);  /* 回転 */
+    transform: rotate(-12deg);  /* 回転 */
 }
 
 .article_main table{
