@@ -106,7 +106,6 @@
 
 
 
-
 /**h1*/
 .article_main h1{
     margin:  0;                 /* デフォルトCSS打ち消し */
@@ -146,10 +145,23 @@
 
 .article_main table{
     border-collapse:collapse;
+    max-width: 100%;
 }
 
 .article_main a{
     color:#44c;
     text-decoration: underline;
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
