@@ -145,7 +145,7 @@
 
 .article_main table{
     border-collapse:collapse;
-    max-width: 100%;
+    width: 100%;
 }
 
 .article_main a{
