@@ -2,7 +2,7 @@
 
 return [
 
-    "SITE_NAME" => "blog-H",
+    "SITE_NAME" => "bloGig",
     "SITE_ADRESS" => "aaaaaaa@gmail.com",
     "SITE_TERMS" => "wb-studio",
 ];
