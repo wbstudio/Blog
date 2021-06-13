@@ -217,13 +217,13 @@
 .article_main h4:before {
   top: 0;
   background-image: -webkit-gradient(linear, right top, left top, from(#000), to(#d8130c));
-  background-image: -webkit-linear-gradient(right, #fd1313 0%, #830000 50%, #fd1313 100%);
-  background-image: linear-gradient(to left,#fd1313 0%, #830000 50%, #fd1313 100%);
+  background-image: -webkit-linear-gradient(right, #830000 0%, #fd1313 100%);
+  background-image: linear-gradient(to left,#830000 0%, #fd1313 100%);
 }
 
 .article_main h4:after {
   bottom: 0;
   background-image: -webkit-gradient(linear, right top, left top, from(#d8130c), to(#000));
-  background-image: -webkit-linear-gradient(right, #fd1313 0%, #830000 50%, #fd1313 100%);
-  background-image: linear-gradient(to left,#fd1313 0%, #830000 50%, #fd1313 100%);
+  background-image: -webkit-linear-gradient(right, #830000 0%, #fd1313 100%);
+  background-image: linear-gradient(to left,#fd1313 0%, #830000 100%);
 }
