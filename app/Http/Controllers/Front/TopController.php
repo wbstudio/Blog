@@ -35,7 +35,8 @@ class TopController extends Controller
             'test_id' => $test_id
         ];
 
-        return view('front.'.USER_AGENT.'.toptest_'.$test_id);
+        // return view('front.'.USER_AGENT.'.toptest_'.$test_id);
+        return view('front.pc.toptest_'.$test_id);
 
     }
 
