@@ -12,7 +12,7 @@
     <div class="inner_header">
         <p class="inner_header_text">
             <span class="en">All about web.</span><br>
-            <span class="ja">あなたのwebでの「困った」に</span>
+            <span class="ja">あなたのwebでの「困った」に。</span>
         </p>
     </div>
 </section>
