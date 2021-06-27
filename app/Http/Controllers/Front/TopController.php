@@ -30,22 +30,12 @@ class TopController extends Controller
     }
 
     public function test($test_id) {
-        $dispData = array();
-        //layout+pickup
-        $layoutData = AvailController::fillInLayout(NULL,NULL);
-        $threeDaysAgo = new DateTime();
-        $threeDaysAgo->modify('-3 days');//1日後
 
         $dispData = [
-            'pickupList' => $layoutData ->pickup,
-            'newsList' => $layoutData ->news,
-            'newArticlesList' => $layoutData ->newArticles,
-            'rankingList' => $layoutData ->ranking,
-            'threeDaysAgo' => $threeDaysAgo,
             'test_id' => $test_id
         ];
 
-        return view('front.'.USER_AGENT.'.toptest',$dispData);
+        return view('front.'.USER_AGENT.'.toptest_'.$test_id);
 
     }
 
