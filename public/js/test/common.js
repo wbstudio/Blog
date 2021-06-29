@@ -16,16 +16,16 @@ $(function(){
         }
     });
 
-    var displayHeiht = $("#header").height();
-    $(window).scroll(function() {
-        var scroll = $(this).scrollTop();
-        if(scroll > displayHeiht){
-            $("#fixed_menu").css("background","#FFF");
-            console.log("aaaaaaa");
-        }else{
-            $("#fixed_menu").css("background","#930000");
-            console.log(scroll);
-        }
-    });
+    // var displayHeiht = $("#header").height();
+    // $(window).scroll(function() {
+    //     var scroll = $(this).scrollTop();
+    //     if(scroll > displayHeiht){
+    //         $("#fixed_menu").css("background","#FFF");
+    //         console.log("aaaaaaa");
+    //     }else{
+    //         $("#fixed_menu").css("background","#930000");
+    //         console.log(scroll);
+    //     }
+    // });
 
 });
