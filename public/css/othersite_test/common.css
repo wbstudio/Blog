@@ -52,7 +52,7 @@ footer li a{
  }
  
  #header .inner_header{
-    background: #930000;
+    background:linear-gradient(-45deg, #000 50%, #930000 50%);
     width: 100%;
     height: calc(100vh - 41px);
     display: flex;
@@ -60,6 +60,13 @@ footer li a{
     align-items: center; /* 縦方向中央揃え */
     -webkit-justify-content: center; /* 横方向中央揃え（Safari用） */
     justify-content: center; /* 横方向中央揃え */
+    background-repeat: no-repeat;
+
+}
+
+#header .inner_header .inner_header_mass{
+    width: 100%;
+    height: calc(100vh - 41px);
 }
 
 #header .inner_header .inner_header_text{
@@ -67,10 +74,22 @@ footer li a{
     font-size: 40px;
     text-align: center;
     color:#FFF;
+    position: relative;
+    top: 38%;
+}
+
+#header .inner_header .inner_header_logo{
+    height: 100px;
+    width: auto;
+    vertical-align: text-bottom;
 }
 
 #header .inner_header .inner_header_text .ja{
-    font-size: 24px;
+    font-size: 45px;
+}
+
+#header .inner_header .inner_header_text .en{
+    font-size: 100px;
 }
 
 

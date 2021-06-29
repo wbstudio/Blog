@@ -1,4 +1,4 @@
-@extends('front.pc.test_include.layout1')
+@extends('front.pc.test_include.layout2')
 @section('title', 'topページ')
 @section('head')
 <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -12,8 +12,7 @@
     <div class="inner_header">
         <div class="inner_header_mass">
             <p class="inner_header_text">
-                <span class="ja">あなたのwebでの悩みを解決するTech集団</span><br>
-                <img src="{{ asset('images/test/wb_logo.png') }}" class="inner_header_logo"><span class="en">wb-studio</span>
+                <img src="{{ asset('images/test/test2.png') }}" class="inner_header_logo">
             </p>
         </div>
     </div>
