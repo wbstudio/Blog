@@ -19,20 +19,25 @@ footer ul{
    margin:0;
    width:100%;
    height: 41px;
+   border-top: 1px solid #000;
 }
 
 footer li{
-   justify-content: center;
-   align-items: center;
-   width: 20%;
-   padding:0;
-   margin:0;
-   font-size: 14px;
-   border-right: 1px solid #FFF;
-   background: #000;
-}
-
-/*ボタンを調整*/
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    padding:0;
+    margin:0;
+    font-size: 14px;
+    border-right: 1px solid #FFF;
+    background: #000;
+ }
+ 
+ footer li:last-child{
+    border-right: none;
+ }
+ 
+ /*ボタンを調整*/
 footer li a{
     color: #FFF;
     text-align: center;
@@ -52,7 +57,9 @@ footer li a{
  }
  
  #header .inner_header{
-    background:linear-gradient(-45deg, #000 50%, #930000 50%);
+    /* background:linear-gradient(-45deg, #000 50%, #930000 50%); */
+    background:url('/images/test/bg_test.png');
+    background-size:cover;
     width: 100%;
     height: calc(100vh - 41px);
     display: flex;
@@ -69,34 +76,52 @@ footer li a{
     height: calc(100vh - 41px);
 }
 
-#header .inner_header .inner_header_text{
+#header .inner_header .inner_header_mass{
     font-weight: bold;
     font-size: 40px;
     text-align: center;
     color:#FFF;
     position: relative;
-    top: 38%;
+    top: 43%;
 }
 
 #header .inner_header .inner_header_logo{
-    height: 100px;
+    height: 32px;
     width: auto;
     vertical-align: text-bottom;
 }
 
-#header .inner_header .inner_header_text .ja{
-    font-size: 45px;
+#header .inner_header .ja{
+    font-size: 62px;
 }
 
-#header .inner_header .inner_header_text .en{
-    font-size: 100px;
+#header .inner_header .logo_mass .en{
+    font-size: 32px;
+    font-weight: bold;
+    color:#FFF;
 }
 
 
+#header .inner_header .logo_mass{
+    position: absolute;
+    right: 32px;
+    bottom: 50px;
+}
 
 
+@media screen and (max-width: 1023px){
 
+    #header .inner_header .ja{
+        font-size: 48px;
+    }
+    
+    #header .inner_header .inner_header_logo{
+        height: 28px;
+    }
 
-
-
+    #header .inner_header .logo_mass .en{
+        font-size: 28px;
+    }
+    
+}/**max-width: 1023px*/
 

@@ -28,7 +28,14 @@
                     </div>
                 </div>
                 <div id="content" class="content">
-                    @yield('content')
+                    <div id="content_inner">
+                        @yield('content')
+                    </div>
+                    <div class="footer">
+                        <div class="footer_inner">
+                            footer
+                        </div>
+                    </div>
                 </div>
             </div>
         </main>        
