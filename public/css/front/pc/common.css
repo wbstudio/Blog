@@ -28,7 +28,7 @@ header{
 }
 
 .header_first_area{
-    height: 45px;
+    height: 55px;
 }
 
 .header_title_area{
@@ -39,7 +39,7 @@ header{
     float: right;
     display:flex;
     position: relative;
-    top:13px;
+    top:19px;
     right:15px;
 }
 
@@ -57,7 +57,7 @@ header{
 .header_title_area img{
     position: relative;
     top: 4px;
-    height: 39px;
+    height: 50px;
     left: 10px;
 }
 
@@ -75,7 +75,7 @@ header{
 }
 
 .header_second_area{
-    height: 36px;
+    height: 28px;
     text-align: center;
     margin-top: 3px;
     border-top: 1px solid #ccc;
@@ -86,6 +86,10 @@ header{
     width: 11%;
     display: inline-block;
     border-left: 1px solid #dcdcdc;
+}
+
+.header_second_area .header_second_area_mass:last-child{
+    border-right: 1px solid #dcdcdc;
 }
 
 .header_second_area a{
@@ -124,7 +128,7 @@ header{
     list-style: none;
     width: 220px;
     background: #f5f5f5;
-    top: 37px;
+    top: 30px;
     font-weight: normal;
 }
 

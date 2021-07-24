@@ -18,7 +18,7 @@
         <header>
             <div>
                 <a href="{{ route('topPage') }}">
-                    <img src="{{ asset('images/front/logo03.png') }}" height="45px">
+                    <img src="{{ asset('images/front/logo03_02.png') }}" height="45px">
                 </a>
                 <div class="menu_icon">
                     <img src="{{ asset('images/front/icon_humberger.svg') }}">
@@ -36,7 +36,7 @@
             <div class="footter_iiner">
                 <div class="site_title_area">
                     <a href="{{ route('topPage') }}">
-                        <img src="{{ asset('images/front/logo03.png') }}">
+                        <img src="{{ asset('images/front/logo03_02.png') }}">
                     </a>
                 </div>
                 <div class="site_contents_area">
