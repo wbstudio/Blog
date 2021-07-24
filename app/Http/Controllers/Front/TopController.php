@@ -17,12 +17,15 @@ class TopController extends Controller
         $threeDaysAgo = new DateTime();
         $threeDaysAgo->modify('-3 days');//1日後
 
+        $linkNum = rand(1,2);
+
         $dispData = [
             'pickupList' => $layoutData ->pickup,
             'newsList' => $layoutData ->news,
             'newArticlesList' => $layoutData ->newArticles,
             'rankingList' => $layoutData ->ranking,
             'threeDaysAgo' => $threeDaysAgo,
+            'linkNum' => $linkNum,
         ];
 
         return view('front.'.USER_AGENT.'.top',$dispData);
