@@ -67,7 +67,7 @@ return [
                 "day" => "火曜",
             ],
             5 => [
-                "name" => "仕事術とか人間関係とか徒然なるままに",
+                "name" => "仕事術,人間関係とか徒然に",
                 "explain" => "カテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明text",
                 "day" => "火曜",
             ],
