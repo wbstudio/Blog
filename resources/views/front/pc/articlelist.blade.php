@@ -36,7 +36,7 @@
 						<div class="article_list_tag_list">
 						@if(isset($article->tag))
 							@foreach($article->tagObj as $containTag)
-								<a href="{{ route('list.tagArticleList', ['tag_id' => $containTag,'page' => 1]) }}"><div class="tag_single">{{$allTagData[$containTag]}}</div></a>
+								<a href="{{ route('list.tagArticleList', ['tag_id' => $containTag,'page' => '1']) }}"><div class="tag_single">{{$allTagData[$containTag]}}</div></a>
 							@endforeach
 						@endif
 						</div>
