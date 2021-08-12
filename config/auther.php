@@ -158,50 +158,53 @@ return [
         "profile" => "広島県出身。海外に住んだり、世界中を一人で放浪したりしてます。今は役者をしながら生きてます。",
         "updateInfo" => [
             [
-                "day" => "火曜",
-                "contents" => "競馬",
+                "day" => "",
+                "contents" => "株",
             ],
             [
-                "day" => "水曜",
-                "contents" => "プログラミング",
+                "day" => "",
+                "contents" => "スポーツ",
             ],
             [
-                "day" => "不定期",
-                "contents" => "ためになるかもしれないこと",
+                "day" => "",
+                "contents" => "ギャンブル",
+            ],
+            [
+                "day" => "",
+                "contents" => "旅",
+            ],
+            [
+                "day" => "",
+                "contents" => "運動、アート",
             ],
         ],
         "greeting" => "自分の知らない世界を知っていくのが好きなので、たくさんの人と交流したいです。よろしくお願いします！",
         "imgPath" => "face_test.png",
         "category" => [
                 0 => [
-                    "name" => "1ネットビジネス",
+                    "name" => "株",
                     "explain" => "00カテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明text",
                     "day" => "火曜",
                 ],
                 1 => [
-                    "name" => "101のカテゴリー02",
+                    "name" => "スポーツ",
                     "channel" => "01-02チャンネル",
                     "explain" => "カテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明text",
                     "day" => "火曜",
                 ],
                 2 => [
-                    "name" => "101のカテゴリー03",
+                    "name" => "ギャンブル",
                     "explain" => "カテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明text",
                     "day" => "火曜",
                 ],
                 3 => [
-                    "name" => "101のカテゴリー03",
+                    "name" => "旅",
                     "explain" => "カテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明text",
                     "day" => "火曜",
                 ],
                 4 => [
-                    "name" => "101のカテゴリー04",
+                    "name" => "運動、アート",
                     "channel" => "01-04チャンネル",
-                    "explain" => "カテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明text",
-                    "day" => "火曜",
-                ],
-                5 => [
-                    "name" => "101のカテゴリー05",
                     "explain" => "カテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明text",
                     "day" => "火曜",
                 ],
@@ -215,50 +218,53 @@ return [
                     テストテキストテストテキストテストテキストテストテキスト",
         "updateInfo" => [
             [
-                "day" => "火曜",
-                "contents" => "競馬",
+                "day" => "",
+                "contents" => "BuzzVideo",
             ],
             [
-                "day" => "水曜",
-                "contents" => "プログラミング",
+                "day" => "",
+                "contents" => "自作PC",
             ],
             [
-                "day" => "不定期",
-                "contents" => "ためになるかもしれないこと",
+                "day" => "",
+                "contents" => "ゲーム、アニメ",
+            ],
+            [
+                "day" => "",
+                "contents" => "2次元",
+            ],
+            [
+                "day" => "",
+                "contents" => "パン・料理",
             ],
         ],
         "greeting" => "1テストテキストテストテキストテストテキストテストテキストテストテキストテストテキテキストテストテキストテストスト1テストテキストテストテキストテストテキストテストテキストテストテキストテストテキテキストテストテキストテストスト1テストテキストテストテキストテストテキストテストテキストテストテキストテストテキテキストテストテキストテストスト",
         "imgPath" => "face_test.png",
         "category" => [
                 0 => [
-                    "name" => "1ネットビジネス",
+                    "name" => "BuzzVideo",
                     "explain" => "00カテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明text",
                     "day" => "火曜",
                 ],
                 1 => [
-                    "name" => "101のカテゴリー02",
+                    "name" => "自作PC",
                     "channel" => "01-02チャンネル",
                     "explain" => "カテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明text",
                     "day" => "火曜",
                 ],
                 2 => [
-                    "name" => "101のカテゴリー03",
+                    "name" => "ゲーム、アニメ",
                     "explain" => "カテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明text",
                     "day" => "火曜",
                 ],
                 3 => [
-                    "name" => "101のカテゴリー03",
+                    "name" => "2次元",
                     "explain" => "カテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明text",
                     "day" => "火曜",
                 ],
                 4 => [
-                    "name" => "101のカテゴリー04",
+                    "name" => "パン・料理",
                     "channel" => "01-04チャンネル",
-                    "explain" => "カテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明text",
-                    "day" => "火曜",
-                ],
-                5 => [
-                    "name" => "101のカテゴリー05",
                     "explain" => "カテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明text",
                     "day" => "火曜",
                 ],
@@ -273,16 +279,28 @@ return [
                     が重なる稼ぎ方がないかなと日々夢想しております。",
         "updateInfo" => [
             [
-                "day" => "火曜",
-                "contents" => "競馬",
+                "day" => "",
+                "contents" => "株",
             ],
             [
-                "day" => "水曜",
-                "contents" => "プログラミング",
+                "day" => "",
+                "contents" => "身体作り、ゴルフ、工作",
             ],
             [
-                "day" => "不定期",
-                "contents" => "ためになるかもしれないこと",
+                "day" => "",
+                "contents" => "PC、ネット",
+            ],
+            [
+                "day" => "",
+                "contents" => "武術、格闘技",
+            ],
+            [
+                "day" => "",
+                "contents" => "アニメ",
+            ],
+            [
+                "day" => "",
+                "contents" => "頑張らない",
             ],
         ],
         "greeting" => "基本一人行動好きです。当面は体脂肪を減らす事と仕事に必要な資格取得が目標です。
@@ -291,34 +309,34 @@ return [
         "imgPath" => "face_test.png",
         "category" => [
                 0 => [
-                    "name" => "1ネットビジネス",
+                    "name" => "株",
                     "explain" => "00カテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明text",
                     "day" => "火曜",
                 ],
                 1 => [
-                    "name" => "101のカテゴリー02",
+                    "name" => "身体作り、ゴルフ、工作",
                     "channel" => "01-02チャンネル",
                     "explain" => "カテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明text",
                     "day" => "火曜",
                 ],
                 2 => [
-                    "name" => "101のカテゴリー03",
+                    "name" => "PC、ネット",
                     "explain" => "カテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明text",
                     "day" => "火曜",
                 ],
                 3 => [
-                    "name" => "101のカテゴリー03",
+                    "name" => "武術、格闘技",
                     "explain" => "カテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明text",
                     "day" => "火曜",
                 ],
                 4 => [
-                    "name" => "101のカテゴリー04",
+                    "name" => "アニメ",
                     "channel" => "01-04チャンネル",
                     "explain" => "カテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明text",
                     "day" => "火曜",
                 ],
                 5 => [
-                    "name" => "101のカテゴリー05",
+                    "name" => "頑張らない",
                     "explain" => "カテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明text",
                     "day" => "火曜",
                 ],
