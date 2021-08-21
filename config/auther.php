@@ -103,50 +103,52 @@ return [
         "profile" => "84年生まれ、神奈川出身。幼い頃からイラストばかり描いており、イラストレーターを目指し、挫折。その後アパレル→グラフィックデザイン→Tシャツ製造→エロ漫画のバナー制作→WEBデザイナーとして社会人を満喫。ゆくゆくは、つげ義春のマンガに出てくる自分つの様にゆらゆらと霞む様に消えて行く予定。",
         "updateInfo" => [
             [
-                "day" => "火曜",
-                "contents" => "競馬",
+                "day" => "",
+                "contents" => "せどり",
             ],
             [
-                "day" => "水曜",
-                "contents" => "プログラミング",
+                "day" => "",
+                "contents" => "古着",
             ],
             [
-                "day" => "不定期",
-                "contents" => "ためになるかもしれないこと",
+                "day" => "",
+                "contents" => "イラスト・レザークラフト",
+            ],
+            [
+                "day" => "",
+                "contents" => "映画・読書",
+            ],
+            [
+                "day" => "",
+                "contents" => "面接・日々のこと",
             ],
         ],
         "greeting" => "変な人間が周りに集まってくる運命のようで、だから僕も変な奴なんだとお思います。よろしく",
         "imgPath" => "sugion_face.png",
         "category" => [
-                0 => [
-                    "name" => "1ネットビジネス",
-                    "explain" => "00カテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明text",
-                    "day" => "火曜",
-                ],
-                1 => [
-                    "name" => "101のカテゴリー02",
-                    "channel" => "01-02チャンネル",
-                    "explain" => "カテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明text",
-                    "day" => "火曜",
-                ],
-                2 => [
-                    "name" => "101のカテゴリー03",
-                    "explain" => "カテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明text",
-                    "day" => "火曜",
-                ],
-                3 => [
-                    "name" => "101のカテゴリー03",
+            0 => [
+                "name" => "せどり",
+                "explain" => "カテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明text",
+                "day" => "火曜",
+            ],
+            2 => [
+                "name" => "古着",
+                "explain" => "カテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明text",
+                "day" => "火曜",
+            ],
+            3 => [
+                    "name" => "イラスト・レザークラフト",
                     "explain" => "カテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明text",
                     "day" => "火曜",
                 ],
                 4 => [
-                    "name" => "101のカテゴリー04",
+                    "name" => "映画・読書",
                     "channel" => "01-04チャンネル",
                     "explain" => "カテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明text",
                     "day" => "火曜",
                 ],
                 5 => [
-                    "name" => "101のカテゴリー05",
+                    "name" => "面接・日々のこと",
                     "explain" => "カテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明textカテゴリーの説明text",
                     "day" => "火曜",
                 ],
