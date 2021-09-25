@@ -62,14 +62,16 @@ h3{
 }
 
 .top_area .swiper-button-prev{
-    top:276px;
+    top:-17px;
     left: 440px;
-    position: inherit;
+    position: relative;
 }
 
 .top_area .swiper-button-next{
-    top:276px;
-    right: 440px;
+    top:-39px;
+    /* left: 320px; */
+    right:-550px;
+    position: relative;
 }
 
 .patern_01 .swiper-pagination{
