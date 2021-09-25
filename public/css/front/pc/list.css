@@ -6,7 +6,8 @@ h3{
 }
 
 .patern_01 .swiper-container{
-    height:280px;
+    height:330px;
+    overflow: hidden;
 }
 
 .top_area .swiper-container{
@@ -48,20 +49,22 @@ h3{
 }
 
 .patern_01 .swiper-button-prev{
-    top:266px;
+    top:-17px;
     left: 320px;
-    right:auto;
+    position: relative;
 }
 
 .patern_01 .swiper-button-next{
-    top:266px;
-    right: 320px;
-    left:auto;
+    top:-39px;
+    /* left: 320px; */
+    right:-423px;
+    position: relative;
 }
 
 .top_area .swiper-button-prev{
     top:276px;
     left: 440px;
+    position: inherit;
 }
 
 .top_area .swiper-button-next{
@@ -69,6 +72,10 @@ h3{
     right: 440px;
 }
 
+.patern_01 .swiper-pagination{
+    position: relative;
+    top: -14px;
+}
 .patern_01 img{
     max-width: 190px;
     height: 150px;

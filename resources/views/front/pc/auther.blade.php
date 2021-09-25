@@ -22,7 +22,7 @@
             <p class="blogger_explain_detail">
             {{config("auther.".$autherId.".profile")}}
             </p>
-            <div class="blogger_explain_title">profile</div>
+            <div class="blogger_explain_title">greeting</div>
             <p class="blogger_explain_detail">
             {{config("auther.".$autherId.".greeting")}}
             </p>
