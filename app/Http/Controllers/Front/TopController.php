@@ -17,8 +17,8 @@ class TopController extends Controller
         $threeDaysAgo = new DateTime();
         $threeDaysAgo->modify('-3 days');//1日後
 
-        // $linkNum = rand(1,2);
-        $linkNum = 1;
+        $linkNum = rand(1,2);
+        // $linkNum = 1;
 
         $dispData = [
             'pickupList' => $layoutData ->pickup,
