@@ -70,8 +70,9 @@
 
         <div id="site_intro">
             <a href="{{ route('thisblogis') }}">
-                <video src="{{ asset('images/front/top_link/top_image_'.$linkNum.'_pc.mp4') }}" width="100%" muted autoplay loop playsinline></video>
-            </a>
+                <!-- <video src="{{ asset('images/front/top_link/top_image_'.$linkNum.'_pc.mp4') }}" width="100%" muted autoplay loop playsinline></video> -->
+                <img src="{{ asset('images/front/top_link/head_pc_'.$linkNum.'.png') }}" width="100%">
+                </a>
         </div>
 
         <div id="top_page_main">
