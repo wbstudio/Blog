@@ -25,6 +25,7 @@ define("USER_AGENT", $user_agent);
 //  非会員閲覧可能ページ
 //******************************//
 Route::get('/', [\App\Http\Controllers\Front\TopController::class, 'index'])->name('topPage');
+Route::get('/qrtest', [\App\Http\Controllers\Front\TopController::class, 'qrtest']);
 Route::get('/top/{test_id}', [\App\Http\Controllers\Front\TopController::class, 'test'])->name('topPageTest');
 Route::get('/auther', [\App\Http\Controllers\Front\ListController::class, 'autherList'])->name('autherList');
 Route::get('/category', [\App\Http\Controllers\Front\ListController::class, 'categoryList'])->name('categoryList');

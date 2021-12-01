@@ -44,4 +44,13 @@ class TopController extends Controller
 
     }
 
+    public function qrtest() {
+
+
+        // return view('front.'.USER_AGENT.'.toptest_'.$test_id);
+        return view('front.sp.qrtest');
+
+    }
+
+
 }
