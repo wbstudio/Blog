@@ -16,27 +16,26 @@
          </div>
      @endif
      <div class="list_top_area">
-        <form method="POST" action="{{route('tagRegist')}}" class="">
+        <form method="POST" action="{{ route('tag.regist') }}" class="">
         @csrf
         <input type="text" name="name">
         <input type="submit" value="新規追加">
         </form>
      </div>
-    <form action="{{route('tagDelete')}}" method="POST">
+    <form action="{{ route('tag.delete') }}" method="POST">
         @csrf
         <div class="tag_list">
-        @if(isset($tags) && count($tags) > 0)
-            @foreach($tags as $tag)
-            <div class="tag_detail">
-                <img src="../../images/admin/common/pencil.svg" class="pencil">
-                <span class="nametext">{{$tag->name}}</span>
-                <input type="checkbox" name="delete[]" value="{{$tag->id}}" class="namecheck">
-                <input type="text" name="name" value="{{$tag->name}}"  style="display:none;" class="replacetext" id="{{$tag->id}}">
-                <input type="button" value="p"  style="display:none;" class="replacesubmit">
-                        
-            </div>
-            @endforeach
-        @endif
+            @if ($tagList->isNotEmpty())
+                @foreach ($tagList as $tag)
+                    <div class="tag_detail">
+                        <img src="{{ asset('images/admin/pencil.svg') }}" class="pencil">
+                        <span class="nametext">{{ $tag->name }}</span>
+                        <input type="checkbox" name="delete[]" value="{{ $tag->id }}" class="namecheck">
+                        <input type="text" name="name" value="{{ $tag->name }}"  style="display:none;" class="replacetext" id="{{ $tag->id }}">
+                        <input type="button" value="submit"  style="display:none;" class="replacesubmit">                                
+                    </div>
+                @endforeach
+            @endif
         </div>
         <div>
             <input type="submit" value="checkしたものを消す">

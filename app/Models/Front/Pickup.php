@@ -4,6 +4,7 @@ namespace App\Models\Front;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use DB;
 
 class Pickup extends Model
 {
@@ -22,44 +23,39 @@ class Pickup extends Model
             "updated_at",
         ];
 
-        $whereList = [
-            ["delete_flag","=",0],
-        ];
+        $query = DB::table('pickups');
+        $query->select($columnList);
+        $query->where('delete_flag', config('const.DELETE_FLG_OFF'));
 
         //auther_idの9999は該当なしの設定
         if(isset($auther)){
-            $whereList[] = ["auther_id","=",$auther];
+            $query->where('auther_id', $auther);
         }else{
-            $whereList[] = ["auther_id","=",9999];
+            $query->where('auther_id', config('const.PICKUP_NO_AUTHER'));
         }
 
-        //category_idの9999は該当なしの設定
+        //auther_idの9999は該当なしの設定
         if(isset($category)){
-            $whereList[] = ["category_id","=",$category];
+            $query->where('category_id', $category);
         }else{
-            $whereList[] = ["category_id","=",9999];
+            $query->where('category_id', config('const.PICKUP_NO_CATEGORY'));
         }
-        $dispData =$this::from("pickups")
-                    ->where($whereList)
-                    ->get($columnList);
 
+        $pickupList = $query->first();
 
-        if(isset($dispData[0])){
-            return $dispData[0];
+        if(isset($pickupList)){
+            return $pickupList;
         }else{
             //該当のpickupがない時は
-            $whereList = [
-                ["delete_flag","=",0],
-                ["auther_id","=",9999],
-                ["category_id","=",9999],
-            ];
-        
-            $dispData =$this::from("pickups")
-                        ->where($whereList)
-                        ->get($columnList);
+            $query = DB::table('pickups');
+            $query->select($columnList);
+            $query->where('delete_flag', config('const.DELETE_FLG_OFF'))
+                ->where('auther_id', config('const.PICKUP_NO_AUTHER'))
+                ->where('category_id', config('const.PICKUP_NO_CATEGORY'));    
+            $pickupList = $query->first();
 
-            if(isset($dispData[0])){
-                return $dispData[0];
+            if(isset($pickupList)){
+                return $pickupList;
             }else{
                 return null;
             }

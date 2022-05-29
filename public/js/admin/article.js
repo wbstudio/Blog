@@ -1,52 +1,35 @@
 
 $(function(){
 
-    /************************************
-     * auther-select
-     * ---------------------------
-     * useParameter
-     * ・select.auther
-     * ・select.auther_category
-     * ・.auther_{auther}-auther_category-option
-     * ---------------------------
-     ************************************/
-    //初期表示
-    var autherHidden = $("input[name=autherhidden]").val();
-    $("select.auther").val(autherHidden);
-    if(autherHidden != undefined && autherHidden != ""){
-        $("select.auther_category").prop("disabled", false);
-        var authercategory = $("select.auther_category option");
-        $(authercategory).each(function(index, element){
-            if($(this).attr("class") == "auther_"+autherHidden){
-                $(this).css("display","block");
-            }else{
-                $(this).css("display","none");
-            }
-        })
-        var authercategoryHidden = $("input[name=authercategoryhidden]").val();
-        setTimeout(function(){
-            $("select.auther_category option.auther_"+autherHidden+"[value="+authercategoryHidden+"]").prop('selected', true);
-        },100);
-    }
-    //change_event
+    ajustCategorySelect()
+
     $("select.auther").change(function() {
-        var auther = $(this).val();
-        $("select.auther_category").val("");
-
-        if(auther != ""){
-            $("select.auther_category").prop("disabled", false);
-            var autherCategory = $("select.auther_category option");
-            $(autherCategory).each(function(index, element){
-                if($(this).attr("class") == "auther_"+auther){
-                    $(this).css("display","block");
-                }else{
-                    $(this).css("display","none");
-                }
-            })
-        }else{
-            $("select.auther_category").prop("disabled", true);
-        }
-    });
-
-
+        ajustCategorySelect()
+    })
 });
+
+function ajustCategorySelect(){
+    var auther = $('select.auther').val();
+    var autherCategory = $('select.auther option:selected').data('category');
+    var autherCategoryArray = [];
+    if (String(autherCategory).indexOf("|") !== -1) {
+        autherCategoryArray = autherCategory.split('|');
+    } else {
+        autherCategoryArray.push(String(autherCategory));
+    }
+
+    if(auther != "" && autherCategory != ''){
+        $("select.category").prop("disabled", false);
+        var category = $("select.category option");
+
+        for (var i=0; i<$(category).length; i++) {
+            if (autherCategoryArray.includes($(category).eq(i).val())) {
+                $(category).eq(i).css("display","block");
+            } else {
+                $(category).eq(i).css("display","none");
+            }
+        }
+    }else{
+        $("select.category").prop("disabled", true);
+    }
+}

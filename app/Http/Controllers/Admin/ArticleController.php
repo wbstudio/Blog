@@ -1,155 +1,77 @@
 <?php
-/****************
- * //admin-article用//
- * auther:Keisuke_Iwasada
- * date:2020/12/20 
- * [pager-paramater]
- * page:
- * auther:著者
- * auther_category:著者特有のカテゴリー
- * main_category:全体のカテゴリー
- * tag:該当タグ
- * [pager-paramater]
- * ****************** */
+
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use \App\Http\Controllers\Admin\Avail;
 use \App\Models\Admin\Article;
+use \App\Models\Auther;
+use \App\Models\Category;
 use \App\Models\Admin\Tag;
 
 class ArticleController extends Controller
 {
-    //
     public function getList(Request $request) {
 
-        $param = null;
-        $baseurl = null;
-        $param["page"] = 1; //
-        $param["per_page"] = 20; //
-        $param["auther"] = null; //
-        $param["auther_category"] = null; //
-        $param["main_category"] = null; //
-        $param["tag"] = null; //
-
-        $auther = $request->auther; //
-        $auther_category = $request->auther_category; //
-        $main_category = $request->main_category; //
-        $tag = $request->tag; //
-
-        //POST時
-        if($request->method() == "POST"){
-            //著者
-            if($auther != null){
-                $param["auther"] = $auther;
-                $baseurl[] = "auther=".$param["auther"];
-                if($auther_category != null){
-                    $param["auther_category"] = $auther_category;
-                    $baseurl[] = "auther_category=".$param["auther_category"];
-                }
-            }
-            //カテゴリー
-            if($main_category != null){
-                $param["main_category"] = $main_category;
-                $baseurl[] = "main_category=".$param["main_category"];
-            }
-            //タグ
-            if($tag != null){
-                $param["tag"] = $tag;
-                $baseurl[] = "tag=".$param["tag"];
-            }
-        }
-
-        //GETの時(初期表示（検索なしの1ページ目も）)
-        if($request->method() == "GET"){
-            if(isset($_GET["auther"]) && $_GET["auther"] != ""){
-                $param["auther"] = $_GET["auther"];
-                $baseurl[] = "auther=".$param["auther"];
-            }
-            if(isset($_GET["auther_category"]) && $_GET["auther_category"] != ""){
-                $param["auther_category"] = $_GET["auther_category"];
-                $baseurl[] = "auther_category=".$param["auther_category"];
-            }
-            if(isset($_GET["main_category"]) && $_GET["main_category"] != ""){
-                $param["main_category"] = $_GET["main_category"];
-                $baseurl[] = "main_category=".$param["main_category"];
-            }
-            if(isset($_GET["tag"]) && $_GET["tag"] != ""){
-                $param["tag"] = $_GET["tag"];
-                $baseurl[] = "tag=".$param["tag"];
-            }
-            if(isset($_GET["page"]) && $_GET["page"] != null){
-                $param["page"] = $_GET["page"];
-            }
-        }
-
-        //DAO
-        $mdArticle = new Article();
-        $articlesData = $mdArticle->getArticlesList($param);
-        $articles = $articlesData["data"];
+        $arrayRequest = [
+            'auther' => $request->input('auther'),
+            'category' => $request->input('category'),
+        ];
         
-        //url
-        if(isset($baseurl) && $baseurl != null){
-            $baseurl = join("&",$baseurl);
-            $baseurl = "?".$baseurl."&page=";
-        }else{
-            $baseurl = "?page=";
+        $mdArticle = new Article();
+        $articleList = $mdArticle->getArticlesList($arrayRequest);
+
+        $mdAuther = new Auther();
+        $autherNameList = $mdAuther->getAutherNameList();
+
+        $mdCategory = new Category();
+        $categoryNameList = $mdCategory->getCategoryNameList();
+
+        // ページャーURLに引数追加
+         if ($articleList->isNotEmpty()) {
+            $articleList->appends($arrayRequest);
         }
 
-        //pagenator
-        if(isset($articles) && $articles != null){
-            $page = $param["page"];
-            $per_page = $param["per_page"];
-            $all_cnt = $articlesData["AllCnt"];
-            $data = AvailController::purepagenator($all_cnt,$page,$per_page);
-        }
+        $queryString = '&auther=' . $arrayRequest['auther'] .
+                        // '&bond_name=' . urlencode($arrayRequest['bond_name']) .
+                        '&category=' . $arrayRequest['category'];
 
-        $dispData = [];
-        if(isset($articles) && count($articles) > 0){
-            $dispData = [
-                'articles' => $articles,
-                'pagenator' => $data ->link,
-                'page' => $page,
-                'baseurl' => $baseurl,
-                'autherhidden' => $param["auther"],
-                'authercategoryhidden' => $param["auther_category"],
-                'main_category' => $param["main_category"],
-                'tag' => $param["tag"],
-            ];
-        }else{
-            $dispData = [
-                'autherhidden' => $param["auther"],
-                'authercategoryhidden' => $param["auther_category"],
-            ];
-        }
-
-        return view('admin.article.list', $dispData);
-
+        return view('admin.article.list', 
+                    compact(
+                        'arrayRequest',
+                        'queryString',
+                        'articleList',
+                        'autherNameList',
+                        'categoryNameList',
+                    )
+                );
     }
 
-
     public function regist() {
-        //DAO
+
+        $mdAuther = new Auther();
+        $autherDataList = $mdAuther->getAutherDataList();
+        $mdCategory = new Category();
+        $categoryNameList = $mdCategory->getCategoryNameList();
         $mdTag = new Tag();
-        $tagsData = $mdTag->getTagsList();
+        $tagList = $mdTag->getTagList();
 
-        $dispData = null;
-        if(isset($tagsData) && count($tagsData) > 0){
-            $dispData = [
-                'tags' => $tagsData,
-            ];
-        }
-
-        return view('admin.article.regist',$dispData);
+        return view('admin.article.regist', 
+                    compact(
+                        'autherDataList',
+                        'categoryNameList',
+                        'tagList',
+                    )
+                );
     }
 
     public function insert(Request $request) {
 
-        $upload_image = null;
+        $inputData = $request->input();
+        $inputData['eyecatch'] = null;
         if($request->file("eyecatch")){
-            $upload_image = $request->file("eyecatch")->getClientOriginalName();
-            $path = $request -> file("eyecatch")->storeAs("admin/article/eyecatch",$upload_image);
+            $inputData['eyecatch'] = $request->file("eyecatch")->getClientOriginalName();
+            $path = $request -> file("eyecatch")->storeAs("admin/article/eyecatch", $inputData['eyecatch']);
         }
         /*
         * バリデーション
@@ -157,135 +79,106 @@ class ArticleController extends Controller
         if($request->input("status") < 3){
             $this->validate($request, [
                 'auther' => 'required',
+                'category' => 'required',
             ]);
         }
 
-        $article = new Article();
 
-        $releaseDate = $request->input('release_year')."-".$request->input('release_month')."-".$request->input('release_day')." ".$request->input('release_hour').":".$request->input('release_minute');
+        //公開日時
+        $inputData['releaseDate'] = $request->input('release_year')."-".$request->input('release_month')."-".$request->input('release_day')." ".$request->input('release_hour').":".$request->input('release_minute');
         if($request->input('endstatus') == "on"){
-            $endDate = $request->input('end_year')."-".$request->input('end_month')."-".$request->input('end_day')." ".$request->input('end_hour').":".$request->input('end_minute');
+            $inputData['endDate'] = $request->input('end_year')."-".$request->input('end_month')."-".$request->input('end_day')." ".$request->input('end_hour').":".$request->input('end_minute');
         }else{
-            $endDate = "9999-12-31 23:59";
+            $inputData['endDate'] = "9999-12-31 23:59";
         }
 
+        //タグ
         $inputTags = $request->input("tag");
-        $tags = null;
+        $inputData['tag'] = null;
         if(isset($inputTags) && $inputTags != null){
-            $tags = join(",",$request->input("tag"));
+            $inputData['tag'] = join(",",$request->input("tag"));
         }
 
-        #Greetingモデルクラスのプロパティに値を代入
-        $article->auther = $request->input('auther');
-        $article->auther_category = $request->input('auther_category');
-        $article->main_category = $request->input('main_category');
-        $article->title = $request->input('title');
-        $article->heading = $request->input('heading');
-        $article->eyecatch = $upload_image;
-        $article->main = $request->input('main');
-        $article->channel = $request->input('channel');
-        $article->tag = $tags;
-        $article->release_at = $releaseDate;
-        $article->end_at = $endDate;
-        $article->count = 371;
-        $article->good = 0;
-        $article->delete_flag = 0;
-        $article->status = $request->input('status');
-            
-        // #Greetingモデルクラスのsaveメソッドを実行
-        $article->save();
+        $mdArticle = new Article();
+        $mdArticle->insertArticleData($inputData);
+
         return redirect('admin/article/list');
 
     }
 
-    public function edit($id) {
-        //DAO
+    public function edit(Request $request) {
+
         $mdArticle = new Article();
-        $articlesData = $mdArticle->getArticleDataByid($id);
-        $articles = $articlesData[0];
-        $articles->editEndFlag = 0;
-        $tagsData = null;
-        $containTags = null;
+        $articlesData = $mdArticle->getArticleDataById($request->id);
 
-        if(isset($articles->tag)){
-            $containTags = explode(",",$articles->tag);
+        $articlesData->editEndFlag = 0;
+        if($articlesData->end_at != "9999-12-31 23:59:00"){
+            $articlesData->endFlg = 1;
         }
 
-        //DAO
+        $articlesData->tagsData = null;
+        if(isset($articlesData->tag)){
+            $articlesData->tagsData = explode(",", $articlesData->tag);
+        }
+
+        $mdAuther = new Auther();
+        $autherDataList = $mdAuther->getAutherDataList();
+        $mdCategory = new Category();
+        $categoryNameList = $mdCategory->getCategoryNameList();
         $mdTag = new Tag();
-        $tagsData = $mdTag->getTagsList();
+        $tagList = $mdTag->getTagList();
 
-        if($articles->end_at != "9999-12-31 23:59:00"){
-            $articles->editEndFlag = 1;
-        }
-
-        $dispData = [
-            'article' => $articles,
-            'autherhidden' => $articles["auther"],
-            'authercategoryhidden' => $articles["auther_category"],
-            'maincategoryhidden' => $articles["main_category"],
-            'statushidden' => $articles["status"],
-            'tags' => $tagsData,
-            'contain_tags'=> $containTags,
-        ];
-
-        return view('admin.article.edit',$dispData);
+        return view('admin.article.edit',
+                    compact(
+                        'articlesData',
+                        'autherDataList',
+                        'categoryNameList',
+                        'tagList',
+                    )
+                );
     }
-
 
     public function update(Request $request) {
 
-        $upload_image = null;
+        $inputData = $request->input();
+        $inputData['eyecatch'] = null;
         if($request->file("eyecatch")){
-            $upload_image = $request->file("eyecatch")->getClientOriginalName();
-            $path = $request -> file("eyecatch")->storeAs("admin/article/eyecatch",$upload_image);
+            $inputData['eyecatch'] = $request->file("eyecatch")->getClientOriginalName();
+            $path = $request -> file("eyecatch")->storeAs("admin/article/eyecatch", $inputData['eyecatch']);
         }
 
-        /*
-        * バリデーション
-        */
         if($request->input("status") < 3){
             $this->validate($request, [
                 'auther' => 'required',
+                'category' => 'required',
             ]);
         }
 
-        $article = new Article();
-        $releaseDate = $request->input('release_year')."-".$request->input('release_month')."-".$request->input('release_day')." ".$request->input('release_hour').":".$request->input('release_minute');
+        $inputData['releaseDate'] = $request->input('release_year')."-".$request->input('release_month')."-".$request->input('release_day')." ".$request->input('release_hour').":".$request->input('release_minute');
         if($request->input('endstatus') == "on"){
-            $endDate = $request->input('end_year')."-".$request->input('end_month')."-".$request->input('end_day')." ".$request->input('end_hour').":".$request->input('end_minute');
+            $inputData['endDate'] = $request->input('end_year')."-".$request->input('end_month')."-".$request->input('end_day')." ".$request->input('end_hour').":".$request->input('end_minute');
         }else{
-            $endDate = "9999-12-31 23:59";
+            $inputData['endDate'] = "9999-12-31 23:59";
         }
 
         $inputTags = $request->input("tag");
-        $tags = null;
+        $inputData['tag'] = null;
         if(isset($inputTags) && $inputTags != null){
-            $tags = join(",",$request->input("tag"));
+            $inputData['tag'] = join(",",$request->input("tag"));
         }
 
-        // #Greetingモデルクラスのプロパティに値を代入
-        $article = Article::where("id",$request->input('id'))->first();
-        $article->auther = $request->input('auther');
-        $article->auther_category = $request->input('auther_category');
-        $article->main_category = $request->input('main_category');
-        $article->title = $request->input('title');
-        $article->heading = $request->input('heading');
-        if($upload_image != null){
-            $article->eyecatch = $upload_image;
-        }
-        $article->main = $request->input('main');
-        $article->channel = $request->input('channel');
-        $article->tag = $tags;
-        $article->release_at = $releaseDate;
-        $article->end_at = $endDate;
-        $article->status = $request->input('status');
-            
-        // #Greetingモデルクラスのsaveメソッドを実行
-        $article->save();
+        $mdArticle = new Article();
+        $mdArticle->editArticleData($inputData);
         return redirect('admin/article/list');
-
     }
 
+    public function delete(Request $request) {
 
+        $inputData = $request->input();
+
+        $mdArticle = new Article();
+        $mdArticle->deleteArticleData($inputData);
+
+        return redirect('admin/article/list');
+    }
 }

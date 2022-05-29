@@ -23,7 +23,7 @@
                     </a>
                 </div>
                 <div class="header_btn_area">
-                    <form method="POST" action="{{route('list.searchWordList')}}">
+                    <form method="POST" action="{{ route('list.searchWordList') }}">
                     @csrf
                         <input type="text" name="search_word">
                         <input type="image" class="search" src="{{ asset('images/front/icon_search_button.svg') }}">
@@ -42,16 +42,16 @@
                 <li class="header_second_area_mass has-sub">
                     <a href="{{ route('autherList') }}">Blogger</a>
                     <ul class="sub narrow">
-                        @foreach(Config::get('auther') as $keyAuther => $confAuther)
-                        <li><a href="{{ route('list.onlyAuther', ['auther_id' => $keyAuther]) }}">{{$confAuther["name"]}}</a></li>
+                        @foreach($autherList as $autherData)
+                            <li><a href="{{ route('list.onlyAuther', ['auther_id' => $autherData->id]) }}">{{ $autherData->name }}</a></li>
                         @endforeach
                     </ul>
                 </li>
                 <li class="header_second_area_mass has-sub">
                     <a href="{{ route('categoryList') }}">Category</a>
                     <ul class="sub">
-                        @foreach(Config::get('category') as $keyCategory => $confCategory)
-                        <li><a href="{{ route('list.onlyCategory', ['category_id' => $keyCategory]) }}">{{$confCategory["name"]}}</a></li>
+                        @foreach($categoryList as $categoryData)
+                            <li><a href="{{ route('list.onlyCategory', ['category_id' => $categoryData->id]) }}">{{ $categoryData->name }}</a></li>
                         @endforeach
                     </ul>
                 </li>
@@ -86,16 +86,16 @@
                             <div class="swiper-slide">
                                 <div class="swiper-slide_inner">
                                     <a href="{{ route('detail.article', ['article_id' => $pickup->id]) }}">
-                                    @if(isset($pickup->eyecatch))
-                                    <img src="{{ asset('images/admin/article/eyecatch/' .$pickup->eyecatch)}}" class="">
-                                    @else
-                                    <img src="{{ asset('images/admin/article/eyecatch/no_image.png')}}" class="">
-                                    @endif
-                                    <div class="title">{{$pickup -> title}}</div>
+                                        @if(isset($pickup->eyecatch))
+                                            <img src="{{ asset('images/admin/article/eyecatch/' . $pickup->eyecatch) }}" class="">
+                                        @else
+                                            <img src="{{ asset('images/admin/article/eyecatch/no_image.png') }}" class="">
+                                        @endif
+                                        <div class="title">{{ $pickup -> title }}</div>
                                     </a>
-                                    <div class="auther"><span>著者:</span><a href="{{ route('list.onlyAuther', ['auther_id' => $pickup->auther]) }}">{{config("auther.$pickup->auther.name")}}</a></div>
-                                    <div class="category"><span>カテゴリー:</span><a href="{{ route('list.bothAutherAndCategory', ['auther_id'=>$pickup->auther,'category_id'=>$pickup->auther_category,'page'=>1]) }}">{{config("auther.$pickup->auther.category.$pickup->auther_category.name")}}</a></div>
-                                    <div class="update_date">更新日:{{$pickup->release_at->format('Y/m/d')}}</div>
+                                    <div class="auther"><span>著者:</span><a href="{{ route('list.onlyAuther', ['auther_id' => $pickup->auther]) }}">{{ $pickup->auther_name }}</a></div>
+                                    <div class="category"><span>カテゴリー:</span><a href="{{ route('list.bothAutherAndCategory', ['auther_id'=>$pickup->auther,'category_id'=>$pickup->category,'page'=>1]) }}">{{ $pickup->category_name }}</a></div>
+                                    <div class="update_date">更新日:{{ Common::dateConverter($pickup->release_at) }}</div>
                                 </div>
                             </div>
                             @endforeach
@@ -131,34 +131,28 @@
             @endif
 
             <div id=side_navi class="content">
-                @if(isset($newsList) && is_countable($newsList))
+                @if (isset($newsList) && is_countable($newsList))
                 <div class="side_news">
                     <div class="side_title">News</div>
                     <ul>
-                        @foreach($newsList as $index => $news)
+                        @foreach ($newsList as $index => $news)
                         <li>
                             <a href="{{ route('detail.article', ['article_id' => $news->id]) }}">
                                 <span class="side_navi_date">
-                                    {{ $news->release_at->format('Y/m/d') }}
-                                    @if($news->release_at > $threeDaysAgo)
-                                    <img src="{{ asset('images/front/icon_new.png') }}" width="34px">
+                                    {{ Common::dateConverter($news->release_at) }}
+                                    @if (Common::newFlg($news->release_at))
+                                        <img src="{{ asset('images/front/icon_new.png') }}" width="34px">
                                     @endif
                                 </span>
-                                <p title="{{$news->title}}" class="side_navi_title">
-                                    {{$news->title}}
+                                <p title="{{ $news->title }}" class="side_navi_title">
+                                    {{ $news->title }}
                                 </p>
                             </a>
                             <div class="side_navi_auther">
-                            @if(isset($news->auther))
-                                <span style="color:#ccc;">筆者:</span>
-                                <a href="{{ route('list.onlyAuther', ['auther_id' => $news->auther]) }}">{{config("auther.$news->auther.name")}}</a>
-                            @endif
-                            </div>
-                            <div class="side_navi_category">
-                            @if(isset($news->category_id))
-                                <span style="color:#ccc;">カテゴリー:</span>
-                                <a href="{{ route('list.bothAutherAndCategory', ['auther_id' => $news->auther,'category_id' => $news->auther_category,'page'=>1]) }}">{{config("auther.$news->auther.category.$news->auther_category.name")}}</a>
-                            @endif
+                                @if (isset($news->auther))
+                                    <span style="color:#ccc;">筆者:</span>
+                                    <a href="{{ route('list.onlyAuther', ['auther_id' => $news->auther]) }}">{{ $news->auther_name }}</a>
+                                @endif
                             </div>
                         </li>
                         @endforeach
@@ -175,9 +169,9 @@
                         <li>
                             <a href="{{ route('detail.article', ['article_id' => $newArticle->id]) }}">
                                 <span class="side_navi_date">
-                                    {{ $newArticle->release_at->format('Y/m/d') }}
-                                    @if($newArticle->release_at > $threeDaysAgo)
-                                    <img src="{{ asset('images/front/icon_new.png') }}" width="34px">
+                                    {{ Common::dateConverter($newArticle->release_at) }}
+                                    @if (Common::newFlg($newArticle->release_at))
+                                        <img src="{{ asset('images/front/icon_new.png') }}" width="34px">
                                     @endif
                                 </span>
                                 <p title="{{$newArticle->title}}" class="side_navi_title">
@@ -186,11 +180,11 @@
                             </a>
                             <div class="side_navi_auther">
                                 <span style="color:#ccc;">筆者:</span>
-                                <a href="{{ route('list.onlyAuther', ['auther_id' => $newArticle->auther]) }}">{{config("auther.$newArticle->auther.name")}}</a>
+                                <a href="{{ route('list.onlyAuther', ['auther_id' => $newArticle->auther]) }}">{{ $newArticle->auther_name }}</a>
                             </div>
                             <div class="side_navi_category">
                                 <span style="color:#ccc;">カテゴリー:</span>
-                                <a href="{{ route('list.bothAutherAndCategory', ['auther_id' => $newArticle->auther,'category_id' => $newArticle->auther_category,'page'=>1]) }}">{{config("auther.$newArticle->auther.category.$newArticle->auther_category.name")}}</a>
+                                <a href="{{ route('list.bothAutherAndCategory', ['auther_id' => $newArticle->auther,'category_id' => $newArticle->category,'page'=>1]) }}">{{ $newArticle->category_name }}</a>
                             </div>
                         </li>
                         @endforeach
@@ -203,30 +197,30 @@
                 <div class="side_ranking">
                     <div class="side_title">Ranking</div>
                     <ul>
-                        @foreach($rankingList as $index => $ranking)
+                        @foreach ($rankingList as $index => $ranking)
                         <li>
                             <a href="{{ route('detail.article', ['article_id' => $ranking->id]) }}">
                                 @if($index < 3)
-                                <img src="{{ asset('images/front/icon_rank'.$index.'.png') }}" style="vertical-align: bottom;width:30px;">
+                                    <img src="{{ asset('images/front/icon_rank'.$index.'.png') }}" style="vertical-align: bottom;width:30px;">
                                 @elseif($index == 3)
-                                <span class="ranking">4位</span>
+                                    <span class="ranking">4位</span>
                                 @else
-                                <span class="ranking">5位</span>
+                                    <span class="ranking">5位</span>
                                 @endif
                                 <span class="side_navi_date">
-                                    {{ $ranking->release_at->format('Y/m/d') }}
+                                    {{ Common::dateConverter($ranking->release_at) }}
                                 </span>
-                                <p title="{{$ranking->title}}" class="side_navi_title">
-                                    {{$ranking->title}}
+                                <p title="{{ $ranking->title }}" class="side_navi_title">
+                                    {{ $ranking->title }}
                                 </p>
                             </a>
                             <div class="side_navi_auther">
                                 <span style="color:#ccc;">筆者:</span>
-                                <a href="{{ route('list.onlyAuther', ['auther_id' => $ranking->auther]) }}">{{config("auther.$ranking->auther.name")}}</a>
+                                <a href="{{ route('list.onlyAuther', ['auther_id' => $ranking->auther]) }}">{{ $ranking->auther_name }}</a>
                             </div>
                             <div class="side_navi_category">
                                 <span style="color:#ccc;">カテゴリー:</span>
-                                <a href="{{ route('list.bothAutherAndCategory', ['auther_id' => $ranking->auther,'category_id' => $ranking->auther_category,'page'=>1]) }}">{{config("auther.$ranking->auther.category.$ranking->auther_category.name")}}</a>
+                                <a href="{{ route('list.bothAutherAndCategory', ['auther_id' => $ranking->auther,'category_id' => $ranking->category,'page'=>1]) }}">{{ $ranking->category_name }}</a>
                             </div>
                         </li>
                         @endforeach

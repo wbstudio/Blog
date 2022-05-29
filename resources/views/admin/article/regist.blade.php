@@ -11,36 +11,32 @@
 @section('content')
 <div class="container">
     <h2>記事登録ページ</h2>
-    <form method="POST" action="{{route('articleInsert')}}" class="regist_place"  enctype="multipart/form-data">
+    <form method="POST" action="{{route('article.insert')}}" class="regist_place"  enctype="multipart/form-data">
     @csrf
         <table>
-        <tr>
-                <th>auther<br>auther_category</th>
+            <colgroup>
+                <col style="width: 15%;">
+                <col style="width: 85%;">
+            </colgroup>
+            <tr>
+                <th>auther</th>
                 <td>
-                <select class="auther" name="auther">
+                    <select class="auther" name="auther">
                         <option value="">著者</option>
-                        @foreach(Config::get('auther') as $key => $auther)
-                            <option value="{{$key}}" @if(isset($autherhidden) && $autherhidden == $key) selected @endif>{{$auther["name"]}}</option>
-                        @endforeach
-                    </select>
-                    <select class="auther_category"  name="auther_category" disabled>
-                        <option value="">著者内カテゴリー</option>
-                        @foreach(Config::get('auther') as $key => $auther)
-                            @foreach($auther["category"] as $idx => $auther_category)
-                                <option value="{{$idx}}" class="auther_{{$key}}" @if(isset($authercategoryhidden) && $authercategoryhidden == $idx) selected @endif>{{$auther_category["name"]}}</option>
-                            @endforeach    
+                        @foreach ($autherDataList as $id => $auther)
+                            <option value="{{ $id }}" data-category="{{ $auther['category'] }}">{{ $auther['name'] }}</option>
                         @endforeach
                     </select>
                 </td>
             </tr>
             <tr>
-                <th>category</th>
+                <th>カテゴリー</th>
                 <td>
-                <select class="category" name="main_category">
-                        <option value="">全体でのカテゴリー</option>
-                        @foreach(Config::get('category') as $key => $category)
-                            <option value="{{$key}}" @if(isset($categoryhidden) && $categoryhidden == $key) selected @endif>{{$category["name"]}}</option>
-                        @endforeach
+                    <select class="category" name="category" disabled>
+                        <option value="">カテゴリー</option>
+                            @foreach ($categoryNameList as $id => $name)
+                                <option value="{{ $id }}">{{ $name }}</option>
+                            @endforeach
                     </select>
                 </td>
             </tr>
@@ -48,11 +44,11 @@
                 <th>tag</th>
                 <td>
                 <div class="tag_list">
-                    @foreach($tags as $tag)
-                    <div class="tag_detail">
-                    {{$tag->name}}
-                    <input type="checkbox" name="tag[]" value="{{$tag->id}}">
-                    </div>
+                    @foreach ($tagList as $tagData)
+                        <div class="tag_detail">
+                            {{ $tagData->name }}
+                            <input type="checkbox" name="tag[]" value="{{ $tagData->id }}">
+                        </div>
                     @endforeach
                 </div>
                 </td>
@@ -90,8 +86,8 @@
                 <th>status</th>
                 <td>
                     <select class="" name="status">
-                        @foreach(Config::get('status.article') as $key => $status)
-                            <option value="{{$key}}">{{$status}}</option>
+                        @foreach (Config::get('status.article') as $key => $status)
+                            <option value="{{ $key }}">{{ $status }}</option>
                         @endforeach
                     </select>
                 </td>
@@ -101,20 +97,20 @@
                 <td>
                     <div class="release">
                         <select class="datetime" name="release_year">
-                            @foreach(Config::get('date.year') as $key => $year)
-                                <option value="{{$key}}">{{$year}}</option>
+                            @foreach (Config::get('date.year') as $key => $year)
+                                <option value="{{ $key }}">{{ $year }}</option>
                             @endforeach
                         </select>
                         年
                         <select class="datetime" name="release_month">
-                            @foreach(Config::get('date.month') as $key => $month)
-                                <option value="{{$key}}">{{$month}}</option>
+                            @foreach (Config::get('date.month') as $key => $month)
+                                <option value="{{ $key }}">{{ $month }}</option>
                             @endforeach
                         </select>
                         月
                         <select class="datetime" name="release_day">
-                            @foreach(Config::get('date.year') as $key => $year)
-                                <option value="{{$key}}">{{$year}}</option>
+                            @foreach (Config::get('date.year') as $key => $year)
+                                <option value="{{ $key }}">{{ $year }}</option>
                             @endforeach
                         </select>
                         日

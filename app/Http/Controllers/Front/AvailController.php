@@ -30,8 +30,8 @@ class AvailController extends Controller
         //DAO
         $mdArticle = new Article();
         //pickup
-        if(isset($pickupsData["article_id"])){
-            $pickupArticleData = $mdArticle->getArticlesListByPickupInfo($pickupsData["article_id"]);
+        if(isset($pickupsData->article_id)){
+            $pickupArticleData = $mdArticle->getArticlesListByPickupInfo($pickupsData->article_id);
         }
         //更新情報
         $newArticlesArticleData = $mdArticle->getArticlesListNewArticles();
