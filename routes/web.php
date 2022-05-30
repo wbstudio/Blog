@@ -12,19 +12,13 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
- 
-if (preg_match("/iPhone|iPod|Android.*Mobile|Windows.*Phone/", $_SERVER['HTTP_USER_AGENT'])) {
-    $user_agent = "sp";
-} else {
-    $user_agent = "pc";
-}
-define("USER_AGENT", $user_agent);
 
 
 //******************************//
 //  非会員閲覧可能ページ
 //******************************//
 Route::get('/', [\App\Http\Controllers\Front\TopController::class, 'index'])->name('topPage');
+Route::get('/qrtest', [\App\Http\Controllers\Front\TopController::class, 'qrtest']);
 Route::get('/top/{test_id}', [\App\Http\Controllers\Front\TopController::class, 'test'])->name('topPageTest');
 Route::get('/auther', [\App\Http\Controllers\Front\ListController::class, 'autherList'])->name('autherList');
 Route::get('/category', [\App\Http\Controllers\Front\ListController::class, 'categoryList'])->name('categoryList');
@@ -77,15 +71,42 @@ Route::prefix('admin')->middleware('auth:admin')->group(function(){
 
     //記事管理
     Route::group(['prefix' => 'article'], function () {
-        Route::get('list', [\App\Http\Controllers\Admin\ArticleController::class, 'getList'])->name('articleList');
-        Route::post('list', [\App\Http\Controllers\Admin\ArticleController::class, 'getList']);
-        Route::post('delete', [\App\Http\Controllers\Admin\ArticleController::class, 'delete'])->name('articleDelete');
-        Route::get('/regist', [\App\Http\Controllers\Admin\ArticleController::class, 'regist'])->name('articleRegist');
-        Route::post('/regist', [\App\Http\Controllers\Admin\ArticleController::class, 'insert'])->name('articleInsert');
-        Route::get('/edit/{id}', [\App\Http\Controllers\Admin\ArticleController::class, 'edit']);
-        Route::post('/edit/{id}', [\App\Http\Controllers\Admin\ArticleController::class, 'update']);
+        Route::get('list', [\App\Http\Controllers\Admin\ArticleController::class, 'getList'])->name('article.list');
+        Route::post('list', [\App\Http\Controllers\Admin\ArticleController::class, 'getList'])->name('article.list');
+        Route::post('delete', [\App\Http\Controllers\Admin\ArticleController::class, 'delete'])->name('article.delete');
+        Route::get('/regist', [\App\Http\Controllers\Admin\ArticleController::class, 'regist'])->name('article.regist');
+        Route::post('/regist', [\App\Http\Controllers\Admin\ArticleController::class, 'insert'])->name('article.insert');
+        Route::get('/edit/{id}', [\App\Http\Controllers\Admin\ArticleController::class, 'edit'])->name('article.edit');
+        Route::post('/edit', [\App\Http\Controllers\Admin\ArticleController::class, 'update'])->name('article.update');
         // Route::post('/edit', [\App\Http\Controllers\Admin\ArticleController::class, 'update']);
     });
+
+    //記事管理
+    Route::group(['prefix' => 'auther'], function () {
+        Route::get('list', [\App\Http\Controllers\Admin\AutherController::class, 'getList'])->name('auther.list');
+        // Route::post('list', [\App\Http\Controllers\Admin\AutherController::class, 'getList'])->name('autherList');
+        Route::post('delete', [\App\Http\Controllers\Admin\AutherController::class, 'autherDelete'])->name('auther.delete');
+        Route::get('/regist/form', [\App\Http\Controllers\Admin\AutherController::class, 'registForm'])->name('auther.regist.form');
+        Route::post('/regist/confirm', [\App\Http\Controllers\Admin\AutherController::class, 'registConfirm'])->name('auther.regist.confirm');
+        Route::post('/regist/insert', [\App\Http\Controllers\Admin\AutherController::class, 'registInsert'])->name('auther.regist.insert');
+        Route::get('/edit/{id}', [\App\Http\Controllers\Admin\AutherController::class, 'editForm'])->name('auther.edit.form');
+        Route::post('/edit/confirm', [\App\Http\Controllers\Admin\AutherController::class, 'editConfirm'])->name('auther.edit.confirm');
+        Route::post('/edit/update', [\App\Http\Controllers\Admin\AutherController::class, 'editUpdate'])->name('auther.edit.update');
+    });
+
+    //記事管理
+    Route::group(['prefix' => 'category'], function () {
+        Route::get('list', [\App\Http\Controllers\Admin\CategoryController::class, 'getList'])->name('category.list');
+        // Route::post('list', [\App\Http\Controllers\Admin\AutherController::class, 'getList'])->name('autherList');
+        Route::post('delete', [\App\Http\Controllers\Admin\CategoryController::class, 'categoryDelete'])->name('category.delete');
+        Route::get('/regist/form', [\App\Http\Controllers\Admin\CategoryController::class, 'registForm'])->name('category.regist.form');
+        Route::post('/regist/confirm', [\App\Http\Controllers\Admin\CategoryController::class, 'registConfirm'])->name('category.regist.confirm');
+        Route::post('/regist/insert', [\App\Http\Controllers\Admin\CategoryController::class, 'registInsert'])->name('category.regist.insert');
+        Route::get('/edit/{id}', [\App\Http\Controllers\Admin\CategoryController::class, 'editForm'])->name('category.edit.form');
+        Route::post('/edit/confirm', [\App\Http\Controllers\Admin\CategoryController::class, 'editConfirm'])->name('category.edit.confirm');
+        Route::post('/edit/update', [\App\Http\Controllers\Admin\CategoryController::class, 'editUpdate'])->name('category.edit.update');
+    });
+
 
     //記事管理
     Route::group(['prefix' => 'pickup'], function () {
@@ -115,10 +136,15 @@ Route::prefix('admin')->middleware('auth:admin')->group(function(){
 
     //タグ管理
     Route::group(['prefix' => 'tag'], function () {
-        Route::get('list', [\App\Http\Controllers\Admin\TagController::class, 'getList'])->name('tagList');
-        Route::post('regist', [\App\Http\Controllers\Admin\TagController::class, 'regist'])->name('tagRegist');
-        Route::post('delete', [\App\Http\Controllers\Admin\TagController::class, 'delete'])->name('tagDelete');
+        Route::get('list', [\App\Http\Controllers\Admin\TagController::class, 'getList'])->name('tag.list');
+        Route::post('regist', [\App\Http\Controllers\Admin\TagController::class, 'regist'])->name('tag.regist');
+        Route::post('delete', [\App\Http\Controllers\Admin\TagController::class, 'delete'])->name('tag.delete');
         Route::get('edit/{id}/{name}', [\App\Http\Controllers\Admin\TagController::class, 'edit']);
+    });
+    
+    //Ajax
+    Route::group(['prefix' => 'ajax'], function () {
+        Route::get('delete/profile/image/{image}', [\App\Http\Controllers\Admin\AjaxController::class, 'deleteProfileImage'])->name('ajax.delete.profile.image');
     });
     
 });

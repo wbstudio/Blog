@@ -11,42 +11,33 @@
 @section('content')
 <div class="container">
     <h2>記事登録ページ</h2>
-    <form method="POST" action="./{{$article->id}}" class="edit_place"  enctype="multipart/form-data">
+    <form method="POST" action="{{ route('article.update') }}" class="edit_place"  enctype="multipart/form-data">
     @csrf
         <table>
+            <colgroup>
+                <col style="width: 15%;">
+                <col style="width: 85%;">
+            </colgroup>
             <tr>
-                <th>auther<br>auther_category</th>
+                <th>auther</th>
                 <td>
-                <select class="auther" name="auther">
+                    <select class="auther" name="auther">
                         <option value="">著者</option>
-                        @foreach(Config::get('auther') as $key => $auther)
-                            <option value="{{$key}}" @if(isset($autherhidden) && $autherhidden == $key) selected @endif>{{$auther["name"]}}</option>
-                        @endforeach
+                            @foreach ($autherDataList as $id => $auther)
+                                <option value="{{ $id }}" data-category="{{ $auther['category'] }}" @if (!empty($articlesData->auther) && $articlesData->auther == $id) selected @endif>{{ $auther['name'] }}</option>
+                            @endforeach
                     </select>
-                    <select class="auther_category"  name="auther_category" disabled>
-                        <option value="">著者内カテゴリー</option>
-                        @foreach(Config::get('auther') as $key => $auther)
-                            @foreach($auther["category"] as $idx => $auther_category)
-                                <option value="{{$idx}}" class="auther_{{$key}}" @if(isset($authercategoryhidden) && $authercategoryhidden == $idx) selected @endif>{{$auther_category["name"]}}</option>
-                            @endforeach    
-                        @endforeach
-                    </select>
-                    @isset($autherhidden)
-                    <input type="hidden" name="autherhidden" value="{{$autherhidden}}">
-                    @endisset
-                    @isset($authercategoryhidden)
-                    <input type="hidden" name="authercategoryhidden" value="{{$authercategoryhidden}}">
-                    @endisset
+                    <input type="hidden" name="initial_auther" value="{{ $articlesData->auther }}">
                 </td>
             </tr>
             <tr>
                 <th>category</th>
                 <td>
-                <select class="category" name="main_category">
-                        <option value="">全体でのカテゴリー</option>
-                        @foreach(Config::get('category') as $key => $category)
-                            <option value="{{$key}}" @if(isset($maincategoryhidden) && $maincategoryhidden == $key) selected @endif>{{$category["name"]}}</option>
-                        @endforeach
+                    <select class="category" name="category">
+                        <option value="">カテゴリー</option>
+                            @foreach ($categoryNameList as $id => $name)
+                                <option value="{{ $id }}" @if (!empty($articlesData->category) && $articlesData->category == $id) selected @endif>{{ $name }}</option>
+                            @endforeach
                     </select>
                 </td>
             </tr>
@@ -54,24 +45,24 @@
                 <th>tag</th>
                 <td>
                 <div class="tag_list">
-                    @foreach($tags as $tag)
-                    <div class="tag_detail">
-                    {{$tag->name}}
-                    <input type="checkbox" name="tag[]" value="{{$tag->id}}" @if(is_array($contain_tags) && in_array($tag->id,$contain_tags)) checked @endif>
-                    </div>
+                    @foreach ($tagList as $tag)
+                        <div class="tag_detail">
+                            {{ $tag->name }}
+                            <input type="checkbox" name="tag[]" value="{{ $tag->id }}" @if (is_array($articlesData->tagsData) && in_array($tag->id, $articlesData->tagsData)) checked @endif>
+                        </div>
                     @endforeach
                 </div>
                 </td>
             </tr>
             <tr>
                 <th>title</th>
-                <td><input type="text" name="title" class="inp_text" value="{{$article->title}}"></td>
+                <td><input type="text" name="title" class="inp_text" value="{{ $articlesData->title }}"></td>
             </tr>
             <tr>
                 <th>main</th>
                 <td>
                 <textarea name="main" id="editor">
-                    {!!$article->main!!}
+                    {!! $articlesData->main !!}
                 </textarea>
                 <script>
                     window.onload=function(){
@@ -86,13 +77,15 @@
             <tr>
                 <th>eyecatch</th>
                 <td><input type="file" name="eyecatch"><br>
-                <img src="{{ asset('images/admin/article/eyecatch/' .$article->eyecatch)}}">
+                @if (!empty($articlesData->eyecatch))
+                    <img src="{{ asset('images/admin/article/eyecatch/' . $articlesData->eyecatch) }}">
+                @endif
             </td>
             </tr>
             <tr>
                 <th>heading</th>
                 <td>
-                    <textarea name="heading">{!!$article->heading!!}</textarea>
+                    <textarea name="heading">{!! $articlesData->heading !!}</textarea>
                 </td>
             </tr>
             <tr>
@@ -100,7 +93,7 @@
                 <td>
                     <select class="" name="status">
                         @foreach(Config::get('status.article') as $key => $status)
-                            <option value="{{$key}}" @if(isset($statushidden) && $statushidden == $key) selected @endif>{{$status}}</option>
+                            <option value="{{ $key }}" @if(isset($articlesData->status) && $articlesData->status == $key) selected @endif>{{ $status }}</option>
                         @endforeach
                     </select>
                 </td>
@@ -141,8 +134,11 @@
                 </td>
             </tr>
             <tr>
-            <th>endStatus</th>
-            <td><input type="checkbox" name="endstatus"  @if(isset($article->editEndFlag) && $article->editEndFlag == 1) checked @endif>チェックを入れると公開終了時間を設定できます。</td>
+                <th>endStatus</th>
+                <td>
+                    <input type="checkbox" name="endstatus"  @if(isset($articlesData->editEndFlag) && $articlesData->editEndFlag == 1) checked @endif>
+                    チェックを入れると公開終了時間を設定できます。
+                </td>
             </tr>
             <tr>
                 <th>end_at</th>
@@ -180,13 +176,13 @@
                 </td>
             </tr>
         </table>
-        <input type="hidden" name="hiddenreleaseDate" value="{{$article->release_at}}">
-        <input type="hidden" name="hiddenendDate" value="{{$article->end_at}}">
+        <input type="hidden" name="hiddenreleaseDate" value="{{ $articlesData->release_at}}">
+        <input type="hidden" name="hiddenendDate" value="{{$articlesData->end_at}}">
         <input type="hidden" name="hiddenrelease" value=1>
         @if(isset($article->editEndFlag) && $article->editEndFlag == 1) 
-        <input type="hidden" name="hiddenend" value=1>
+            <input type="hidden" name="hiddenend" value=1>
         @endif
-        <input type="hidden" name="id" value="{{$article->id}}">
+        <input type="hidden" name="id" value="{{ $articlesData->id }}">
         <div class="submitPlace">
             <input type="submit" value="submit">
         </div>

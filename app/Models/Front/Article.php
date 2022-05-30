@@ -60,157 +60,182 @@ class Article extends Model
         $articleIdArray = explode(",",$pickupsData);
 
         $columnList = [
-            "id",
-            "auther",
-            "auther_category",
-            "main_category",
-            "tag",
-            "channel",
-            "title",
-            "heading",
-            "eyecatch",
-            "status",
-            "release_at",
-            "end_at",
-            "count",
-            "good",
-            "created_at",
-            "updated_at",
+            "ar.id",
+            "ar.auther",
+            "ar.category",
+            "ar.main_category",
+            "ar.tag",
+            "ar.channel",
+            "ar.title",
+            "ar.heading",
+            "ar.eyecatch",
+            "ar.status",
+            "ar.release_at",
+            "ar.end_at",
+            "ar.count",
+            "ar.good",
+            "ar.created_at",
+            "ar.updated_at",
+            "au.name as auther_name",
+            "ca.name as category_name",
         ];
 
 
-        $whereList = [
-            ["delete_flag","=",0],
-            ["status","=",2],
-        ];
+        $query = DB::table('articles as ar');
+        $query->select($columnList);
 
-        $dispData =$this::from("articles")
-                    ->where($whereList)
-                    ->whereIn('id', $articleIdArray)
-                    ->get($columnList);
+        $query->join('authers as au', 'au.id', '=', 'ar.auther');
+        $query->join('categories as ca', 'ca.id', '=', 'ar.category');
 
-        $returnData = [];
+        $query->where('ar.delete_flag', config('const.DELETE_FLG_OFF'))
+            ->where('ar.status', config('const.ARTICLE_STATUS.BLOG_RELEASE'))
+            ->where('au.delete_flg', config('const.DELETE_FLG_OFF'))
+            ->where('ca.delete_flg', config('const.DELETE_FLG_OFF'));
+
+
+        $list = $query->get();
+
+        $returnList = [];
         //順番の並び替え
         if(isset($articleIdArray) && count($articleIdArray) > 0){
-            foreach($articleIdArray as $pickup){        
-                if(isset($dispData) && is_countable($dispData)){
-                    foreach($dispData as $articleData){
+            foreach($articleIdArray as $pickup){
+                if(isset($list) && is_countable($list)){
+                    foreach($list as $articleData){
                         if($articleData->id == $pickup){
-                            $returnData[] = $articleData;
+                            $returnList[] = $articleData;
                         }
                     }
                 }
             }
         }
 
-        return $returnData;
+        return $returnList;
     }
 
 
     public function getArticlesListNewArticles()
     {
+
         $columnList = [
-            "id",
-            "auther",
-            "auther_category",
-            "main_category",
-            "tag",
-            "channel",
-            "title",
-            "heading",
-            "eyecatch",
-            "status",
-            "release_at",
-            "end_at",
-            "count",
-            "good",
-            "created_at",
-            "updated_at",
+            "ar.id",
+            "ar.auther",
+            "ar.category",
+            "ar.main_category",
+            "ar.tag",
+            "ar.channel",
+            "ar.title",
+            "ar.heading",
+            "ar.eyecatch",
+            "ar.status",
+            "ar.release_at",
+            "ar.end_at",
+            "ar.count",
+            "ar.good",
+            "ar.created_at",
+            "ar.updated_at",
+            "au.name as auther_name",
+            "ca.name as category_name",
         ];
 
 
-        $whereList = [
-            ["delete_flag","=",0],
-            ["status","=",2],
-        ];
+        $query = DB::table('articles as ar');
+        $query->select($columnList);
 
-        $dispData =$this::from("articles")
-                    ->where($whereList)
-                    ->orderBy('release_at', 'desc')
-                    ->limit(5)
-                    ->get($columnList);
+        $query->join('authers as au', 'au.id', '=', 'ar.auther');
+        $query->join('categories as ca', 'ca.id', '=', 'ar.category');
 
-        return $dispData;
+        $query->where('ar.delete_flag', config('const.DELETE_FLG_OFF'))
+            ->where('ar.status', config('const.ARTICLE_STATUS.BLOG_RELEASE'))
+            ->where('au.delete_flg', config('const.DELETE_FLG_OFF'))
+            ->where('ca.delete_flg', config('const.DELETE_FLG_OFF'));
+
+
+        $list = $query->orderByDesc('ar.release_at')
+                ->limit(5)
+                ->get();
+
+        return $list;
     }
 
     public function getArticlesListRanking()
     {
         $columnList = [
-            "id",
-            "auther",
-            "auther_category",
-            "main_category",
-            "tag",
-            "channel",
-            "title",
-            "heading",
-            "eyecatch",
-            "status",
-            "release_at",
-            "end_at",
-            "count",
-            "good",
-            "created_at",
-            "updated_at",
+            "ar.id",
+            "ar.auther",
+            "ar.category",
+            "ar.main_category",
+            "ar.tag",
+            "ar.channel",
+            "ar.title",
+            "ar.heading",
+            "ar.eyecatch",
+            "ar.status",
+            "ar.release_at",
+            "ar.end_at",
+            "ar.count",
+            "ar.good",
+            "ar.created_at",
+            "ar.updated_at",
+            "au.name as auther_name",
+            "ca.name as category_name",
         ];
 
-        $whereList = [
-            ["delete_flag","=",0],
-            ["status","=",2],
-        ];
 
-        $dispData =$this::from("articles")
-                    ->where($whereList)
-                    ->orderBy('count', 'desc')
-                    ->limit(5)
-                    ->get($columnList);
+        $query = DB::table('articles as ar');
+        $query->select($columnList);
 
-        return $dispData;
+        $query->join('authers as au', 'au.id', '=', 'ar.auther');
+        $query->join('categories as ca', 'ca.id', '=', 'ar.category');
+
+        $query->where('ar.delete_flag', config('const.DELETE_FLG_OFF'))
+            ->where('ar.status', config('const.ARTICLE_STATUS.BLOG_RELEASE'))
+            ->where('au.delete_flg', config('const.DELETE_FLG_OFF'))
+            ->where('ca.delete_flg', config('const.DELETE_FLG_OFF'));
+
+
+        $list = $query->orderByDesc('ar.count')
+                ->limit(5)
+                ->get();
+
+        return $list;
     }
 
     public function getArticlesListNews()
     {
         $columnList = [
-            "id",
-            "auther",
-            "auther_category",
-            "main_category",
-            "tag",
-            "channel",
-            "title",
-            "heading",
-            "eyecatch",
-            "status",
-            "release_at",
-            "end_at",
-            "count",
-            "good",
-            "created_at",
-            "updated_at",
+            "ar.id",
+            "ar.auther",
+            "ar.category",
+            "ar.main_category",
+            "ar.tag",
+            "ar.channel",
+            "ar.title",
+            "ar.heading",
+            "ar.eyecatch",
+            "ar.status",
+            "ar.release_at",
+            "ar.end_at",
+            "ar.count",
+            "ar.good",
+            "ar.created_at",
+            "ar.updated_at",
+            "au.name as auther_name",
         ];
 
-        $whereList = [
-            ["delete_flag","=",0],
-            ["status","=",4],
-        ];
+        $query = DB::table('articles as ar');
+        $query->select($columnList);
 
-        $dispData =$this::from("articles")
-                    ->where($whereList)
-                    ->orderBy('count', 'desc')
-                    ->limit(5)
-                    ->get($columnList);
+        $query->join('authers as au', 'au.id', '=', 'ar.auther');
 
-        return $dispData;
+        $query->where('ar.delete_flag', config('const.DELETE_FLG_OFF'))
+            ->where('ar.status', config('const.ARTICLE_STATUS.NEWS_RELEASE'))
+            ->where('au.delete_flg', config('const.DELETE_FLG_OFF'));
+
+
+        $list = $query->limit(5)
+                    ->get();
+
+        return $list;
     }
 
     public function getCategoryArticlesListByPageInfo($auther=null,$category=null)
@@ -219,7 +244,7 @@ class Article extends Model
         $columnList = [
             "id",
             "auther",
-            "auther_category",
+            "category",
             "main_category",
             "tag",
             "channel",
@@ -272,7 +297,7 @@ class Article extends Model
         $columnList = [
             "id",
             "auther",
-            "auther_category",
+            "category",
             "main_category",
             "tag",
             "channel",
@@ -332,7 +357,7 @@ class Article extends Model
         $columnList = [
             "id",
             "auther",
-            "auther_category",
+            "category",
             "main_category",
             "tag",
             "channel",
@@ -381,7 +406,7 @@ class Article extends Model
         $columnList = [
             "id",
             "auther",
-            "auther_category",
+            "category",
             "main_category",
             "tag",
             "channel",
@@ -422,7 +447,7 @@ class Article extends Model
         $columnList = [
             "id",
             "auther",
-            "auther_category",
+            "category",
             "main_category",
             "tag",
             "channel",
@@ -464,7 +489,7 @@ class Article extends Model
         $columnList = [
             "id",
             "auther",
-            "auther_category",
+            "category",
             "main_category",
             "tag",
             "channel",
@@ -505,7 +530,7 @@ class Article extends Model
         $columnList = [
             "id",
             "auther",
-            "auther_category",
+            "category",
             "main_category",
             "tag",
             "channel",
@@ -558,7 +583,7 @@ class Article extends Model
         $columnList = [
             "id",
             "auther",
-            "auther_category",
+            "category",
             "main_category",
             "tag",
             "channel",
@@ -671,7 +696,7 @@ class Article extends Model
         $columnList = [
             "id",
             "auther",
-            "auther_category",
+            "category",
             "main_category",
             "tag",
             "channel",
@@ -711,7 +736,7 @@ class Article extends Model
         $columnList = [
             "id",
             "auther",
-            "auther_category",
+            "category",
             "main_category",
             "tag",
             "channel",

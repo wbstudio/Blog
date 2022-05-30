@@ -77,10 +77,10 @@ header{
 }
 
 header a img{
-    height: 35px;
+    height: 41px;
     position: relative;
-    top: 4px;
-    left: 7px;
+    top: 1px;
+    left: 5px;
 }
 
 header .menu_icon{

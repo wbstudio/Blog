@@ -5,77 +5,58 @@ namespace App\Models\Admin;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
-
-
 class Article extends Model
 {
     use HasFactory;
 
-    public function getArticlesList($param=null)
+    public function getArticlesList($arrayRequest)
     {
         $columnList = [
-            "id",
-            "auther",
-            "auther_category",
-            "main_category",
-            "tag",
-            "title",
-            "heading",
-            "status",
-            "created_at",
-            "updated_at",
+            "ar.id",
+            "ar.auther",
+            "ar.category",
+            "ar.tag",
+            "ar.title",
+            "ar.heading",
+            "ar.status",
+            "ar.created_at",
+            "ar.updated_at",
+            "au.name as auther_name",
+            "ca.name as category_name",
         ];
 
+        $query = DB::table('articles as ar');
 
-        $whereList = [
-            ["delete_flag","=",0],
-        ];
-        if(isset($param["auther"]) && $param["auther"] != null){
-            $whereList[] = ["auther","=",$param["auther"]];
-        }
-        if(isset($param["auther_category"]) && $param["auther_category"] != null){
-            $whereList[] = ["auther_category","=",$param["auther_category"]];
-        }
-        if(isset($param["main_category"]) && $param["main_category"] != null){
-            $whereList[] = ["main_category","=",$param["main_category"]];
-        }
-        if(isset($param["tag"]) && $param["tag"] != null){
-            $whereList[] = ["tag","=",$param["tag"]];
+        $query->select($columnList);
+
+        $query->join('authers as au', 'au.id', '=', 'ar.auther');
+        $query->join('categories as ca', 'ca.id', '=', 'ar.category');
+
+        $query->where('ar.delete_flag', config('const.DELETE_FLG_OFF'))
+            ->where('au.delete_flg', config('const.DELETE_FLG_OFF'))
+            ->where('ca.delete_flg', config('const.DELETE_FLG_OFF'));
+
+        if (isset($arrayRequest['auther'])) {
+            $query->where('ar.auther', $arrayRequest['auther']);
         }
 
-
-        $offset = 0;
-        $limit = $param["per_page"];
-        if(isset($param["page"]) && $param["page"] != 1){
-            $offset = ($param["page"] - 1) * $param["per_page"];
+        if (isset($arrayRequest['category'])) {
+            $query->where('ar.category', $arrayRequest['category']);
         }
+        $query->orderByDesc('ar.updated_at');
 
+        $articleList = $query->paginate(config('const.ADMIN.ARTICLE_PER_PAGE'));
 
-        $dispData =$this::from("articles")
-                    ->where($whereList)
-                    ->orderby("id","desc")
-                    ->offset($offset)
-                    ->limit($limit)
-                    ->get($columnList);
-
-        $aList["data"] = $dispData;
-
-
-        $Cnt = DB::table('articles')->where($whereList)->count();
-
-        
-        $aList["AllCnt"] = $Cnt;
-        return $aList;
+        return $articleList;
     }
 
 
-    public function getArticleDataByid($id)
+    public function getArticleDataById($requestId)
     {
         $columnList = [
             "id",
             "auther",
-            "auther_category",
-            "main_category",
+            "category",
             "tag",
             "channel",
             "title",
@@ -92,18 +73,16 @@ class Article extends Model
         ];
 
 
-        $whereList = [
-            ["delete_flag","=",0],
-            ["id","=",$id],
-        ];
+        $query = DB::table('articles as ar');
 
+        $query->select($columnList);
 
+        $query->where('ar.delete_flag', config('const.DELETE_FLG_OFF'))
+            ->where('ar.id', $requestId);
 
-        $dispData =$this::from("articles")
-                    ->where($whereList)
-                    ->get($columnList);
+        $articleData = $query->first();
 
-        return $dispData;
+        return $articleData;
     }
 
     public function getPureArticlesList()
@@ -141,6 +120,62 @@ class Article extends Model
         return $dispData;
     }
 
+    public function insertArticleData($inputData)
+    {
+        $query = DB::table('articles');
 
+        $insertDataArray = [
+            'auther' => $inputData['auther'],
+            'category' => $inputData['category'],
+            'title' => $inputData['title'],
+            'heading' => $inputData['heading'],
+            'eyecatch' => $inputData['eyecatch'],
+            'main' => $inputData['main'],
+            'tag' => $inputData['tag'],
+            'release_at' => $inputData['releaseDate'],
+            'end_at' => $inputData['endDate'],
+            'count' => 370,
+            'good' => 201,
+            'delete_flag' => config('const.DELETE_FLG_OFF'),
+            'status' => $inputData['status'],
+            'created_at' => now(),
+            'updated_at' => now(),
+        ];
+
+        $query->insert($insertDataArray);
+    }
+
+    public function editArticleData($inputData)
+    {
+        $query = DB::table('articles');
+        $query->where('id', $inputData['id']);
+        $editDataArray = [
+            'auther' => $inputData['auther'],
+            'category' => $inputData['category'],
+            'title' => $inputData['title'],
+            'heading' => $inputData['heading'],
+            'eyecatch' => $inputData['eyecatch'],
+            'main' => $inputData['main'],
+            'tag' => $inputData['tag'],
+            'release_at' => $inputData['releaseDate'],
+            'end_at' => $inputData['endDate'],
+            'delete_flag' => config('const.DELETE_FLG_OFF'),
+            'status' => $inputData['status'],
+            'updated_at' => now(),
+        ];
+
+        $query->update($editDataArray);
+    }
+
+    public function deleteArticleData($inputData)
+    {
+        $query = DB::table('articles');
+        $query->whereIn('id', $inputData['delete']);
+        $editDataArray = [
+            'delete_flag' => config('const.DELETE_FLG_ON'),
+        ];
+
+        $query->update($editDataArray);
+    }
 
 }

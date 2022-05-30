@@ -1,0 +1,84 @@
+#content .container {
+  font-size: 14px;
+}
+#content .container .validation {
+  margin: 5px 0;
+}
+#content .container .list_top_area {
+  width: 100%;
+  min-height: 30px;
+}
+#content .container .list_top_area a.regist_link {
+  margin: 0;
+}
+#content .container table.list {
+  width: 100%;
+  margin: 50px 0 0;
+}
+#content .container table.form,
+#content .container table.confirm {
+  width: 100%;
+  margin: 20px 0 0;
+  border-collapse: collapse;
+}
+#content .container table.form th,
+#content .container table.confirm th {
+  background: #f2f2f2;
+  padding: 3px 5px;
+  border-right: 1px solid #ccc;
+}
+#content .container table.form td,
+#content .container table.confirm td {
+  background: #fafafa;
+  padding: 10px 10px;
+}
+#content .container table.form td label.chk,
+#content .container table.confirm td label.chk {
+  margin-right: 10px;
+  cursor: pointer;
+}
+#content .container table.form td label.chk input[type=checkbox],
+#content .container table.confirm td label.chk input[type=checkbox] {
+  margin-left: 10px;
+}
+#content .container table.form td label.img,
+#content .container table.confirm td label.img {
+  padding: 3px 10px;
+  color: #ffffff;
+  background-color: #5e5e5e;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#content .container table.form td input[type=file],
+#content .container table.confirm td input[type=file] {
+  display: none;
+}
+#content .container table.form td p,
+#content .container table.confirm td p {
+  margin: 10px 0 0 0;
+}
+#content .container table.form td textarea,
+#content .container table.confirm td textarea {
+  width: 100%;
+  height: 200px;
+}
+#content .container table.form td input[type=text],
+#content .container table.confirm td input[type=text] {
+  width: 100%;
+  height: 30px;
+}
+#content .container .submit_place {
+  text-align: center;
+  margin-top: 20px;
+  width: 100%;
+}
+#content .container .submit_place button {
+  width: 20%;
+  padding: 10px 20px;
+  margin: 0 10px;
+  background: #fafafa;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 2px 2px 4px #ccc;
+}/*# sourceMappingURL=adminAuther.css.map */

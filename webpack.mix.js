@@ -1,4 +1,5 @@
 const mix = require('laravel-mix');
+const glob = require('glob');
 
 /*
  |--------------------------------------------------------------------------
@@ -17,3 +18,13 @@ mix.js('resources/js/app.js', 'public/js')
         require('tailwindcss'),
     ])
     .webpackConfig(require('./webpack.config'));
+
+    glob.sync('resources/js/*.js').map(function(file) {
+        mix.js(file, 'public/js').version()
+      });
+    
+      glob.sync('resources/css/*.scss').map(function(file) {
+        mix.js(file, 'public/css').version()
+      });
+    
+          

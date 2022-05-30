@@ -9,8 +9,9 @@ class Tag extends Model
 {
     use HasFactory;
 
-    public function getTagsList()
+    public function getTagList()
     {
+
         $columnList = [
             "id",
             "name",
@@ -20,19 +21,14 @@ class Tag extends Model
             "updated_at",
         ];
 
+        $query = DB::table('tags');
+        $query->select($columnList);
 
-        $whereList = [
-            ["delete_flag","=",0],
-        ];
+        $query->where('delete_flag', config('const.DELETE_FLG_OFF'));
 
-        $dispData =$this::from("tags")
-                    ->where($whereList)
-                    ->orderby("id","desc")
-                    ->get($columnList);
+        $tagList = $query->get();
 
-        $aList = $dispData;
-
-        return $aList;
+        return $tagList;
     }
 
 }

@@ -12,17 +12,13 @@ class TagController extends Controller
     public function getList() {
         //DAO
         $mdTag = new Tag();
-        $tagsData = $mdTag->getTagsList();
+        $tagList = $mdTag->getTagList();
 
-        $dispData = null;
-        if(isset($tagsData) && count($tagsData) > 0){
-            $dispData = [
-                'tags' => $tagsData,
-            ];
-            return view('admin.tag.list', $dispData);
-        }
-
-        return view('admin.tag.list');
+        return view('admin.tag.list', 
+                    compact(
+                        'tagList',
+                    )
+                );
     }
 
     public function regist(Request $request) {

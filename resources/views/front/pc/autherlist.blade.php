@@ -19,9 +19,9 @@
         <img src="{{ asset('images/front/introduct/'.$confAuther['imgPath']) }}" class="">
         <div class="blogger_name">{{$confAuther['name']}}</div>
         <div class="blogger_explain">
-        <div class="blogger_explain_title">plofile</div>
+        <div class="blogger_explain_title">profile</div>
             <p class="blogger_explain_detail">{{$confAuther['profile']}}</p>
-            <div class="blogger_explain_title">plofile</div>
+            <div class="blogger_explain_title">greeting</div>
             <p class="blogger_explain_detail">{{$confAuther['greeting']}}</p>
         </div>
         <div class="to_blogger_category"><a href="{{ route('list.onlyAuther', ['auther_id' => $key]) }}">{{$confAuther['name']}}の部屋へ</a></div>
